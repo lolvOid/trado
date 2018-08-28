@@ -82,7 +82,7 @@
                 <li class="dropdown">
                         <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="">
                             
-                        <img style="width:50px;height:50px;" src="fa fa-user" class="dropdown-image" />
+                        <img style="width:50px;height:50px;" src={{$user->avatar}} class="dropdown-image" />
                     </a>
                     <div class="dropdown-menu dropdown-menu-right" role="menu">
                     <a class="dropdown-item" role="presentation" href="{{ route('dashboard.index') }}">Dashboard</a>

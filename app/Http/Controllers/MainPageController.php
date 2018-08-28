@@ -3,16 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Product;
 
+use Auth;
+use App\Product;
+use App\User;
 class MainPageController extends Controller
 {
     //
 
-    public function index(){
+    public function index(Request $request){
 
          $products = Product::where('featured',true)->take(6)->inRandomOrder()->get();
         //$products = Product::where('featured',true)->get();
-        return view('landing')->with('products',$products);
+        
+        $user = User::find(Auth::id());
+        
+        return view('landing', compact('products','user'));
     }
 }

@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Auth;
 use DB;
-use App\User;
+use App\User; 
+use Input;
+use Image;
 class ProfilesController extends Controller
 {
     /**
@@ -103,7 +105,6 @@ class ProfilesController extends Controller
      */
     public function update(Request $request, $id)
     {   
-        dd($request->quantity);
         User::update($id, $request->user());
         return view('profile');
         //
@@ -118,5 +119,18 @@ class ProfilesController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function upload(Request $request){
+        if($request->hasFile('avatar')){
+            $avatar = $request->file('avatar');
+            $filename = "/users/" .  time() . '.' . $avatar->getClientOriginalExtension();
+            
+            Image::make($avatar)->resize(300, 300)->save( public_path( $filename ) );
+            $user = Auth::user();
+            $user->avatar = $filename;
+            $user->save();
+        }
+        return redirect()->route('profile.index');
     }
 }

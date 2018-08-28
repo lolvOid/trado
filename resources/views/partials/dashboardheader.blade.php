@@ -290,8 +290,8 @@
                                 </li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        <span class="user-name">Lin<i class="fa fa-angle-down"></i></span>
-                                        <img class="img-circle avatar" src="img/lhpp.jpg" width="40" height="40" alt="">
+                                        <span class="user-name">{{$user->name}}<i class="fa fa-angle-down"></i></span>
+                                        <img class="img-circle avatar" src={{$user->avatar}} width="40" height="40" alt="">
                                     </a>
                                     <ul class="dropdown-menu dropdown-list" role="menu">
                                     <li role="presentation"><a href="{{route('profile.index')}}"><i class="icon-user"></i>Profile</a></li>

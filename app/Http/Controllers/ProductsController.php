@@ -3,21 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class DashboardController extends Controller
+class ProductsController extends Controller
 {
     /**
-     * Display a listing of the resource.   
+     * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
         //
-        
-        $user = Auth::user();
-
-        return view('dashboard', compact('user'));
     }
 
     /**
@@ -58,10 +55,8 @@ class DashboardController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Reponse $request,$id)
+    public function edit($id)
     {
-
-        
         //
     }
 

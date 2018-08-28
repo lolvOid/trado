@@ -28,8 +28,12 @@
                                 <div class="panel-body">
                                     {{-- <img src="img/lhpp.jpg" class="user-profile-image img-circle" alt=""> --}}
                                     <div class="form-group">
-                                        <img src={{$user->avatar}} class="img-circle" style="width:200px; height:auto; clear:both; display:block; padding:2px; border:1px solid #ddd; margin-bottom:10px;">
-                                        <input type="file" data-name="avatar" name="avatar">
+                                        <form method="POST" action="{{ URL::to('upload') }}" enctype="multipart/form-data">
+                                            {{csrf_field()}}
+                                            <img src={{$user->avatar}} class="img-circle" style="width:200px; height:auto; clear:both; display:block; padding:2px; border:1px solid #ddd; margin-bottom:10px;">
+                                            <input class="form-control" type="file" data-name="avatar" name="avatar" id="avatar">
+                                            <button type="submit" class="btn btn-primary m-t-xs m-b-xs">Upload</button>
+                                        </form>
                                     </div>
                                     <h4 class="text-center m-t-lg"></h4>
                                     <p class="text-center"></p>

@@ -44,12 +44,13 @@ Route::get('/dashboard','DashboardController@index')->name('dashboard.index');
 
 Route::get('/profile','ProfilesController@index')->name('profile.index');
 Route::post('/profile','ProfilesController@store')->name('profile.store');
+Route::post('upload', 'profilesController@upload');
 
 Route::view('/statistics','statistics');
 //Route::view('/profile','profile');
 Route::view('/productdata','productdata');
-Route::view('/shoppingcart','shoppingcart');
-
+Route::view('/shoppingcart','ProductsController@index')->name('productdata');
+ 
 
 Route::view('/auth/register','register');
 Route::view('/auth/login','login');
