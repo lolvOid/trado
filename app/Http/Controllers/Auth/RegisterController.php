@@ -42,7 +42,7 @@ class RegisterController extends Controller
 
     /**
      * Get a validator for an incoming registration request.
-     *
+     * 
      * @param  array  $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
@@ -65,12 +65,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        var_dump($data);
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-/*             'contact' => $data['number'],
-            'username' => $data['username'], */
+             'contact' => $data['contact'],
+            'username' => $data['username'],
         ]);
     }
 

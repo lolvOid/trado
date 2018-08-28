@@ -32,6 +32,7 @@ class ProfilesController extends Controller
                 ->get();         */
         $name = User::select('name')->where('id','=', $uid)->get();
         $email= User::select('email')->where('id','=',$uid)->get(); 
+        
         /* return view('profile')->with(['name'=>$name,'username'=>$username,'number'=>$number,'email'=>$email]); */
        return view('profile')->with(['name'=>$name,'email'=>$email]);
         //
