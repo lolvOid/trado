@@ -17,12 +17,10 @@ class ProfilesController extends Controller
     public function index(Request $request)
     {
         
-        $user = $request->user();
+        $user = User::find(Auth::id());
         if($user == null){
             return view('landing');
         }
-        
-        $user->name = "haha";
         return view('profile')->with('user', $user);
        //return view('profile', compact('name','email', 'username', 'contact'));
         //
@@ -48,10 +46,26 @@ class ProfilesController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        
+        //dd($request->all()['email']);
+        $user = array();
 
-        return view('dashboard.index');
+        $user['name']      = $request->input('name');
+        $user['username']      = $request->input('username');
+        $user['email']      = $request->input('email');
+        $user['password']      = $request->user()->password;        
+        $user['contact']      = $request->input('contact');
+
+
+        //     'username'  -> $request->input('username'),
+        //     'email'     -> $request->input('email'),
+        //     'password'  -> $request->input('password'),
+        //     'contact'   -> $request->input('contact')]
+        // );
+
+        User::whereId($request->user()->id)->update($user);
+
+        //return view('profile')->with('user', $user);
+        return redirect()->route('profile.index');
     }
 
     /**
@@ -71,10 +85,10 @@ class ProfilesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Reponse $request,$id)
+    public function edit($id)
     {   
-        $user = $request->user();
- 
+        $user = User::find($id);
+        dd($user);
     
         //
         return view('profile')->with('user',$user);
@@ -89,8 +103,9 @@ class ProfilesController extends Controller
      */
     public function update(Request $request, $id)
     {   
-        $user = $request->user();
-        return view('profile')->with('user', $user);
+        dd($request->quantity);
+        User::update($id, $request->user());
+        return view('profile');
         //
     }
 

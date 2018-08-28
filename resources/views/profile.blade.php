@@ -26,7 +26,11 @@
                                     
                                
                                 <div class="panel-body">
-                                    <img src="img/lhpp.jpg" class="user-profile-image img-circle" alt="">
+                                    {{-- <img src="img/lhpp.jpg" class="user-profile-image img-circle" alt=""> --}}
+                                    <div class="form-group">
+                                        <img src={{$user->avatar}} class="img-circle" style="width:200px; height:auto; clear:both; display:block; padding:2px; border:1px solid #ddd; margin-bottom:10px;">
+                                        <input type="file" data-name="avatar" name="avatar">
+                                    </div>
                                     <h4 class="text-center m-t-lg"></h4>
                                     <p class="text-center"></p>
                                     <hr>
@@ -52,26 +56,26 @@
                                             <h4 class="panel-title">Edit your profile</h4>
                                         </div>
                                         <div class="panel-body">
-                                            <form method="POST" action="">
-
+                                            <form method="POST" action="{{ route('profile.store', $user->id) }}">
+                                                    {{csrf_field()}}
                                                     <div class="form-group">
                                                             <label for="name">Name</label>
-                                                        <input type="text" class="form-control m-t-xxs" id="name" placeholder="Enter Name" value="{{$user->name}}">
+                                                        <input type="text" class="form-control m-t-xxs" id="name" name='name' placeholder="Enter Name" value="{{$user->name}}">
                                                     </div>    
                                                         <div class="form-group">
                                                                 <label for="username" value="">username</label>
-                                                                <input type="text" class="form-control m-t-xxs" id="username" value="{{$user->username}}">
+                                                                <input type="text" class="form-control m-t-xxs" id="username" name="username" value="{{$user->username}}">
                                                             </div>    
                                                     
                                                         <div class="form-group">
                                                                 <label for="contect">Contact Number</label>
-                                                                <input type="tel" class="form-control m-t-xxs" id="contact" value="{{$user->contact}}" >
+                                                                <input type="tel" class="form-control m-t-xxs" id="contact" name="contact" value="{{$user->contact}}" >
                                                             </div>        
                                                             
 
                                                 <div class="form-group">
                                                     <label for="email">Email address</label>
-                                                    <input type="email" name="email"  class="form-control m-t-xxs" id="email" value="{{$user->email}}">
+                                                    <input type="email" name="email"  class="form-control m-t-xxs" id="email" name="email" value="{{$user->email}}">
                                                 </div>
 
                                                 <button type="submit" class="btn btn-primary m-t-xs m-b-xs">Submit</button>
