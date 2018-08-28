@@ -44,6 +44,7 @@ Route::get('/dashboard','DashboardController@index')->name('dashboard.index');
 
 Route::get('/profile','ProfilesController@index')->name('profile.index');
 Route::post('/profile','ProfilesController@update')->name('profile.update');
+Route::post('/profile','ProfilesController@store')->name('profile.store');
 
 Route::view('/statistics','statistics');
 //Route::view('/profile','profile');

@@ -32,7 +32,7 @@
                                     <hr>
                                     <ul class="list-unstyled text-center">
                                         <li><p><i class="icon-pointer m-r-xs"></i>Address</p></li>
-                                    <li><p><i class="icon-envelope-open m-r-xs"></i><a href="">{{$email}}</a></p></li>
+                                    <li><p><i class="icon-envelope-open m-r-xs"></i><a href="">{{$user->email}}</a></p></li>
                                         
                                     </ul>
                                     <hr>
@@ -52,38 +52,28 @@
                                             <h4 class="panel-title">Edit your profile</h4>
                                         </div>
                                         <div class="panel-body">
-                                            <form action="{{route('profile.update')}}">
+                                            <form method="POST" action="">
 
                                                     <div class="form-group">
                                                             <label for="name">Name</label>
-                                                    <input type="text" class="form-control m-t-xxs" id="name" placeholder="Enter Name" value="{{$name}}">
-                                                        </div>    
+                                                        <input type="text" class="form-control m-t-xxs" id="name" placeholder="Enter Name" value="{{$user->name}}">
+                                                    </div>    
                                                         <div class="form-group">
                                                                 <label for="username" value="">username</label>
-                                                                <input type="text" class="form-control m-t-xxs" id="username" placeholder="Enter Username">
+                                                                <input type="text" class="form-control m-t-xxs" id="username" value="{{$user->username}}">
                                                             </div>    
                                                     
                                                         <div class="form-group">
                                                                 <label for="contect">Contact Number</label>
-                                                                <input type="tel" class="form-control m-t-xxs" id="contact" placeholder="Enter Your Contact Number" value="">
+                                                                <input type="tel" class="form-control m-t-xxs" id="contact" value="{{$user->contact}}" >
                                                             </div>        
                                                             
 
                                                 <div class="form-group">
-                                                    <label for="email" value="{{$email}}">Email address</label>
-                                                    <input type="email" name="email"  class="form-control m-t-xxs" id="email" placeholder="Enter email">
+                                                    <label for="email">Email address</label>
+                                                    <input type="email" name="email"  class="form-control m-t-xxs" id="email" value="{{$user->email}}">
                                                 </div>
 
-                                                
-                                                <div class="form-group">
-                                                    <label for="password1">Password</label>
-                                                    <input type="password" name="password" class="password form-control m-t-xxs" id="password" placeholder="Password">
-                                                </div>
-                                                <div class="checkbox">
-                                                    <label class="no-s">
-                                                        <input type="checkbox"> Show Password
-                                                    </label>
-                                                </div>
                                                 <button type="submit" class="btn btn-primary m-t-xs m-b-xs">Submit</button>
                                                 <button type="reset" class="btn btn-primary m-t-xs m-b-xs">Cancel</button>
                                                 

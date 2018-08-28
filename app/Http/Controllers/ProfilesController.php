@@ -17,24 +17,14 @@ class ProfilesController extends Controller
     public function index(Request $request)
     {
         
-        $uid = $request->user()->id;
+        $user = $request->user();
+        if($user == null){
+            return view('landing');
+        }
         
-        //$userprofile = Auth::user()->id;
-
-        /* $name = DB::table('users')
-                ->select('name')
-                ->where('id',$uid)
-                ->get();
-                
-        $email = DB::table('users')
-                ->select('email')
-                ->where('id',$uid)
-                ->get();         */
-        $name = User::select('name')->where('id','=', $uid)->get();
-        $email= User::select('email')->where('id','=',$uid)->get(); 
-        
-        /* return view('profile')->with(['name'=>$name,'username'=>$username,'number'=>$number,'email'=>$email]); */
-       return view('profile')->with(['name'=>$name,'email'=>$email]);
+        $user->name = "haha";
+        return view('profile')->with('user', $user);
+       //return view('profile', compact('name','email', 'username', 'contact'));
         //
     }
 
@@ -59,9 +49,9 @@ class ProfilesController extends Controller
     public function store(Request $request)
     {
         //
+        
 
-
-        return view('dashboard');
+        return view('dashboard.index');
     }
 
     /**
@@ -83,11 +73,11 @@ class ProfilesController extends Controller
      */
     public function edit(Reponse $request,$id)
     {   
-        $uid = $request->user()->id;
-        $user = User::find($id);
+        $user = $request->user();
+ 
     
         //
-        return view('profile')->with('data',$userdata);
+        return view('profile')->with('user',$user);
     }
 
     /**
@@ -99,14 +89,8 @@ class ProfilesController extends Controller
      */
     public function update(Request $request, $id)
     {   
-        $uid = $request->user()->id;
-        if (!$request->ajax()) {
-            $this->insertUpdateData($request, $name, $email, $password,$data);
-            User::where('email',$id)->where('name',$id)->where('username',$id)->where('contact',$id)->where('password',$id)->delete();
-            $this->updateUser($request,$id);
-           
-      }  
-        return view('profile');
+        $user = $request->user();
+        return view('profile')->with('user', $user);
         //
     }
 

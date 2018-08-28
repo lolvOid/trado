@@ -34,7 +34,7 @@ Route::group(['as' => 'voyager.'], function () {
 
         Route::get('profile', ['uses' => $namespacePrefix.'VoyagerController@profile', 'as' => 'profile']);
 
-        try {
+        try { 
             foreach (DataType::all() as $dataType) {
                 $breadController = $dataType->controller
                                  ? $dataType->controller
