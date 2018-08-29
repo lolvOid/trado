@@ -125,71 +125,6 @@
                                 <li>		
                                     <a href="javascript:void(0);" class="sidebar-toggle"><i class="icon-arrow-left"></i></a>
                                 </li>
-                              <!--  <li>
-                                    <a href="#cd-nav" class="cd-nav-trigger"><i class="icon-support"></i></a>
-                                </li>-->
-                              <!--  <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        <i class="icon-settings"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-md dropdown-list theme-settings" role="menu">
-                                        <li class="li-group">
-                                            <ul class="list-unstyled">
-                                                <li class="no-link" role="presentation">
-                                                    Fixed Header 
-                                                    <div class="ios-switch pull-right switch-md">
-                                                        <input type="checkbox" class="js-switch pull-right fixed-header-check">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="li-group">
-                                            <ul class="list-unstyled">
-                                                <li class="no-link" role="presentation">
-                                                    Fixed Sidebar 
-                                                    <div class="ios-switch pull-right switch-md">
-                                                        <input type="checkbox" class="js-switch pull-right fixed-sidebar-check">
-                                                    </div>
-                                                </li>
-                                                <li class="no-link" role="presentation">
-                                                    Horizontal bar 
-                                                    <div class="ios-switch pull-right switch-md">
-                                                        <input type="checkbox" class="js-switch pull-right horizontal-bar-check">
-                                                    </div>
-                                                </li>
-                                                <li class="no-link" role="presentation">
-                                                    Toggle Sidebar 
-                                                    <div class="ios-switch pull-right switch-md">
-                                                        <input type="checkbox" class="js-switch pull-right toggle-sidebar-check">
-                                                    </div>
-                                                </li>
-                                                <li class="no-link" role="presentation">
-                                                    Compact Menu 
-                                                    <div class="ios-switch pull-right switch-md">
-                                                        <input type="checkbox" class="js-switch pull-right compact-menu-check" checked>
-                                                    </div>
-                                                </li>
-                                                <li class="no-link" role="presentation">
-                                                    Hover Menu 
-                                                    <div class="ios-switch pull-right switch-md">
-                                                        <input type="checkbox" class="js-switch pull-right hover-menu-check">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="li-group">
-                                            <ul class="list-unstyled">
-                                                <li class="no-link" role="presentation">
-                                                    Boxed Layout 
-                                                    <div class="ios-switch pull-right switch-md">
-                                                        <input type="checkbox" class="js-switch pull-right boxed-layout-check">
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="no-link"><button class="btn btn-default reset-options">Reset Options</button></li>
-                                    </ul>
-                                </li>-->
                             </ul>
                           
                           
@@ -197,65 +132,6 @@
                                 <li>	
                                     <a href="javascript:void(0);" class="show-search"><i class="icon-magnifier"></i></a>
                                 </li>
-                               <!-- <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-envelope-open"></i><span class="badge badge-danger pull-right">6</span></a>
-                                    <ul class="dropdown-menu title-caret dropdown-lg" role="menu">
-                                        <li><p class="drop-title">You have 6 new  messages!</p></li>
-                                        <li class="dropdown-menu-list slimscroll messages">
-                                            <ul class="list-unstyled">
-                                                <li>
-                                                    <a href="#">
-                                                        <div class="msg-img"><div class="online on"></div><img class="img-circle" src="img/img.png" alt=""></div>
-                                                        <p class="msg-name">Michael Lewis</p>
-                                                        <p class="msg-text">Yeah science!</p>
-                                                        <p class="msg-time">3 minutes ago</p>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <div class="msg-img"><div class="online off"></div><img class="img-circle" src="img/avatar4.png" alt=""></div>
-                                                        <p class="msg-name">John Doe</p>
-                                                        <p class="msg-text">Hi Nick</p>
-                                                        <p class="msg-time">8 minutes ago</p>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <div class="msg-img"><div class="online off"></div><img class="img-circle" src="img/avatar3.png" alt=""></div>
-                                                        <p class="msg-name">Emma Green</p>
-                                                        <p class="msg-text">Let's meet!</p>
-                                                        <p class="msg-time">56 minutes ago</p>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <div class="msg-img"><div class="online on"></div><img class="img-circle" src="img/avatar5.png" alt=""></div>
-                                                        <p class="msg-name">Nick Doe</p>
-                                                        <p class="msg-text">Nice to meet you</p>
-                                                        <p class="msg-time">2 hours ago</p>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <div class="msg-img"><div class="online on"></div><img class="img-circle" src="img/avatar2.png" alt=""></div>
-                                                        <p class="msg-name">Michael Lewis</p>
-                                                        <p class="msg-text">Yeah science!</p>
-                                                        <p class="msg-time">5 hours ago</p>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">
-                                                        <div class="msg-img"><div class="online off"></div><img class="img-circle" src="img/avatar4.png" alt=""></div>
-                                                        <p class="msg-name">John Doe</p>
-                                                        <p class="msg-text">Hi Nick</p>
-                                                        <p class="msg-time">9 hours ago</p>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="drop-all"><a href="#" class="text-center">All Messages</a></li>
-                                    </ul>
-                                </li>-->
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-bell"></i><span class="badge badge-danger pull-right">3</span></a>
                                     <ul class="dropdown-menu title-caret dropdown-lg" role="menu">

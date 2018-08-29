@@ -116,6 +116,9 @@ class ProductsDataController extends Controller
      */
     public function destroy(Request $request)
     {
+        $product = Product::find($request->input("id"));
+        $product->delete();
+        return redirect()->route('productdata.index');
         // Product::all()->where('owner_id' , '=', Auth::id()->where('id', '=', $request->input())
     }
 }

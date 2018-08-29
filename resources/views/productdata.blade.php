@@ -105,11 +105,20 @@
                                                                 <td>{{$product->description}}</td>
                                                                 <td>
                                                                     {{-- <input value= --}}
-                                                                <form>
-                                                                        <button type="button" class="btn btn-info m-b-sm" data-toggle="modal" data-target="#editModel{{$product->id}}">Edit</button>
-                                                                        <br><br>
-                                                                        <a class="btn btn-danger m-b-sm">Delete</a>
-                                                                        <div class="modal fade" id="editModel{{$product->id}}" tab dashboard="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                                        
+                                                                            
+                                                                            <input type="submit" class="btn btn-info m-b-sm" data-toggle="modal" data-target="#editModel{{$product->id}}" value="Edit">
+                                                                            <br><br>
+
+                                                                            <form method="post" action="{{route('products.delete')}} ">
+                                                                                {{csrf_field()}}
+                                                                                <input type="hidden" value="{{ $product->id}}" name="id" id="id">
+                                                                                <input type="submit" class="btn btn-danger m-b-sm" value="Delete">
+                                                                            </form>
+
+                                                                            <form method="POST" action="{{route('products.edit', $product->id)}}">
+                                                                                    {{csrf_field()}}
+                                                                            <div class="modal fade" id="editModel{{$product->id}}" tab dashboard="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                                                 <div class="modal-dialog">
                                                                                     
                                                                                     <div class="modal-content">

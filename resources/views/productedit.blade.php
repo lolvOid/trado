@@ -1,6 +1,7 @@
 
-
 @extends('dashmaster')
+
+@section('dashboard')
 
 <form>
         <div class="modal fade" id="editModel" tab dashboard="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
