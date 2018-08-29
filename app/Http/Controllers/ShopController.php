@@ -85,6 +85,7 @@ class ShopController extends Controller
 
 
     public function search(Request $request){
+        $user = Auth::user();
         
         $request->validate([
             'query'=>'required|min:3',
@@ -97,7 +98,7 @@ class ShopController extends Controller
                             ->paginate(10);
         //$products = Product::search($query);
             
-        return view('search-results')->with('products',$products);
+        return view('search-results')->with(['products'=>$products, 'user'=>$user ]);
 
 
     }

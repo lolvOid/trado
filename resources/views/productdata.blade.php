@@ -36,7 +36,7 @@
                                                 {{-- <form method="GET" action="{{route('productUpdate.store')}}">
                                                         <button type='submit'>Ha ha</button>
                                                     </form> --}}
-                                                                <button type="button" class="btn btn-primary m-b-sm" data-toggle="modal" data-target="#addModel">Add new product</button>
+                                                                <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="#addModel">Add new product</button>
                                                                 <br>
                                                                 @if(\Session::has('success'))
                                                                     <div class='alert alert-success'>
@@ -45,7 +45,7 @@
                                                                         </p>
                                                                 @endif
                                                                 <!-- Modal -->
-                                                                <form id="add-row-form"  method="POST" action="{{route('products.store')}}" enctype="multipart/form-data">
+                                                                <form id="add-row-form" class="md-form" method="POST" action="{{route('products.store')}}" enctype="multipart/form-data">
                                                                 {{csrf_field()}}
                                                                 <div class="modal fade" id="addModel" tab dashboard="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                                     <div class="modal-dialog">
@@ -63,7 +63,14 @@
                                                                                 <div class="form-group">
                                                                                     <input type="text" id="slug" name="slug" class="form-control"  placeholder="Slug" required>
                                                                                 </div>
-                                                                                
+                                                                                <div class="form-group">
+                                                                                    <select name="category" id="category" class="selectpicker">
+                                                                                        @foreach ($categories as $category)
+                                                                                        <option>{{$category->name}}</option>
+                                                                                        @endforeach
+                                                                                        
+                                                                                    </select>
+                                                                                </div>
                                                                                 <div class="form-group">
                                                                                     <input type="text" id="details" name="details" class="form-control" placeholder="Details" required>
                                                                                 </div>
@@ -73,7 +80,9 @@
                                                                                 <div class="form-group">
                                                                                         <textarea type="text" id="descriptions" name="descriptions" class="form-control" placeholder="Description" required></textarea>
                                                                                 </div>
-                                                                                    <input class="form-control" type="file" data-name="product_img" name="product_img" id="product_img">
+                                                                                <div class="form-group">
+                                                                                    <input class="btn btn-success btn-md float-left" type="file" data-name="product_img" name="product_img" id="product_img">
+                                                                                </div>
                                                                                 
                                                                             </div>
                                                                             <div class="modal-footer">
