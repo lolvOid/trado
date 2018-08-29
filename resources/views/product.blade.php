@@ -2,37 +2,32 @@
 
 @section('pages')
 
-<!--Product Details-->
-<div class="container " style="background-color:#ffffff;">
-	   
 
-<div class="row ">
-	<!--Product Image-->
-            <div class="col-md-6 border border-light ">
-			
-                <div class="row ">
-				<div  class="col-md-12 col-12  col-sm-12 mx-auto center">
-				<img style="width:500px;height:500px;"src="{{'/storage/'.$product->image}}" class="img-responsive img-fluid" />
-				</div>
 
-				</div>
-			   <!--Product Image end-->
-				
-                <div class="row">
-                    <div class="col-6 col-sm-6 col-md-6"></div>
-                    <div class="col-6 col-sm-6 col-md-6"></div>
-                </div>
-			</div>
-			<!--Product Description-->
-            <div class="col-md-6 border border-light ">
-				<h1 style="color:#373737;font-size:37px;">{{$product->name}}</h1>
-			<br>
-			<br>
-			<br>
-                <p style="font-size:16px;">	{!!$product->description!!}</p><h2 class="text-center text" style="color:#4d5fff;"><strong>{{$product->presentPrice()}}</strong></h2><button class="button" type="button" data-hover="SURE!"><span>Add to Card</span></button></div>
-        </div><!--Product Description End-->
-	</div>
-	
+  <div class="Push-20"></div>
+    <div class="Push-20"></div><div class="container" style=" border-color:#373737;background-color:#ffffff;">
+    <div class="row">
+        <div class="col-8 col-sm-8 col-xs-12 col-md-6">
+            <div class="row"> <div class="col-12 col-xs-12 col-sm-12 "><img src="{{'/storage/'.$product->image}}" class="img-fluid   mx-auto d-block" alt="Responsive image"></div></div>
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-6"></div>
+                <div class="col-6 col-sm-6 col-md-6"></div>
+            </div>
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-6"></div>
+                <div class="col-6 col-sm-6 col-md-6"></div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <h1 style="color:#373737;font-size:37px;">{{$product->name}}</h1>
+            <p style="font-size:18px;">{!!$product->description!!}</p>
+            <h2 class="text-center text" style="  color:#4d5fff;
+"><strong>$ 1000</strong></h2><button class=" btn-sm button" type="button" data-hover="SURE!"><span>Buy It?</span></button>
+        <button class=" btn-sm button" type="button" data-hover="SURE!"><span>Buy It?</span></button></div>
+    </div>
+</div>
+
+
 
 
 	<!--Related Products-->
@@ -80,12 +75,7 @@
 				</div>
 			</div>
 			<!-- Carousel controls -->
-			<a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
-				<i class="fa fa-angle-left"></i>
-			</a>
-			<a class="carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
-				<i class="fa fa-angle-right"></i>
-			</a>
+		
 		</div>
 		</div>
 	</div>
