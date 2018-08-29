@@ -10,7 +10,9 @@ class Product extends Model
 {
    use SearchableTrait;
 
-
+   protected $fillable = [
+    'name', 'slug','detail', 'price', 'description'
+    ];
    protected $searchable = [
     /**
      * Columns and their priority in search results.
