@@ -23,7 +23,7 @@ class ProfilesController extends Controller
         $user = User::find(Auth::id());
         if($user == null){
             $products = Product::all();
-            
+            return redirect('/');
         }
         return view('profile')->with('user', $user);
        //return view('profile', compact('name','email', 'username', 'contact'));
