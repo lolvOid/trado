@@ -15,7 +15,7 @@
 					<div class="filtr-controls">
 						<span class="active" data-filter="all">all</span>
 						@foreach ($categories as $category)
-					<span data-filter="{{$category->id}}">{{$category->name}}</span>						
+					<span style="font-size:15px" data-filter="{{$category->id}}" class="medium">{{$category->name}}</span>						
 						@endforeach
 	
     
@@ -67,24 +67,30 @@
 </div>
 <!--Product Row Start-->
 <div class="row filtr-container">
-   <!--Product Start-->
-<div class="col-12 col-sm-10 col-md-3 col-lg-3 col-xl-4 offset-sm-0 col-md-12 card filtr-item"  data-category="3" >
+   <!--Product Start-->   
+   @forelse ($products as $product)
+
+   
+<div class="col-12 col-sm-10 col-md-3 col-lg-3 col-xl-4 offset-sm-0 col-md-12 card filtr-item"  data-category="{{$product->category_id}}">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-xl-12 offset-sm-0 col-md-5">
-            <div style="background-color:#ffffff;width:200px;"></div><img src="img/iPhoneX.png" style="height:242px;" /></div>
+		<div style="background-color:#ffffff;width:200px;"></div><img src="{{$product->images}}" style="height:242px;" /></div>
         <div class="col-sm-10 col-md-12 col-lg-12 col-xl-12 offset-sm-9 offset-lg-0 offset-xl-0 offset-md-1 col-md-6" style="margin-left:0px;padding-left:21px;">
-            <h1 class="product-text-color">CitriWist</h1><small style="font-style:oblique;">Citrus Reamer</small>
-            <h5>In Stock</h5>
+            <h1 class="product-text-color">{{$product->name}}</h1><small style="font-style:oblique;">Citrus Reamer</small>
+            
             <div class="start-icon"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-                <h6 class="product-price">$ 9.99<small>USD</small></h6>
+                <h6 class="product-price">{{$product->presentPrice()}}<small>USD</small></h6>
             </div><small class="product-review">3 - 272 reviews</small>
             <div>
-                <h3 class="product-description">CitriTwist is no ordinary reamer. It extracts every last drop of citrus juice without making a big ol&#39; mess. How, you ask? Its spiraled form allows the juice to drip down the inside walls, not your hands. Genius!</h3>
+                <h3 class="product-description">{{str_limit($product->description,20)}}</h3>
         
             <button class="btn btn-primary pull-right" type="button"><i class="fa fa-shopping-cart" style="color:#fff;"></i>&nbsp;Buy Now</button></div>
         </div>
     </div>
-</div><!--Product End-->
+</div>
+@empty
+	   <div class="large">No Items</div>
+@endforelse<!--Product End-->
 <!--DATA CATEGORY IS FOR THE PRODUCT CATEGORY A TAG-->
 	
 </div></div>

@@ -38,7 +38,7 @@ class ShopController extends Controller
         }else if(request()->sort == 'highlow'){
             $products = $products -> sortByDesc('price');
         }
-
+        
         return view('shop')->with([
             'products'=>$products,
             'categories'=>$categories,

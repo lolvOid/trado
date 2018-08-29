@@ -63,7 +63,7 @@ class ProductsDataController extends Controller
             'owner_id'      => $uid, 
             'name'          => $request->input('name'),
             'slug'          => $request->input('slug'),
-            'category'      => $request->input('category'),
+            'category_id'      => $request->input('category'),
             'details'       => $request->input('details'),
             'price'         => $request->input('price'),
             'description'   => $request->input('descriptions'),

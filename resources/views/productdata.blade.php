@@ -66,7 +66,7 @@
                                                                                 <div class="form-group">
                                                                                     <select name="category" id="category" class="selectpicker">
                                                                                         @foreach ($categories as $category)
-                                                                                        <option>{{$category->name}}</option>
+                                                                                        <option value="{{$category->id}}">{{$category->name}}</option>
                                                                                         @endforeach
                                                                                         
                                                                                     </select>
@@ -81,7 +81,7 @@
                                                                                         <textarea type="text" id="descriptions" name="descriptions" class="form-control" placeholder="Description" required></textarea>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <input class="btn btn-success btn-md float-left" type="file" data-name="product_img" name="product_img" id="product_img">
+                                                                                    <input class="btn btn-success btn-md float-left" type="file" data-name="product_img" name="product_img" id="product_img" required>
                                                                                 </div>
                                                                                 
                                                                             </div>
