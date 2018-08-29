@@ -90,10 +90,40 @@ class ProductsDataController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        dd($id);
-        //return view('productedit');
+        $uid = Auth::id();
+        if($uid == null){
+            return view('/login');
+        }
+        
+        $product = Product::find($request->input('id'));
+        $product->name = $request->input('name');
+        $product->slug = $request->input('slug');
+        $product->details = $request->input('details');
+        $product->price = $request->input('price');
+        $product->description = $request->input('descriptions');
+
+        if($request->hasFile('product_img')){
+            $product_img = $request->file('product_img');
+            $filename = "/img/" . time() . $product_img->getClientOriginalExtension();
+            Image::make($product_img)->resize(640, 426)->save( public_path( $filename ) );
+            $product->images = $filename;
+        }
+
+        // Product::create([
+        //     'owner_id'      => $uid, 
+        //     'name'          => $request->input('name'),
+        //     'slug'          => $request->input('slug'),
+        //     'details'       => $request->input('details'),
+        //     'price'         => $request->input('price'),
+        //     'description'   => $request->input('descriptions'),
+        //     'images'        => $filename
+        // ]); 
+        // dd($product);
+        $product->save();
+
+        return redirect()->route('productdata.index')->with('success','Product Edit Successful');
     }
 
     /**

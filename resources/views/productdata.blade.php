@@ -64,7 +64,7 @@
                                                                                     <input type="number" id="price" name="price" class="form-control date-picker" placeholder="Price" required>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                        <input type="text" id="description" name="descriptions" class="form-control" placeholder="Description" required>
+                                                                                        <textarea type="text" id="descriptions" name="descriptions" class="form-control" placeholder="Description" required></textarea>
                                                                                 </div>
                                                                                     <input class="form-control" type="file" data-name="product_img" name="product_img" id="product_img">
                                                                                 
@@ -87,7 +87,7 @@
                                                                 <th>Slug</th>
                                                                 <th>Detail</th>
                                                                 <th>Price</th>
-                                                                <th>Description</th>
+                                                                <th style="column-width: 300px;">Description</th>
                                                                 <th></th>
                                                             </tr>
                                                         </thead>
@@ -102,7 +102,7 @@
                                                                 <td>{{$product->slug}}</td>
                                                                 <td>{{$product->details}}</td>                                           
                                                                 <td>{{$product->presentPrice()}}</td>
-                                                                <td>{{$product->description}}</td>
+                                                                <td style="column-width: 300px;">{{$product->description}}</td>
                                                                 <td>
                                                                     {{-- <input value= --}}
                                                                         
@@ -116,7 +116,7 @@
                                                                                 <input type="submit" class="btn btn-danger m-b-sm" value="Delete">
                                                                             </form>
 
-                                                                            <form method="POST" action="{{route('products.edit', $product->id)}}">
+                                                                            <form method="POST" action="{{route('products.edit')}}" enctype="multipart/form-data">
                                                                                     {{csrf_field()}}
                                                                             <div class="modal fade" id="editModel{{$product->id}}" tab dashboard="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                                                 <div class="modal-dialog">
@@ -127,7 +127,7 @@
                                                                                             <h4 class="modal-title" id="myModalLabel">Edit Product</h4>
                                                                                         </div>
                                                                                         <div class="modal-body">
-                                                                                            
+                                                                                            <input type="hidden" value="{{$product->id}}" name="id" id="id">
                                                                                             <div class="form-group">
                                                                                                 <input onClick="this.select();" type="text" id="name" class="form-control" name="name" value="{{$product->name}}" placeholder="Name" required>
                                                                                             </div>
@@ -142,7 +142,7 @@
                                                                                                 <input type="number" id="price" name="price" class="form-control date-picker" value="{{$product->price}}" placeholder="Price" required>
                                                                                             </div>
                                                                                             <div class="form-group">
-                                                                                                    <input type="text" id="description" name="descriptions" class="form-control" value="{{$product->description}}" placeholder="Description" required>
+                                                                                                    <textarea id="description" name="descriptions" class="form-control" placeholder="Description" required>{{$product->description}}</textarea>
                                                                                             </div>
                                                                                                 <input class="form-control" type="file" data-name="product_img" name="product_img" id="product_img">
                                                                                             
