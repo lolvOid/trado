@@ -38,7 +38,7 @@ Route::get('/profile','ProfilesController@index')->name('profile.index');
 Route::post('/profile','ProfilesController@store')->name('profile.store');
 Route::post('upload', 'ProfilesController@upload');
 
-Route::view('/statistics','statistics');
+Route::get('/statistics','StatisticsController@index')->name('statistics.index');
 
 
 //Route::view('/profile','profile');
