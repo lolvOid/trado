@@ -11,9 +11,11 @@
 					<h1 class="cd-headline clip">
 			            <span class="blc">TRADE WITH | </span>
 			            <span class="cd-words-wrapper">
-			              <b class="is-visible">TRUSTED</b>
+			              <b class="is-visible">TRUST</b>
 			              <b></b>
-			              <b>TRADO</b>
+                          <b>US</b>
+                          <b></b>
+                          <b>TRADO</b>
 			            </span>
 	          		</h1>
 				</div>
