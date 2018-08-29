@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 //use Illuminate\Support\Facades\Request;
 use Illuminate\Http\Request;
 //use Illuminate\Http\Request;
+
+use App\User;
 use App\Product;
 use App\Category;
 use Auth;
@@ -19,7 +21,8 @@ class ShopController extends Controller
     {
         //
         $user = Auth::user();
-
+        $users = User::all();
+        
         if(request()->category){
             $products = Product::with('categories')->whereHas('categories',function($query){
                 $query->where('slug',request()->category);
@@ -43,7 +46,8 @@ class ShopController extends Controller
             'products'=>$products,
             'categories'=>$categories,
             'categoryName'=>$categoryName,
-            'user'=>$user
+            'user'=>$user,
+            'users'=>$users
             ]);
     }
 

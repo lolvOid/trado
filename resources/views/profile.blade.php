@@ -9,7 +9,7 @@
                 <div class="page-title">
                     <div class="page-breadcrumb">
                         <ol class="breadcrumb">
-                            <li><a href=" dashboard.html">Home</a></li>
+                            <li><a href="dashboard">Home</a></li>
                             <li class="active">Profile</li>
                         </ol>
                     </div>
@@ -27,11 +27,11 @@
                                
                                 <div class="panel-body">
                                     {{-- <img src="img/lhpp.jpg" class="user-profile-image img-circle" alt=""> --}}
-                                    <div class="form-group">
+                                    <div class="form-group"> 
                                         <form method="POST" action="{{ URL::to('upload') }}" enctype="multipart/form-data">
                                             {{csrf_field()}}
                                             <img src={{$user->avatar}} class="img-circle" style="width:200px; height:auto; clear:both; display:block; padding:2px; border:1px solid #ddd; margin-bottom:10px;">
-                                            <input class="form-control" type="file" data-name="avatar" name="avatar" id="avatar">
+                                            <input class="btn btn-success btn-sm float-left" type="file" data-name="avatar" name="avatar" id="avatar">
                                             <button type="submit" class="btn btn-primary m-t-xs m-b-xs">Upload</button>
                                         </form>
                                     </div>

@@ -76,7 +76,11 @@
         <div class="col-sm-12 col-md-12 col-xl-12 offset-sm-0 col-md-5">
 		<div style="background-color:#ffffff;width:200px;"></div><img src="{{$product->images}}" style="height:242px;" /></div>
         <div class="col-sm-10 col-md-12 col-lg-12 col-xl-12 offset-sm-9 offset-lg-0 offset-xl-0 offset-md-1 col-md-6" style="margin-left:0px;padding-left:21px;">
-            <h1 class="product-text-color">{{$product->name}}</h1><small style="font-style:oblique;">Citrus Reamer</small>
+			<h1 class="product-text-color">{{$product->name}}</h1><small style="font-style:oblique;">
+				<a href="">
+					{{$users->where('id',$product->owner_id)->first()->username}}
+				</a>
+			</small>
             
             <div class="start-icon"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
                 <h6 class="product-price">{{$product->presentPrice()}}<small>USD</small></h6>
