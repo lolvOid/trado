@@ -12,9 +12,7 @@
 			            <span class="blc">TRADE WITH | </span>
 			            <span class="cd-words-wrapper">
 			              <b class="is-visible">TRUST</b>
-			              <b></b>
                           <b>US</b>
-                          <b></b>
                           <b>TRADO</b>
 			            </span>
 	          		</h1>
