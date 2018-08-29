@@ -37,6 +37,13 @@
                                                         <button type='submit'>Ha ha</button>
                                                     </form> --}}
                                                                 <button type="button" class="btn btn-primary m-b-sm" data-toggle="modal" data-target="#addModel">Add new product</button>
+                                                                <br>
+                                                                @if(\Session::has('success'))
+                                                                    <div class='alert alert-success'>
+                                                                        <p>
+                                                                            {{\Session::get('success')}}
+                                                                        </p>
+                                                                @endif
                                                                 <!-- Modal -->
                                                                 <form id="add-row-form"  method="POST" action="{{route('products.store')}}" enctype="multipart/form-data">
                                                                 {{csrf_field()}}

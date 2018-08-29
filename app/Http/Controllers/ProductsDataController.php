@@ -148,7 +148,7 @@ class ProductsDataController extends Controller
     {
         $product = Product::find($request->input("id"));
         $product->delete();
-        return redirect()->route('productdata.index');
+        return redirect()->route('productdata.index')->with('success','Product Delete Successful');
         // Product::all()->where('owner_id' , '=', Auth::id()->where('id', '=', $request->input())
     }
 }
