@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 //use Illuminate\Http\Request;
 use App\Product;
 use App\Category;
+use Auth;
 class ShopController extends Controller
 {
     /**
@@ -17,6 +18,8 @@ class ShopController extends Controller
     public function index()
     {
         //
+        $user = Auth::user();
+
         if(request()->category){
             $products = Product::with('categories')->whereHas('categories',function($query){
                 $query->where('slug',request()->category);
@@ -39,7 +42,8 @@ class ShopController extends Controller
         return view('shop')->with([
             'products'=>$products,
             'categories'=>$categories,
-            'categoryName'=>$categoryName
+            'categoryName'=>$categoryName,
+            'user'=>$user
             ]);
     }
 

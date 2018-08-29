@@ -24,7 +24,7 @@
                 </div>
                 <div class="form-row form-group">
                     <div class="col-sm-4 label-column"><label class="col-form-label" for="number">Contact Number</label></div>
-                    <div class="col-sm-6 input-column"><input class="form-control" id="number" name="number" type="text"></div>
+                    <div class="col-sm-6 input-column"><input class="form-control" id="contact" name="contact" type="text"></div>
                 </div>
                 <div class="form-row form-group">
                     <div class="col-sm-4 label-column"><label class="col-form-label" for="email">Email </label></div>

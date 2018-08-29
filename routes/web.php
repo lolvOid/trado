@@ -1,12 +1,6 @@
 
 <?php
 
-
-  
-    
-   
-   
-
 Route::get('/','MainPageController@index')->name('landing');
 
 Route::get('/shop','ShopController@index')->name('shop.index');
@@ -44,12 +38,12 @@ Route::get('/dashboard','DashboardController@index')->name('dashboard.index');
 
 Route::get('/profile','ProfilesController@index')->name('profile.index');
 Route::post('/profile','ProfilesController@store')->name('profile.store');
-Route::post('upload', 'profilesController@upload');
+Route::post('upload', 'ProfilesController@upload');
 
 Route::view('/statistics','statistics');
 //Route::view('/profile','profile');
-Route::view('/productdata','productdata');
-Route::view('/shoppingcart','ProductsController@index')->name('productdata');
+Route::get('/productdata','ProductsController@index')->name('products.index');
+Route::view('/shoppingcart', 'shoppingcart');
  
 
 Route::view('/auth/register','register');
