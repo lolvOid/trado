@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use Auth;
 use DB;
 use App\User; 
+use App\Product;
 use Input;
 use Image;
 class ProfilesController extends Controller
@@ -21,7 +22,8 @@ class ProfilesController extends Controller
         
         $user = User::find(Auth::id());
         if($user == null){
-            return view('landing');
+            $products = Product::all();
+            return redirect('/');
         }
         return view('profile')->with('user', $user);
        //return view('profile', compact('name','email', 'username', 'contact'));
