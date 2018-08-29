@@ -290,7 +290,7 @@
                                 </li>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                        <span class="user-name">{{$user->name}}<i class="fa fa-angle-down"></i></span>
+                                        <span class="user-name">{{$user->username}}<i class="fa fa-angle-down"></i></span>
                                         <img class="img-circle avatar" src={{$user->avatar}} width="40" height="40" alt="">
                                     </a>
                                     <ul class="dropdown-menu dropdown-list" role="menu">
@@ -320,7 +320,7 @@
                             <li><a href="profile" class="waves-effect waves-button"><span class="menu-icon icon-user"></span><p>Profile</p><span class="active-page"></span></a></li>
                      
                             <li><a href="statistics" class="waves-effect waves-button"><span class="menu-icon icon-grid"></span><p>Statisics</p></a></li>
-                        <li><a href="productdata" class="waves-effect waves-button"><span class="menu-icon icon-basket"></span><p>Products</p></a></li>
+                        <li><a href="{{route('productdata.index')}}" class="waves-effect waves-button"><span class="menu-icon icon-basket"></span><p>Products</p></a></li>
                    
                             <li><a href="" class="waves-effect waves-button"><span class="menu-icon icon-power"></span><p>Logout</p></a></li>
                         

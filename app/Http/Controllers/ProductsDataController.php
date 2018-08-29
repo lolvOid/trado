@@ -7,8 +7,9 @@ use App\Http\Controllers\Controller;
 use Auth;
 use App\Product;
 use App\Category;
+use Image;
 
-class ProductsController extends Controller
+class ProductsDataController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +25,7 @@ class ProductsController extends Controller
             return view('/');
         }
         //
-        $products = Product::all();
+        $products = Product::all()->where('owner_id', "=", $user->id);
 
         return view('productdata', compact('user', 'products', 'categories'));
     }
@@ -37,7 +38,7 @@ class ProductsController extends Controller
     public function create(Request $request)
     {
         
-    }
+    } 
 
     /**
      * Store a newly created resource in storage.
@@ -47,7 +48,27 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        $uid = Auth::id();
+        if($uid == null){
+            return view('/login');
+        }
+        $filename = "/img/Trado.png";
+        if($request->hasFile('product_img')){
+            $product_img = $request->file('product_img');
+            $filename = "/img/" . time() . $product_img->getClientOriginalExtension();
+            Image::make($product_img)->resize(640, 426)->save( public_path( $filename ) );
+        }
+
+        Product::create([
+            'owner_id'      => $uid, 
+            'name'          => $request->input('name'),
+            'slug'          => $request->input('slug'),
+            'details'       => $request->input('details'),
+            'price'         => $request->input('price'),
+            'description'   => $request->input('descriptions'),
+            'images'        => $filename
+        ]); 
+        return redirect()->route('productdata.index');
     }
 
     /**
@@ -56,8 +77,10 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request,$id)
     {
+        dd($request->all()); 
+        return route('productdata.index');
         //
     }
 
@@ -69,7 +92,8 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+        dd($id);
+        //return view('productedit');
     }
 
     /**
@@ -90,8 +114,8 @@ class ProductsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        // Product::all()->where('owner_id' , '=', Auth::id()->where('id', '=', $request->input())
     }
 }

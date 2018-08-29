@@ -18,9 +18,7 @@ Route::post('/checkout','CheckoutController@store')->name('checkout.store');
 Route::get('empty',function(){
     Cart::destroy();
 });
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
+
 Route::get('/search-results','ShopController@search')->name('search');
 
 
@@ -44,15 +42,18 @@ Route::view('/statistics','statistics');
 
 
 //Route::view('/profile','profile');
-Route::get('/productdata','ProductsController@index')->name('products.index');
-Route::post('/addProduct', 'ProductsController@store')->name('products.add');
+Route::get('/productdata','ProductsDataController@index')->name('productdata.index');
+Route::post('/productAdd','ProductsDataController@store')->name('products.store');
+Route::get('/productEdit','ProductsDataController@edit')->name('products.edit');
 Route::view('/shoppingcart', 'shoppingcart');
  
 
 Route::view('/auth/register','register');
 Route::view('/auth/login','login');
 Auth::routes();
-
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
 
 
 Route::get('/home', 'HomeController@index')->name('home');

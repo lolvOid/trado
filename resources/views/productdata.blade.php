@@ -20,6 +20,7 @@
                                             <li><a href=" dashboard.html">Home</a></li>
                                          
                                             <li class="active">Product Data</li>
+                                            
                                         </ol>
                                     </div>
                                 </div>
@@ -31,31 +32,31 @@
                                                     <h2 class="panel-title">Products</h2>
                                                 </div>
                                                 <div class="panel-body">
-                                                                <button type="button" class="btn btn-success m-b-sm" data-toggle="modal" data-target="#myModal">Add new product</button>
+
+                                                {{-- <form method="GET" action="{{route('productUpdate.store')}}">
+                                                        <button type='submit'>Ha ha</button>
+                                                    </form> --}}
+                                                                <button type="button" class="btn btn-primary m-b-sm" data-toggle="modal" data-target="#addModel">Add new product</button>
                                                                 <!-- Modal -->
-                                                                <form id="add-row-form" method="POST" action="{{ route('products.add') }}" enctype="multipart/form-data">
-                                                                <div class="modal fade" id="myModal" tab dashboard="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                                <form id="add-row-form"  method="POST" action="{{route('products.store')}}" enctype="multipart/form-data">
+                                                                {{csrf_field()}}
+                                                                <div class="modal fade" id="addModel" tab dashboard="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                                     <div class="modal-dialog">
+                                                                        
                                                                         <div class="modal-content">
                                                                             <div class="modal-header">
-                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                                                
                                                                                 <h4 class="modal-title" id="myModalLabel">Create Product</h4>
                                                                             </div>
                                                                             <div class="modal-body">
+                                                                                
                                                                                 <div class="form-group">
                                                                                     <input type="text" id="name" class="form-control" name="name" placeholder="Name" required>
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <input type="text" id="slug" name="slug" class="form-control"  placeholder="Slug" required>
                                                                                 </div>
-                                                                                <div class="form-group">
-                                                                                        <Select type="text" id="category" name="category" class="form-control" required>
-                                                                                            @foreach ($categories as $cat)
-                                                                                        <option value="{{$cat->id}}" >{{$cat->name}}</option>    
-                                                                                            @endforeach
-                                                                                            
-                                                                                        </Select>
-                                                                                    </div>
+                                                                                
                                                                                 <div class="form-group">
                                                                                     <input type="text" id="details" name="details" class="form-control" placeholder="Details" required>
                                                                                 </div>
@@ -65,7 +66,7 @@
                                                                                 <div class="form-group">
                                                                                         <input type="text" id="description" name="descriptions" class="form-control" placeholder="Description" required>
                                                                                 </div>
-                                                                                    <input class="form-control" type="file" data-name="avatar" name="avatar" id="avatar">
+                                                                                    <input class="form-control" type="file" data-name="product_img" name="product_img" id="product_img">
                                                                                 
                                                                             </div>
                                                                             <div class="modal-footer">
@@ -81,38 +82,81 @@
                                                     <table id="example" class="display table" style="width: 100%; cellspacing: 0;">
                                                         <thead>
                                                             <tr>
+                                                                <th>Product Image</th>
                                                                 <th>Product Name</th>
-                                                                <th>Category</th>
+                                                                <th>Slug</th>
                                                                 <th>Detail</th>
                                                                 <th>Price</th>
-                                                                <th></th>
+                                                                <th>Description</th>
                                                                 <th></th>
                                                             </tr>
                                                         </thead>
-                                                        <tfoot>
-                                                            <tr>
-                                                                <th>Name</th>
-                                                                <th>Position</th>
-                                                                <th>Office</th>
-                                                                <th>Age</th>
-                                                                <th>Start date</th>
-                                                                <th>Salary</th>
-                                                            </tr>
-                                                        </tfoot>
                                                         <tbody>
                                                             @foreach ($products as $product)
                                                                 
                                                              <tr>
-                                                                <td>Hermione Butler</td>
-                                                                <td>Regional Director</td>
-                                                                <td>London</td>
-                                                                <td>47</td>
-                                                                <td>2011/03/21</td>
-                                                                <td>$356,250</td>
+                                                                <td>
+                                                                    <img src="{{$product->images}}" width="160px" height="106px">
+                                                                </td>
+                                                                <td>{{$product->name}}</td>
+                                                                <td>{{$product->slug}}</td>
+                                                                <td>{{$product->details}}</td>                                           
+                                                                <td>{{$product->presentPrice()}}</td>
+                                                                <td>{{$product->description}}</td>
+                                                                <td>
+                                                                    {{-- <input value= --}}
+                                                                <form>
+                                                                        <button type="button" class="btn btn-info m-b-sm" data-toggle="modal" data-target="#editModel{{$product->id}}">Edit</button>
+                                                                        <br><br>
+                                                                        <a class="btn btn-danger m-b-sm">Delete</a>
+                                                                        <div class="modal fade" id="editModel{{$product->id}}" tab dashboard="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                                                                <div class="modal-dialog">
+                                                                                    
+                                                                                    <div class="modal-content">
+                                                                                        <div class="modal-header">
+                                                                                            
+                                                                                            <h4 class="modal-title" id="myModalLabel">Edit Product</h4>
+                                                                                        </div>
+                                                                                        <div class="modal-body">
+                                                                                            
+                                                                                            <div class="form-group">
+                                                                                                <input onClick="this.select();" type="text" id="name" class="form-control" name="name" value="{{$product->name}}" placeholder="Name" required>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <input type="text" id="slug" name="slug" class="form-control" value="{{$product->slug}}"  placeholder="Slug" required>
+                                                                                            </div>
+                                                                                            
+                                                                                            <div class="form-group">
+                                                                                                <input type="text" id="details" name="details" class="form-control" value="{{$product->details}}" placeholder="Details" required>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <input type="number" id="price" name="price" class="form-control date-picker" value="{{$product->price}}" placeholder="Price" required>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                    <input type="text" id="description" name="descriptions" class="form-control" value="{{$product->description}}" placeholder="Description" required>
+                                                                                            </div>
+                                                                                                <input class="form-control" type="file" data-name="product_img" name="product_img" id="product_img">
+                                                                                            
+                                                                                        </div>
+                                                                                        <div class="modal-footer">
+                                                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                                                            <button type="submit" id="add-row" class="btn btn-success">Save</button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                   </form>
+                                                                        {{-- <button type="button" class="btn btn-success m-b-sm">Edit</button>
+                                                                        <br> <br>
+                                                                        <button type="button" class="btn btn-success m-b-sm">Delete</button> --}}
+                                                            
+                                                                </td>
+                                                                
                                                             </tr>
                                                             @endforeach
                                                         </tbody>
                                                        </table>  
+                                                       
                                                     </div>
                                                 </div>
                                             </div>

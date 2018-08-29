@@ -9,7 +9,7 @@ use DB;
 use App\User; 
 use App\Product;
 use Input;
-use Image;
+use Image; 
 class ProfilesController extends Controller
 {
     /**
@@ -92,7 +92,6 @@ class ProfilesController extends Controller
     public function edit($id)
     {   
         $user = User::find($id);
-        dd($user);
     
         //
         return view('profile')->with('user',$user);
@@ -120,7 +119,7 @@ class ProfilesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
 
     public function upload(Request $request){
