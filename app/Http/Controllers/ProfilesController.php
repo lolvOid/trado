@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use Auth;
 use DB;
 use App\User; 
+use App\Product; 
 use Input;
 use Image;
 class ProfilesController extends Controller
