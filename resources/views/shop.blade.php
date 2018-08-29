@@ -14,39 +14,46 @@
 					<!--Category Start-->
 					<div class="filtr-controls">
 						<span class="active" data-filter="all">all</span>
-	<span data-filter="1">category 1</span>
-	<span data-filter="2">category 2</span>
-    <span data-filter="3">category 3</span>
-    <span data-filter="4">category 4</span>
-<span data-filter="5">category 5</span>
-    <span data-filter="6">category 6</span>
-<span data-filter="7">category 7</span>
-    <span data-filter="8">category 8</span>
-    <span data-filter="9">category 9</span>
-    <span data-filter="10">category 10</span>
+						@foreach ($categories as $category)
+					<span data-filter="{{$category->id}}">{{$category->name}}</span>						
+						@endforeach
+	
     
 </div>
 <!--Category ENd-->
 
 <div class="filter">
     <form>
-        <input placeholder="Brand Name,Specification,etc "><br>
        
     <label for="type">Product Type</label>
-    <select id="type">
-             <option value="Laptop">Laptop</option>
+    <select id="category">
+			@foreach ($categories as $category)
+			<option>{{$category->name}}</option>	
+			@endforeach
+             
              
         </select>
   
-    <label for="price1">Price</label>
     
-    <select id="price1">
+    
+    {{-- <select id="price1">
             
-        <option value="High">High</option>
-         <option value="Low">Low</option>
-        </select>
-    
-    
+        <option value="Low">
+			<a href="/">
+				Low to High
+			</a>
+		</option>
+         <option value="High">
+			<a href="/">
+				High to Low
+			</a>
+		 </option>
+		</select> --}}
+		<label for="price1">Price</label>
+		<div class="btn-group">
+		<a class="medium" href="{{route('shop.index',['category'=>request()->category,'sort'=>'lowhigh'])}}">Low to High</a><|>
+		<a class="medium" href="{{route('shop.index',['category'=>request()->category,'sort'=>'highlow'])}}">High to Low</a>
+		</div>
     <div style="margin-top:20px;">
         <label >Featured</label>
    <label  id="togglebutton" class="switch">
