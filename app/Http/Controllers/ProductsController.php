@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Auth;
 use App\Product;
+use App\Category;
 
 class ProductsController extends Controller
 {
@@ -17,13 +18,15 @@ class ProductsController extends Controller
     public function index()
     {
         $user = Auth::user();
+        $categories = Category::all();
+
         if($user == null){
             return view('/');
         }
         //
-        //$products = Product::all()->where(';
+        $products = Product::all();
 
-        return view('productdata', compact('user'));
+        return view('productdata', compact('user', 'products', 'categories'));
     }
 
     /**
@@ -31,9 +34,9 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -44,7 +47,7 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**

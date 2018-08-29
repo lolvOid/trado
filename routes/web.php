@@ -41,8 +41,11 @@ Route::post('/profile','ProfilesController@store')->name('profile.store');
 Route::post('upload', 'ProfilesController@upload');
 
 Route::view('/statistics','statistics');
+
+
 //Route::view('/profile','profile');
 Route::get('/productdata','ProductsController@index')->name('products.index');
+Route::post('/addProduct', 'ProductsController@store')->name('products.add');
 Route::view('/shoppingcart', 'shoppingcart');
  
 
