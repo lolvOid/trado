@@ -19,6 +19,7 @@
                                         <div class="panel-body">
                                             <form id="editForm" method="POST" action="{{route('products.update')}}" class="form-horizontal">
                                                 {{ csrf_field() }}
+                                                <input type="hidden" name="id" value="{{$product->id}}">
                                                 <div class="form-group">
                                                     <label for="input-Default" class="col-sm-2 control-label">Name</label>
                                                     <div class="col-sm-10">
