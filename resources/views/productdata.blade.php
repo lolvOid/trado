@@ -75,8 +75,15 @@
                                                                                     <input type="text" id="details" name="details" class="form-control" placeholder="Details" required>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <input type="number" id="price" name="price" class="form-control date-picker" placeholder="Price" required>
+                                                                                    <input type="number" id="price" name="price" class="form-control date-picker" placeholder="Price" min="1" max="9999999999" required>
                                                                                 </div>
+                                                                                <div class="form-group">
+                                                                                        <label >Featured</label>
+                                                                                        <label  id="togglebutton" class="switch">
+                                                                                            .<input class="switch" name="featured" id="featured" type="checkbox">
+                                                                                            <span class="slider round"></span>
+                                                                                        </label>
+                                                                                    </div>
                                                                                 <div class="form-group">
                                                                                         <textarea type="text" id="descriptions" name="descriptions" class="form-control" placeholder="Description" required></textarea>
                                                                                 </div>
@@ -156,6 +163,13 @@
                                                                                             </div>
                                                                                             <div class="form-group">
                                                                                                 <input type="number" id="price" name="price" class="form-control date-picker" value="{{$product->price}}" placeholder="Price" required>
+                                                                                            </div>
+                                                                                            <div class="form-group">
+                                                                                                <label >Featured</label>
+                                                                                                <label  id="togglebutton" class="switch">
+                                                                                                    .<input class="switch" name="featured" id="featured" type="checkbox" checked={{$product->featured}}>
+                                                                                                    <span class="slider round"></span>
+                                                                                                </label>
                                                                                             </div>
                                                                                             <div class="form-group">
                                                                                                     <textarea id="description" name="descriptions" class="form-control" placeholder="Description" required>{{$product->description}}</textarea>

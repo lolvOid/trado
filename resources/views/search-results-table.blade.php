@@ -27,7 +27,7 @@
         <tbody>
                 @foreach ($products as $product)
             <tr>
-                <td><a href="{{route('shop.show',$product->slug)}}">
+                <td><a href="{{route('shop.show',$product->slug)}}"> 
                     <img src="{{$product->images}}"  class="center-block img-fluid">
                     </a>
                 </td>
