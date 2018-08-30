@@ -25,7 +25,7 @@ Route::get('/search-results','ShopController@search')->name('search');
 
 //Route::view('/shop','shop');
 //Route::view('/product','product');
-
+Route::view('/wallet','wallet');
 
 
 Route::view('/contact','contact');
