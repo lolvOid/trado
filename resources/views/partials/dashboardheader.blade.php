@@ -27,11 +27,12 @@
         <link href="{{ URL::asset('plugins/toastr/toastr.min.css') }}" rel="stylesheet" type="text/css"/>
 	<link href="{{ URL::asset('plugins/summernote-master/summernote.css') }}" rel="stylesheet" type="text/css"/>
 	
+       <link href="{{ URL::asset('plugins/summernote-master/summernote.css') }}" rel="stylesheet" type="text/css"/>
         <link href="{{ URL::asset('plugins/bootstrap-datepicker/css/datepicker3.css') }}" rel="stylesheet" type="text/css"/>
         <link href="{{ URL::asset('plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css') }}" rel="stylesheet" type="text/css"/>
         <link href="{{ URL::asset('plugins/bootstrap-tagsinput/bootstrap-tagsinput.css') }}" rel="stylesheet" type="text/css"/>
         <link href="{{ URL::asset('plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css') }}" rel="stylesheet" type="text/css"/>
-        
+
         	
         <!-- Theme Styles -->
         <link href="{{ URL::asset('css/meteor.min.css') }}" rel="stylesheet" type="text/css"/>
