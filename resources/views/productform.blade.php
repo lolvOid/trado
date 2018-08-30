@@ -104,6 +104,7 @@
                                         [ 'view', [ 'undo', 'redo', 'fullscreen', 'codeview', 'help' ] ]
                                     ]
                                 });
+                                $('.note-insert btn-group').html('');
                                 
                             </script>
         @endsection()
