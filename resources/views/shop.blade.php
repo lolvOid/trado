@@ -128,7 +128,7 @@
                 </ul>
             </nav>
 		</div> --}}
-		<div class="center">
+		<div class="text-center">
 		{{$products->links()}}
 		</div>
 
