@@ -52,9 +52,14 @@
         <script src="{{ URL::asset('plugins/chartjs/Chart.bundle.min.js') }}"></script>
         <script src="{{ URL::asset('js/meteor.min.js') }}"></script>
         <script src="{{ URL::asset('js/pages/dashboard.js') }}"></script>
- 	 <script src="{{ URL::asset('js/pages/form-elements.js') }}"></script>
+ 	 
 
-       
+       <script src="{{ URL::asset('plugins/summernote-master/summernote.min.js') }}"></script>
+        <script src="{{ URL::asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
+        <script src="{{ URL::asset('plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js') }}"></script>
+        <script src="{{ URL::asset('plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js') }}"></script>
+        <script src="{{ URL::asset('plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js') }}"></script>
+        <script src="{{ URL::asset('js/pages/form-elements.js') }}"></script>
         
         <script>
             (function(b,i,t,C,O,I,N) {
