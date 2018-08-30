@@ -1,6 +1,7 @@
 @extends('dashmaster')
 
 @section('dashboard')
+<link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.core.css">
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 <div class="page-inner">
                 <div class="page-title">
@@ -180,9 +181,11 @@
                                                                                                     <span class="slider round"></span>
                                                                                                 </label>
                                                                                             </div>
-                                                                                            {{-- <div class="form-group">
+                                                                                            {{-- 
+                                                                                                <div class="form-group">
                                                                                                     <textarea id="description" name="descriptions" class="form-control" placeholder="Description" required>{{$product->description}}</textarea>
-                                                                                            </div> --}}
+                                                                                            </div> 
+                                                                                            --}}
                                                                                             <div id="editor">
                                                                                             </div>
                                                                                             
