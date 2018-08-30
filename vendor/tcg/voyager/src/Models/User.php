@@ -22,7 +22,7 @@ class User extends Authenticatable implements UserContract
     public function getAvatarAttribute($value)
     {
         if (is_null($value)) {
-            return config('voyager.user.default_avatar', 'users/default.png');
+            return config('voyager.user.default_avatar', 'img/default.png');
         }
 
         return $value;

@@ -17,6 +17,9 @@ class MainPageController extends Controller
         //$products = Product::where('featured',true)->get();
         
         $user = User::find(Auth::id());
+        if($user== null){
+            $user = new User();
+        }
         
         return view('landing', compact('products','user'));
     }

@@ -5,10 +5,16 @@
 
 
   <div class="Push-20"></div>
-    <div class="Push-20"></div><div class="container" style=" border-color:#373737;background-color:#ffffff;">
-    <div class="row">
+  <form action="{{route('cart.store',$product)}}" method="POST">
+		{{ csrf_field() }}
+		<input type="hidden" value="{{$product->id}}" name="id" id="id">
+		<input type="hidden" value="{{$product->name}}" name="name" id="name">
+		<input type="hidden" value="{{$product->price}}" name="price" id="price">
+  <div class="Push-20"></div><div class="container" style=" border-color:#373737;background-color:#ffffff;">
+	
+	<div class="row">
         <div class="col-8 col-sm-8 col-xs-12 col-md-6">
-            <div class="row"> <div class="col-12 col-xs-12 col-sm-12 "><img src="{{'/storage/'.$product->image}}" class="img-fluid   mx-auto d-block" alt="Responsive image"></div></div>
+            <div class="row"> <div class="col-12 col-xs-12 col-sm-12 "><img src="{{$product->images}}" class="img-fluid   mx-auto d-block" alt="Responsive image"></div></div>
             <div class="row">
                 <div class="col-6 col-sm-6 col-md-6"></div>
                 <div class="col-6 col-sm-6 col-md-6"></div>
@@ -22,9 +28,14 @@
             <h1 style="color:#373737;font-size:37px;">{{$product->name}}</h1>
             <p style="font-size:18px;">{!!$product->description!!}</p>
             <h2 class="text-center text" style="  color:#4d5fff;
-"><strong>$ 1000</strong></h2><button class=" btn-sm button" type="button" data-hover="SURE!"><span>Buy It?</span></button>
-        <button class=" btn-sm button" type="button" data-hover="SURE!"><span>Buy It?</span></button></div>
-    </div>
+"><strong>{!!$product->presentPrice()!!}</strong></h2>
+
+		<button class=" btn-sm button" type="submit" data-hover="SURE!"><span>Buy It?</span></button>
+		
+		<button class=" btn-sm button" type="submit" data-hover="SURE!"><span>Buy It?</span></button>
+	</div>
+</form>
+</div>
 </div>
 
 
@@ -55,7 +66,7 @@
 							<div class="thumb-wrapper">
 									
 								<div class="img-box">
-									<img src="{{'/storage/'.$item->image}}" class="img-responsive img-fluid" alt="">
+									<img src="{{$item->images}}" class="img-responsive img-fluid" alt="">
 								</div>
 								<div class="thumb-content">
 									<h4>{{$item->name}}</h4>

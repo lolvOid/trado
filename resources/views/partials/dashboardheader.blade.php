@@ -97,7 +97,7 @@
                 </form>
             </div>
 		</nav>
-        <form class="search-form" action="#" method="GET">
+        <form class="search-form" action="{{route('search')}}" method="GET">
             <div class="input-group">
                 <input type="text" name="search" class="form-control search-input" placeholder="Type something...">
                 <span class="input-group-btn">

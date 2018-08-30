@@ -9,7 +9,7 @@
                 <div class="page-title">
                     <div class="page-breadcrumb">
                         <ol class="breadcrumb">
-                            <li><a href="dashboard">Home</a></li>
+                            <li><a href=" dashboard.html">Home</a></li>
                             <li class="active">Profile</li>
                         </ol>
                     </div>

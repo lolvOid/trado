@@ -46,7 +46,6 @@ Route::get('/productdata','ProductsDataController@index')->name('productdata.ind
 Route::post('/productAdd','ProductsDataController@store')->name('products.store');
 Route::post('/productEdit','ProductsDataController@edit')->name('products.edit');
 Route::post('/productDelete','ProductsDataController@destroy')->name('products.delete');
-Route::view('/shoppingcart', 'shoppingcart');
  
 
 Route::view('/auth/register','register');

@@ -81,28 +81,34 @@ class ShopController extends Controller
     public function show($slug)
     {
         //
+        $user = Auth::user();
+        if($user == null){
+            $user = new User();
+        }
         $product = Product::where('slug',$slug)->firstOrFail();
         $related = Product::where('slug','!=',$slug)->related()->get();
-
-        return view('product')->with(['product'=>$product,'related' =>$related]);
+        dd($user);
+        return view('product')->with(['product'=>$product,'related' =>$related, 'user'  => $user]);
     }
 
 
     public function search(Request $request){
         $user = Auth::user();
-        
+        if($user == null){
+            $user = new User();
+        }
         $request->validate([
             'query'=>'required|min:3',
         ]);
-
+        
         $query = $request->input('query');
         $products = Product::where('name','like',"%$query%")
                             ->orWhere('details','like',"%$query%")
                             ->orWhere('description','like',"%$query%")
                             ->paginate(10);
         //$products = Product::search($query);
-            
-        return view('search-results')->with(['products'=>$products, 'user'=>$user ]);
+        dd($user);
+        return view('search-results-table')->with(['products'=>$products, 'user'=>$user ]);
 
 
     }

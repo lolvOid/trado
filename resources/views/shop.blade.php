@@ -87,8 +87,18 @@
             </div><small class="product-review">3 - 272 reviews</small>
             <div>
                 <h3 class="product-description">{{str_limit($product->description,20)}}</h3>
-        
-            <button class="btn btn-primary pull-right" type="button"><i class="fa fa-shopping-cart" style="color:#fff;"></i>&nbsp;Buy Now</button></div>
+				{{-- {{ route('shop.show',$product->slug)}} --}}
+			{{-- <a href="" class="btn btn-primary pull-right"> --}}
+				<form method="GET" action="{{ route('shop.show',$product->slug)}}">
+				<button type="submit" class="btn btn-primary pull-right">
+					 <i class="fa fa-shopping-cart" style="color:#fff;">
+						Get Now
+					</i>
+				</button>
+				</form>
+
+				{{-- &nbsp;Get Now</a> --}}
+			</div>
         </div>
     </div>
 </div>

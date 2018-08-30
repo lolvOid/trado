@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Cart;
 use App\Product;
-
+use Auth;
 class CartController extends Controller
 {
     /**
@@ -15,10 +15,14 @@ class CartController extends Controller
      */
     public function index()
     {
-        
-        //
+        $user = Auth::user();
+        if($user == null){
+            return redirect()->route("login");
+        }
+        $cart = Cart::count();
+       
         $related = Product::related()->get();
-        return view('cart')->with('related',$related);
+        return view('shoppingcart')->with(['related'=>$related, 'user'=>$user]);
     }
 
     /**
@@ -39,17 +43,18 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    
         $duplicates = Cart::search(function ($cartItem,$rowId) use ($request){
             return $cartItem->id == $request->id;
         });
-
+        
         if($duplicates->isNotEmpty()){
             return redirect()->route('cart.index')->with('success_message','Item is already in your card');
         }
+        
         Cart::add($request->id,$request->name,1,$request->price)
             ->associate('App\Product');
-
+        
             return redirect()->route('cart.index')->with('success_message','Item was added');
     }
 
