@@ -232,7 +232,7 @@
                         <ul class="menu accordion-menu">
                             <li ><a href="dashboard" class="waves-effect waves-button"><span class="menu-icon icon-home"></span><p>Dashboard</p></a></li>
                             <li><a href="profile" class="waves-effect waves-button"><span class="menu-icon icon-user"></span><p>Profile</p><span class="active-page"></span></a></li>
-                      <li><a href="" class="waves-effect waves-button"><span class="menu-icon icon-wallet"></span><p>Wallet</p></a></li>
+                      <li><a href="wallet" class="waves-effect waves-button"><span class="menu-icon icon-wallet"></span><p>Wallet</p></a></li>
                             <li><a href="statistics" class="waves-effect waves-button"><span class="menu-icon icon-grid"></span><p>Statisics</p></a></li>
                         <li><a href="{{route('productdata.index')}}" class="waves-effect waves-button"><span class="menu-icon icon-basket"></span><p>Products</p></a></li>
                             <li><a href="" class="waves-effect waves-button"><span class="menu-icon icon-power"></span><p>Logout</p></a></li>
