@@ -55,9 +55,9 @@
                                                     <label class="col-sm-2 control-label">Type</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-control m-b-sm">
-                                                                @foreach ($categories as $category)
+                                                                {{-- @foreach ($categories as $category)
                                                                 <option value="{{$category->id}}">{{$category->name}}</option>
-                                                                @endforeach
+                                                                @endforeach --}}
                                                         </select>
                                                         </div>
                                                 </div>
