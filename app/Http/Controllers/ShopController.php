@@ -35,12 +35,12 @@ class ShopController extends Controller
             $categories = Category::all();    
             $categoryName = 'Featured';
         }
-
-        if(request()->sort == 'lowhigh'){
-            $products = $products -> sortBy('price');
-        }else if(request()->sort == 'highlow'){
-            $products = $products -> sortByDesc('price');
-        }
+        // dd($products->total());
+        // if(request()->sort == 'lowhigh'){
+        //     $products = $products -> sortBy('price');
+        // }else if(request()->sort == 'highlow'){
+        //     $products = $products -> sortByDesc('price');
+        // }
         $trendings = Product::where('featured',true)->take(6)->inRandomOrder()->get();
         return view('shop')->with([
             'products'=>$products,

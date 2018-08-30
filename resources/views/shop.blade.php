@@ -62,7 +62,7 @@
    <!--Product Start-->   
    @forelse ($products as $product)
 	@if ($users->where('id',$product->owner_id)->first() == null)
-		{{continue}}
+		@continue
 	@endif
    
 <div class="col-12 col-sm-10 col-md-3 col-lg-3 col-xl-4 offset-sm-0 col-md-12 card filtr-item"  data-category="{{$product->category_id}}">
