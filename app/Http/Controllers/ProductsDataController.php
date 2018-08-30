@@ -58,7 +58,12 @@ class ProductsDataController extends Controller
             $filename = "/img/" . time() . $product_img->getClientOriginalExtension();
             Image::make($product_img)->resize(640, 426)->save( public_path( $filename ) );
         }
-        dd($request->input('featured'));
+       $featured = $request->input('featured');
+       if($featured == 'on'){
+           $featured = 1;
+       }else{
+           $featured = 0;
+       }
         Product::create([
             'owner_id'      => $uid, 
             'name'          => $request->input('name'),
@@ -66,7 +71,7 @@ class ProductsDataController extends Controller
             'category_id'      => $request->input('category'),
             'details'       => $request->input('details'),
             'price'         => ($request->input('price') * 100),
-            'featured'      => $request->input('featured'),
+            'featured'      => $featured,
             'description'   => $request->input('descriptions'),
             'images'        => $filename
         ]); 
