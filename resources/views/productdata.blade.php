@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.core.css">
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <div class="page-inner">
                 <div class="page-title">
                     <div class="page-breadcrumb">
@@ -47,7 +48,9 @@
                                                                         </p>
                                                                 @endif
                                                                 <!-- Modal -->
-                                                                <form id="add-row-form" class="md-form" method="POST" action="{{route('products.store')}}" enctype="multipart/form-data">
+                                                                
+                                                                <form id="add-row-form" class="md-form" method="POST" action="{{route('products.store')}}" enctype="multipart/form-data" >
+                                                                    {{-- <form id="add-row-form" class="md-form" enctype="multipart/form-data"> --}}
                                                                 {{csrf_field()}}
                                                                 <div class="modal fade" id="addModel" tab dashboard="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                                     <div class="modal-dialog">
@@ -86,10 +89,12 @@
                                                                                             <span class="slider round"></span>
                                                                                         </label>
                                                                                     </div>
-                                                                                <div id="editor">
+                                                                                {{-- <div id="add-description">
+                                                                                        
                                                                                 </div>
+                                                                                <input type="hidden" id="hiddeninput" name="description"> --}}
                                                                                 <div class="form-group">
-                                                                                        <textarea type="text" id="descriptions" name="descriptions" class="form-control" placeholder="Description" required></textarea>
+                                                                                        <textarea type="text" id="descriptions" name="description" class="form-control" placeholder="Description" required></textarea>
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                     <input class="btn btn-default btn-md float-left" type="file" data-name="product_img" name="product_img" id="product_img" required>
@@ -98,7 +103,7 @@
                                                                             </div>
                                                                             <div class="modal-footer">
                                                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                                                                <button type="submit" id="add-row" class="btn btn-success">Add</button>
+                                                                                <button type="submit" id="add-save" class="btn btn-success">Add</button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -134,7 +139,7 @@
                                                                     {{-- <input value= --}}
                                                                         
                                                                             
-                                                                            <input type="submit" class="btn btn-info m-b-sm" data-toggle="modal" data-target="#editModel{{$product->id}}" value="Edit">
+                                                                            <input type="submit" id="save" class="btn btn-info m-b-sm" data-toggle="modal" data-target="#editModel{{$product->id}}" value="Edit">
                                                                             <br><br>
 
                                                                             <form method="post" action="{{route('products.delete')}} ">
@@ -184,20 +189,22 @@
                                                                                                     <span class="slider round"></span>
                                                                                                 </label>
                                                                                             </div>
-                                                                                            {{-- 
+                                                                                            
                                                                                                 <div class="form-group">
-                                                                                                    <textarea id="description" name="descriptions" class="form-control" placeholder="Description" required>{{$product->description}}</textarea>
+                                                                                                    <textarea id="description" name="description" class="form-control" placeholder="Description" required>{{$product->description}}</textarea>
                                                                                             </div> 
-                                                                                            --}}
-                                                                                            <div id="editor">
-                                                                                            </div>
+                                                                                           
+                                                                                            
+                                                                                            {{-- <div id="edit-description">
+                                                                                                    <input type="hidden" id="hiddeninput" name="description">
+                                                                                            </div> --}}
                                                                                             
                                                                                                 <input class="form-control" type="file" data-name="product_img" name="product_img" id="product_img">
                                                                                             
                                                                                         </div>
                                                                                         <div class="modal-footer">
                                                                                             <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                                                                            <button type="submit" id="add-row" class="btn btn-success">Save</button>
+                                                                                            <button type="submit" name="edit-save" id="add-row" class="btn btn-success">Save</button>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -220,15 +227,35 @@
                                         </div>
                                     </div>
                                     <script>
-                                        
-                                        var quill = new Quill('#editor', {
-                                        modules: {
-                                            toolbar: '#editor'
-                                        },
-                                        placeholder: 'Compose an epic...',
-                                        theme: 'snow',
-                                        name: 'description'
-                                        });
+                                        // $(function(){
+                                        //     $('#add-save').click(function () {
+                                        //         var mysave = $('div.ql-editor').text();
+                                        //         $('#hiddeninput').val(mysave);
+                                        //     });
+                                        // });
+
+                                        // $(function(){
+                                        //     $('#edit-save').click(function () {
+                                        //         var mysave = $('div.ql-editor').text();
+                                        //         $('#hiddeninput').val(mysave);
+                                        //     });
+                                        // });
+
+                                       
+                                        // var quill = new Quill('#editor', {
+                                        // modules: {
+                                        //     toolbar: '#add-description'
+                                        // },
+                                        // placeholder: 'Compose an epic...',
+                                        // theme: 'snow'
+                                        // });
+                                        // var quill = new Quill('#editor', {
+                                        // modules: {
+                                        //     toolbar: '#edit-description'
+                                        // },
+                                        // placeholder: 'Compose an epic...',
+                                        // theme: 'snow'
+                                        // });
                                         </script>
                 </div><!-- Main Wrapper -->
         @endsection()

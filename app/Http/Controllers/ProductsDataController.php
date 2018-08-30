@@ -22,7 +22,7 @@ class ProductsDataController extends Controller
         $categories = Category::all();
 
         if($user == null){
-            return view('/');
+            return redirect()->route('login');
         }
         //
         $products = Product::all()->where('owner_id', "=", $user->id);
@@ -50,7 +50,7 @@ class ProductsDataController extends Controller
     {
         $uid = Auth::id();
         if($uid == null){
-            return view('/login');
+            return redirect()->route('login');
         }
         $filename = "/img/Trado.png";
         if($request->hasFile('product_img')){
@@ -59,6 +59,7 @@ class ProductsDataController extends Controller
             Image::make($product_img)->resize(640, 426)->save( public_path( $filename ) );
         }
        $featured = $request->input('featured');
+       
        if($featured == 'on'){
            $featured = 1;
        }else{
@@ -72,7 +73,7 @@ class ProductsDataController extends Controller
             'details'       => $request->input('details'),
             'price'         => ($request->input('price') * 100),
             'featured'      => $featured,
-            'description'   => $request->input('descriptions'),
+            'description'   => $request->input('description'),
             'images'        => $filename
         ]); 
         return redirect()->route('productdata.index');
@@ -101,7 +102,7 @@ class ProductsDataController extends Controller
     {
         $uid = Auth::id();
         if($uid == null){
-            return view('/login');
+            return redirect()->route('login');
         }
         $featured = $request->input('featured');
        if($featured == 'on'){
@@ -115,7 +116,7 @@ class ProductsDataController extends Controller
         $product->slug = $request->input('slug');
         $product->details = $request->input('details');
         $product->price = $request->input('price') * 100;
-        $product->description = $request->input('descriptions');
+        $product->description = $request->input('description');
         $product->featured = $featured;
         if($request->hasFile('product_img')){
             $product_img = $request->file('product_img');
