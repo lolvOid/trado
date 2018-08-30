@@ -101,7 +101,6 @@
                                         [ 'color', [ 'color' ] ],
                                         [ 'para', [ 'ol', 'ul', 'paragraph', 'height' ] ],
                                         [ 'table', [ 'table' ] ],
-                                        [ 'insert', [ 'link'] ],
                                         [ 'view', [ 'undo', 'redo', 'fullscreen', 'codeview', 'help' ] ]
                                     ]
                                 });
