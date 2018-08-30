@@ -12,6 +12,7 @@
         <meta name="author" content="stacks" />
         
         <!-- Styles -->
+        <link rel="shortcut icon" href="img/tradoalpha.png" type="image/x-icon">
         <link href="{{ URL::asset('plugins/pace-master/themes/blue/pace-theme-flash.css') }}" rel="stylesheet"/>
         <link href="{{ URL::asset('plugins/uniform/css/default.css') }}" rel="stylesheet"/>
         <link rel="stylesheet" href="{{ URL::asset('plugins/bootstrap/css/bootstrap.min.css') }} ">
