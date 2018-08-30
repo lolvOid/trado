@@ -72,7 +72,7 @@
                                 <h4><span class="d-inline-block text" style="color:#a6a6a6;">Subtotal</span><span class="float-right price" style="color:#a6a6a6;">{{presentPrice(Cart::subtotal())}}</span></h4>
                                 <h4><span class="text" style="width:5px;color:rgb(187,187,187);">Discount</span><span class="float-right price" style="color:#a6a6a6;"></span></h4>
                                 <h4><span class="text" style="color:#a6a6a6;">Discount</span><span class="float-right price" style="color:#a6a6a6;"></span></h4>
-                                <h4><span class="text" style="color:#a6a6a6;">TAX</span><span class="float-right price" style="color:#a6a6a6;"></span>{{calTax(Cart::subtotal, Cart::tax())}}</h4>
+                                <h4><span class="text" style="color:#a6a6a6;">TAX</span><span class="float-right price" style="color:#a6a6a6;"></span>{{calTax(Cart::subtotal(), Cart::tax())}}</h4>
                                 <h4><span class="text" style="color:#a6a6a6;">Total</span><span class="float-right price" style="color:#a6a6a6;">{{presentPrice(Cart::total())}}</span></h4>
                                 <div class="row">
                                   
