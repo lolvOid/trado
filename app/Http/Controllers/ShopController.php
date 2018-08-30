@@ -32,6 +32,7 @@ class ShopController extends Controller
         }else{
             $products = Product::inRandomOrder();
             $products = $products->paginate(12);
+            
             $categories = Category::all();    
             $categoryName = 'Featured';
         }

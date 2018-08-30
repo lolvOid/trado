@@ -21,7 +21,7 @@
                                          
                                             <li class="active">Product Data</li>
                                             
-                                        </ol>
+                                        </ol> 
                                     </div>
                                 </div>
                                 <div id="main-wrapper">
@@ -88,7 +88,7 @@
                                                                                         <textarea type="text" id="descriptions" name="descriptions" class="form-control" placeholder="Description" required></textarea>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <input class="btn btn-success btn-md float-left" type="file" data-name="product_img" name="product_img" id="product_img" required>
+                                                                                    <input class="btn btn-default btn-md float-left" type="file" data-name="product_img" name="product_img" id="product_img" required>
                                                                                 </div>
                                                                                 
                                                                             </div>
