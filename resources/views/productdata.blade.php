@@ -17,7 +17,7 @@
                                     <h3 class="breadcrumb-header">Data Tables</h3>
                                     <div class="page-breadcrumb">
                                         <ol class="breadcrumb breadcrumb-with-header">
-                                            <li><a href=" dashboard.html">Home</a></li>
+                                            <li><a href=" dashboard">Home</a></li>
                                          
                                             <li class="active">Product Data</li>
                                             
