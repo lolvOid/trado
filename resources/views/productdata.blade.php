@@ -3,6 +3,7 @@
 @section('dashboard')
 <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.core.css">
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<script src="https://cdn.quilljs.com/1.3.6/quill.js">
 <div class="page-inner">
                 <div class="page-title">
                     <div class="page-breadcrumb">
@@ -217,9 +218,14 @@
                                         </div>
                                     </div>
                                     <script>
-                                            var quill = new Quill('#editor', {
-                                              theme: 'snow'
-                                            });
+                                        
+                                        var quill = new Quill('#editor', {
+                                        modules: {
+                                            toolbar: '#editor'
+                                        },
+                                        placeholder: 'Compose an epic...',
+                                        theme: 'snow'
+                                        });
                                         </script>
                 </div><!-- Main Wrapper -->
         @endsection()
