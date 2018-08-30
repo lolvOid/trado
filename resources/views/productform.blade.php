@@ -76,7 +76,7 @@
                                                         <div class="summernote"></div>
                                                     </div>
                                                 </div>
-                                                <button type="submit" name="edit-save" id="edit-save" class="btn btn-success pull-right">Save</button>
+                                                <button onclick="beforeSubmit();" type="submit" name="edit-save" id="edit-save" class="btn btn-success pull-right">Save</button>
                                             </form>
                                         </div>
                                     </div>
@@ -84,17 +84,12 @@
                   
                             </div>
                             <script>
-                                $(function(){
-                                    $('#editForm').submit(function(){
-                                    console.log('helloworld');
-                                    
-                                        $descriptionValue = $('div.note-editable').text();
-                                        $('#description').val($descriptionValue);
-                                        setTimeout(function(){alert($descriptionValue)}, 6000);
-                                        return false;
-                                    });
-                                    
-
-                                });
+                                beforeSubmit = function(){
+                                    $descriptionValue = $('div.note-editable').text();
+                                    $('#description').val($descriptionValue);
+                                    alert($descriptionValue);
+                                    //$("#editForm").submit();                
+                                }
+                                
                             </script>
         @endsection()
