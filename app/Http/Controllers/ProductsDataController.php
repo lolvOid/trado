@@ -66,6 +66,7 @@ class ProductsDataController extends Controller
             'category_id'      => $request->input('category'),
             'details'       => $request->input('details'),
             'price'         => ($request->input('price') * 100),
+            'featured'      => $request->input('featured'),
             'description'   => $request->input('descriptions'),
             'images'        => $filename
         ]); 
@@ -104,7 +105,7 @@ class ProductsDataController extends Controller
         $product->details = $request->input('details');
         $product->price = $request->input('price') * 100;
         $product->description = $request->input('descriptions');
-
+        $product->featured = $request->input('featured');
         if($request->hasFile('product_img')){
             $product_img = $request->file('product_img');
             $filename = "/img/" . time() . $product_img->getClientOriginalExtension();
