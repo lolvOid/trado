@@ -1,7 +1,7 @@
 @extends('dashmaster')
 
 @section('dashboard')
-
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 <div class="page-inner">
                 <div class="page-title">
                     <div class="page-breadcrumb">
@@ -180,9 +180,14 @@
                                                                                                     <span class="slider round"></span>
                                                                                                 </label>
                                                                                             </div>
-                                                                                            <div class="form-group">
+                                                                                            {{-- <div class="form-group">
                                                                                                     <textarea id="description" name="descriptions" class="form-control" placeholder="Description" required>{{$product->description}}</textarea>
-                                                                                            </div>
+                                                                                            </div> --}}
+                                                                                            <script>
+                                                                                                var quill = new Quill('#editor', {
+                                                                                                  theme: 'snow'
+                                                                                                });
+                                                                                            </script>
                                                                                                 <input class="form-control" type="file" data-name="product_img" name="product_img" id="product_img">
                                                                                             
                                                                                         </div>
