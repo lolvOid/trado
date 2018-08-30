@@ -17,7 +17,7 @@
                                                 <h4 class="panel-title">Product Edit</h4>
                                         </div>
                                         <div class="panel-body">
-                                            <form class="form-horizontal">
+                                            <form id="editForm" class="form-horizontal">
                                                 <div class="form-group">
                                                     <label for="input-Default" class="col-sm-2 control-label">Name</label>
                                                     <div class="col-sm-10">
@@ -83,7 +83,7 @@
                             </div>
                             <script>
                                 $(function(){
-                                    $('#edit-save').click(function(){
+                                    $('#editForm').submit(function()
                                         alert($('div.note-editable').text());
                                     });
                                 });
