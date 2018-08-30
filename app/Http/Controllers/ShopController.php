@@ -31,8 +31,8 @@ class ShopController extends Controller
             $categoryName = $categories->where('slug',request()->category)->first()->name;
         }else{
             $products = Product::inRandomOrder();
-            $products = $products->paginate(12);
-            
+            $products = $products->paginate(9);
+
             $categories = Category::all();    
             $categoryName = 'Featured';
         }

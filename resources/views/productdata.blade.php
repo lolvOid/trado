@@ -159,6 +159,15 @@
                                                                                             </div>
                                                                                             
                                                                                             <div class="form-group">
+                                                                                                <select name="category" id="category" value="{{$product->category_id}}" class="selectpicker">
+                                                                                                    @foreach ($categories as $category)
+                                                                                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                                                                                    @endforeach
+                                                                                                    
+                                                                                                </select>
+                                                                                            </div>
+
+                                                                                            <div class="form-group">
                                                                                                 <input type="text" id="details" name="details" class="form-control" value="{{$product->details}}" placeholder="Details" required>
                                                                                             </div>
                                                                                             <div class="form-group">

@@ -47,16 +47,15 @@
 					<a class="medium" href="{{route('shop.index',['category'=>request()->category,'sort'=>'highlow'])}}">High to Low</a>
 				</div>
    				 <div style="margin-top:20px;">
-       <label for="price1">$100</label>
-    <input type="range" style="width:20%;height:20px;" min="1" max="100" value="50"  id="myRange">
-        
-          <label for="price1">$200</label>
+       				<label for="price1">$100</label>
+    				<input type="range" style="width:20%;height:20px;" min="1" max="100" value="50"  id="myRange">
+          			<label for="price1">$200</label>
       
-      <label >Featured</label>
-   <label  id="togglebutton" class="switch">
-    .<input class="switch" type="checkbox">
-  <span class="slider round"></span>
-</label>
+      			<label >Featured</label>
+   				<label  id="togglebutton" class="switch">
+    				.<input class="switch" type="checkbox">
+  					<span class="slider round"></span>
+	</label>
     </div>
     
     </form>
@@ -75,7 +74,7 @@
         <div class="col-sm-12 col-md-12 col-xl-12 offset-sm-0 col-md-5">
 		<div style="background-color:#ffffff;width:200px;"></div><img src="{{$product->images}}" style="height:242px;" /></div>
         <div class="col-sm-10 col-md-12 col-lg-12 col-xl-12 offset-sm-9 offset-lg-0 offset-xl-0 offset-md-1 col-md-6" style="margin-left:0px;padding-left:21px;">
-			<h1 class="product-text-color">{{$product->name}}</h1><small style="font-style:oblique;">
+			<h2 class="product-text-color">{{$product->name}}</h2><small style="font-style:oblique;">
 				<a href="">
 					{{$users->where('id',$product->owner_id)->first()->username}}
 				</a>
