@@ -61,6 +61,16 @@
         <script src="{{ URL::asset('plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js') }}"></script>
         <script src="{{ URL::asset('js/pages/form-elements.js') }}"></script>
         
+	<script src="{{ URL::asset('js/pages/charts-flot.js') }}"></script>
+        <script src="{{ URL::asset('plugins/flot/jquery.flot.min.js') }}"></script>
+        <script src="{{ URL::asset('plugins/flot/jquery.flot.time.min.js') }}"></script>
+        <script src="{{ URL::asset('plugins/flot/jquery.flot.symbol.min.js') }}"></script>
+        <script src="{{ URL::asset('plugins/flot/jquery.flot.resize.min.js') }}"></script>
+        <script src="{{ URL::asset('plugins/flot/jquery.flot.tooltip.min.js') }}"></script>
+        <script src="{{ URL::asset('plugins/flot/jquery.flot.pie.min.js') }}"></script>
+
+
+	
         <script>
             (function(b,i,t,C,O,I,N) {
               window.addEventListener('load',function() {
@@ -69,6 +79,31 @@
                 I.src=t;I.id=C;N.parentNode.insertBefore(I, N);
               },false)
             })(document,'script','https://widgets.bitcoin.com/widget.js','btcwdgt');
+	    
+	    if (typeof (eWgs) === 'undefined') {
+        document.write('<scr' + 'ipt src="https://api.ethplorer.io/widget.js?' + new Date().getTime().toString().substr(0, 7) + '" async></scr' + 'ipt>');
+        var eWgs = [];
+    }
+    eWgs.push(function () {
+        ethplorerWidget.init(
+            '#token-txs-11', // Placeholder element
+            'tokenHistory', // Widget type
+            {
+                address: '0xe94327d07fc17907b4db788e5adf2ed424addff6', // keep empty to show all tokens
+                limit: 5, // Number of records to show
+            },
+            {
+                header: '<div class="txs-header">WETH Recent Transactions</div>', // customized header
+                loader: '<div class="txs-loading">* L * O * A * D * I * N * G *<br><small>Please wait...</small></div>', // customized loader
+                bigScreenTable: '<tr><td>%from% <span class="tx-send">sent</span> <span class="tx-amount">%amount% %token%</span> <span class="tx-send">to</span> %to% <span class="tx-send">at</span><span class="tx-date"> %datetime%</span></td></tr>'
+
+            }
+
+        );
+    });
+
+
+	    
           </script>
     </body>
 </html>
