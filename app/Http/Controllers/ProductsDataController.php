@@ -127,7 +127,7 @@ class ProductsDataController extends Controller
        }else{
            $featured = 0;
        }
-
+       dd($request);
         $product = Product::find($request->input('id'));
         $product->name = $request->input('name');
         $product->slug = $request->input('slug');
