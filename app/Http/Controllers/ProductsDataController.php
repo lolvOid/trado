@@ -65,7 +65,7 @@ class ProductsDataController extends Controller
             'slug'          => $request->input('slug'),
             'category_id'      => $request->input('category'),
             'details'       => $request->input('details'),
-            'price'         => $request->input('price'),
+            'price'         => ($request->input('price') * 100),
             'description'   => $request->input('descriptions'),
             'images'        => $filename
         ]); 
@@ -102,7 +102,7 @@ class ProductsDataController extends Controller
         $product->name = $request->input('name');
         $product->slug = $request->input('slug');
         $product->details = $request->input('details');
-        $product->price = $request->input('price');
+        $product->price = $request->input('price') * 100;
         $product->description = $request->input('descriptions');
 
         if($request->hasFile('product_img')){
