@@ -103,7 +103,6 @@ CREATE TABLE `category_product` (
 
 LOCK TABLES `category_product` WRITE;
 /*!40000 ALTER TABLE `category_product` DISABLE KEYS */;
-INSERT INTO `category_product` VALUES (70,95,1,'2018-08-26 18:12:02','2018-08-26 18:12:02'),(72,96,3,'2018-08-26 18:35:51','2018-08-26 18:35:51'),(77,94,3,'2018-08-26 20:28:34','2018-08-26 20:28:34'),(80,97,3,'2018-08-26 22:22:53','2018-08-26 22:22:53'),(82,93,17,'2018-08-26 23:32:25','2018-08-26 23:32:25'),(83,98,3,'2018-08-26 23:35:44','2018-08-26 23:35:44'),(85,99,1,'2018-08-27 03:45:22','2018-08-27 03:45:22'),(86,100,5,'2018-08-28 17:09:48','2018-08-28 17:09:48'),(87,100,6,'2018-08-28 17:09:48','2018-08-28 17:09:48'),(88,100,7,'2018-08-28 17:09:49','2018-08-28 17:09:49');
 /*!40000 ALTER TABLE `category_product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -259,7 +258,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=71 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -268,7 +267,7 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (39,'2014_10_12_000000_create_users_table',1),(40,'2014_10_12_100000_create_password_resets_table',1),(41,'2018_08_04_142834_create_products_table',1),(42,'2018_08_11_045446_create_categories_table',1),(43,'2018_08_14_135111_create_category_product_table',2),(44,'2016_01_01_000000_add_voyager_user_fields',3),(45,'2016_01_01_000000_create_data_types_table',3),(46,'2016_05_19_173453_create_menu_table',3),(47,'2016_10_21_190000_create_roles_table',3),(48,'2016_10_21_190000_create_settings_table',3),(49,'2016_11_30_135954_create_permission_table',3),(50,'2016_11_30_141208_create_permission_role_table',3),(51,'2016_12_26_201236_data_types__add__server_side',3),(52,'2017_01_13_000000_add_route_to_menu_items_table',3),(53,'2017_01_14_005015_create_translations_table',3),(54,'2017_01_15_000000_make_table_name_nullable_in_permissions_table',3),(55,'2017_03_06_000000_add_controller_to_data_types_table',3),(56,'2017_04_21_000000_add_order_to_data_rows_table',3),(57,'2017_07_05_210000_add_policyname_to_data_types_table',3),(58,'2017_08_05_000000_add_group_to_settings_table',3),(59,'2017_11_26_013050_add_user_role_relationship',3),(60,'2017_11_26_015000_create_user_roles_table',3),(61,'2018_03_11_000000_add_user_settings',3),(62,'2018_03_14_000000_add_details_to_data_types_table',3),(63,'2018_03_16_000000_make_settings_value_nullable',3),(64,'2016_01_01_000000_create_pages_table',4),(65,'2016_01_01_000000_create_posts_table',4),(66,'2016_02_15_204651_create_categories_table',4),(67,'2017_04_11_000000_alter_post_nullable_fields_table',4),(68,'2018_08_14_182831_add_image_to_products_table',5),(69,'2018_08_14_190546_add_images_to_products_table',6);
+INSERT INTO `migrations` VALUES (39,'2014_10_12_000000_create_users_table',1),(40,'2014_10_12_100000_create_password_resets_table',1),(41,'2018_08_04_142834_create_products_table',1),(42,'2018_08_11_045446_create_categories_table',1),(43,'2018_08_14_135111_create_category_product_table',2),(44,'2016_01_01_000000_add_voyager_user_fields',3),(45,'2016_01_01_000000_create_data_types_table',3),(46,'2016_05_19_173453_create_menu_table',3),(47,'2016_10_21_190000_create_roles_table',3),(48,'2016_10_21_190000_create_settings_table',3),(49,'2016_11_30_135954_create_permission_table',3),(50,'2016_11_30_141208_create_permission_role_table',3),(51,'2016_12_26_201236_data_types__add__server_side',3),(52,'2017_01_13_000000_add_route_to_menu_items_table',3),(53,'2017_01_14_005015_create_translations_table',3),(54,'2017_01_15_000000_make_table_name_nullable_in_permissions_table',3),(55,'2017_03_06_000000_add_controller_to_data_types_table',3),(56,'2017_04_21_000000_add_order_to_data_rows_table',3),(57,'2017_07_05_210000_add_policyname_to_data_types_table',3),(58,'2017_08_05_000000_add_group_to_settings_table',3),(59,'2017_11_26_013050_add_user_role_relationship',3),(60,'2017_11_26_015000_create_user_roles_table',3),(61,'2018_03_11_000000_add_user_settings',3),(62,'2018_03_14_000000_add_details_to_data_types_table',3),(63,'2018_03_16_000000_make_settings_value_nullable',3),(64,'2016_01_01_000000_create_pages_table',4),(65,'2016_01_01_000000_create_posts_table',4),(66,'2016_02_15_204651_create_categories_table',4),(67,'2017_04_11_000000_alter_post_nullable_fields_table',4),(68,'2018_08_14_182831_add_image_to_products_table',5),(69,'2018_08_14_190546_add_images_to_products_table',6),(70,'2018_08_30_021003_create_shoppingcart_table',7);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -445,9 +444,9 @@ CREATE TABLE `products` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `owner_id` int(11) DEFAULT NULL,
-  `category` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `category_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=119 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -456,7 +455,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (93,'Apple watch','apple-watch-series-3','Apple Watch is Smart',500.00,'SmartWatch',1,'products\\August2018\\HYaoYGsTcNrAtwz7bfLX.jpg','/img/Trado.png','2018-08-26 15:48:11','2018-08-26 23:32:25',NULL,'Laptop'),(94,'iphonex','iphonex','abcdjadlkadsfjsdfjaslf',998.00,'The glorius product',0,'products\\August2018\\rab5rakXsdwvvWe6UfAi.png','/img/Trado.png','2018-08-26 16:11:42','2018-08-26 20:28:34',NULL,'Laptop'),(95,'macbook pro','macbook pro','Macbook 10',1000.00,'\"MacBook\" is a term used for a brand of Mac notebook computers that Apple started producing in 2006. The American multinational corporation created MacBook computers when it consolidated its PowerBook and iBook lines during its transition to Intel processor-based products. As of 2013, there are two types of MacBook computers: the base-level MacBook Air and the upper-level MacBook Pro.',0,'products\\August2018\\bNSVSW4GDgUxfX3twnO6.png','/img/Trado.png','2018-08-26 18:12:02','2018-08-26 18:12:02',NULL,'Laptop'),(96,'Galaxy J8','Samsung Galaxy J8','Galaxy slay series',500.00,'Samsung Galaxy J8 smartphone was launched in May 2018. The phone comes with a 6.00-inch touchscreen display with a resolution of 720 pixels by 1440 pixels. Samsung Galaxy J8 price in India starts from Rs. 16,990*.\r\nThe Samsung Galaxy J8 runs Android 8.0 and is powered by a 3500mAh.\r\nThe Samsung Galaxy J8 is a dual SIM (GSM and GSM) smartphone that accepts Nano-SIM and Nano-SIM. Connectivity options include Wi-Fi, GPS, Bluetooth, FM, 3G and 4G (with support for Band 40 used by some LTE networks in India). Sensors on the phone include Proximity sensor, Accelerometer and Ambient light sensor.',0,'products\\August2018\\pLv6V3sHUrAQprc1AZv4.png','/img/Trado.png','2018-08-26 18:31:20','2018-08-26 18:35:51',NULL,'Laptop'),(97,'Google Pixel2XL','Google Pixel2XL','the perfect google phone',500.00,'The Google Pixel 2 XL is a stunning fruit to bear from the company’s still-young focus on melding its software and hardware efforts. It’s refined, confidently serving as a showcase of how far Google’s design (and the stock Android experience powering it) have come in the past few years.Plus, it’s a launching point for a few interesting debuts, like the intelligent Google Lens feature and the slick, new Pixel Launcher and, now, the Android P beta.in many ways, this is Google’s best phone yet. Its impressive look and stellar, plus-sized screen go toe-to-toe with the fierce competition.The real kicker here are its cameras, which manage to outperform most, if not all, phones that have come before it.',0,'products\\August2018\\pgS5zlYVcVJRteW1smTb.png','/img/Trado.png','2018-08-26 19:23:44','2018-08-26 22:22:53',NULL,'Laptop'),(98,'Oppo F9 Plus','Oppo F9 Plus','Oppo is doggo',1000.00,'Oppo F9 smartphone was launched in August 2018. The phone comes with a 6.30-inch touchscreen display with a resolution of 1080 pixels by 2340 pixels.\r\n\r\nThe Oppo F9 is powered by 2GHz octa-core processor and it comes with 4GB of RAM. The phone packs 64GB of internal storage that can be expanded up to 256GB via a microSD card. As far as the cameras are concerned, the Oppo F9 packs a 16-megapixel primary camera on the rear and a 25-megapixel front shooter for selfies.\r\n\r\nThe Oppo F9 runs Android Oreo and is powered by a 3500mAh. It measures 156.70 x 74.00 x 7.90 (height x width x thickness) and weighs 169.00 grams.',0,'products\\August2018\\U40wT64hPxh1qdAsvl3Z.jpg','/img/Trado.png','2018-08-26 22:32:04','2018-08-26 23:35:44',NULL,'Laptop'),(99,'Macbook Pro','macbook-pro','Macbook Pro 2017',180000.00,'Hello this is MACBOOK',1,'products\\August2018\\r1MSHvh6qZ8DZr1B1NfA.jpg','/img/Trado.png','2018-08-27 03:44:34','2018-08-27 03:45:22',NULL,'Laptop'),(100,'haha','laptop','lololol',90.00,'lol',1,'products\\August2018\\mFw2hyodbQ5QBhjzzi32.jpg','/img/Trado.png','2018-08-28 17:09:48','2018-08-28 17:09:48',NULL,'Laptop'),(114,'test4','qwe','23',50.00,'345',0,NULL,'/img/1535563293png','2018-08-29 04:18:19','2018-08-29 10:51:34',15,'Laptop'),(116,'test412345','haha1234','238',90.00,'284581',0,NULL,'/img/1535554242png','2018-08-29 08:20:43','2018-08-29 08:20:43',15,'Laptop'),(117,'aaa','aaa','bbb',235.00,'asbc\r\nasdf\r\nasc\r\nfd\r\nba',0,NULL,'/img/1535560809jpg','2018-08-29 10:10:09','2018-08-29 10:10:09',15,'Laptop'),(118,'test4','qwe','I am test',333.00,'lol',0,NULL,'/img/1535572627jpg','2018-08-29 13:27:08','2018-08-29 13:27:08',15,'Laptop');
+INSERT INTO `products` VALUES (114,'test4','qwe','23',500000.00,'345',0,NULL,'/img/1535563293png','2018-08-29 04:18:19','2018-08-29 10:51:34',12,1),(116,'test412345','haha1234','238',90.00,'284581',0,NULL,'/img/1535554242png','2018-08-29 08:20:43','2018-08-29 08:20:43',15,1),(117,'aaa','aaa','bbb',235.00,'asbc\r\nasdf\r\nasc\r\nfd\r\nba',0,NULL,'/img/1535560809jpg','2018-08-29 10:10:09','2018-08-29 10:10:09',15,1),(118,'test4','qwe','I am test',333.00,'lol',0,NULL,'/img/1535572627jpg','2018-08-29 13:27:08','2018-08-29 13:27:08',16,1),(119,'ipad kwa','jjjjkkk','8902',33333.00,'222222',0,NULL,'/img/1535578502png','2018-08-29 15:05:03','2018-08-29 15:05:03',15,3);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -517,6 +516,32 @@ LOCK TABLES `settings` WRITE;
 /*!40000 ALTER TABLE `settings` DISABLE KEYS */;
 INSERT INTO `settings` VALUES (1,'site.title','Site Title','Trado','','text',1,'Site'),(2,'site.description','Site Description','Welcome to Trado','','text',2,'Site'),(3,'site.logo','Site Logo','','','image',3,'Site'),(4,'site.google_analytics_tracking_id','Google Analytics Tracking ID',NULL,'','text',4,'Site'),(5,'admin.bg_image','Admin Background Image','','','image',5,'Admin'),(6,'admin.title','Admin Title','Trado','','text',1,'Admin'),(7,'admin.description','Admin Description','Welcome to Trado','','text',2,'Admin'),(9,'admin.icon_image','Admin Icon Image','settings\\August2018\\4NpnjvW3c8b9MYgdjh1Y.png','','image',4,'Admin'),(10,'admin.google_analytics_client_id','Google Analytics Client ID (used for admin dashboard)',NULL,'','text',1,'Admin'),(11,'admin.loader','Admin Loader','','','image',3,'Admin');
 /*!40000 ALTER TABLE `settings` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `shoppingcart`
+--
+
+DROP TABLE IF EXISTS `shoppingcart`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `shoppingcart` (
+  `identifier` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `instance` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`identifier`,`instance`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `shoppingcart`
+--
+
+LOCK TABLES `shoppingcart` WRITE;
+/*!40000 ALTER TABLE `shoppingcart` DISABLE KEYS */;
+/*!40000 ALTER TABLE `shoppingcart` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -611,7 +636,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,1,'Admin',NULL,'admin@admin.com','','users\\August2018\\ptN5m6WVCIpOHRCPx64I.jpg','$2y$10$FSJx.elbqj2ZAOZRc2Buiuv31ICyES9AuXKLWlVdnsyLEHzKfP6XC','g7Lg8BLMTl1j1VgUf8EhdDfkJOKlPEWTDf7nfmx9ENozfA0r34wfIx95hwHP','{\"locale\":\"en\"}','2018-08-14 09:36:26','2018-08-14 11:13:21',NULL),(2,1,'Lin Htet',NULL,'lin.htet.sept@gmail.com','','users\\August2018\\FztZVFmMtsZzRqixgoNP.jpg','$2y$10$0H/TpDkXV.jNfM9nq.owb.qsSxkpN81tiUfpaY4.9HN5WvQr4l.Eu','a1Fdg5SNtvp6tbZB8NGLUbLtJvn2wnOL9VG9SUi4ZZv8NsBukKlx3ruLZCSa','{\"locale\":\"en\"}','2018-08-14 13:17:06','2018-08-18 00:26:44',NULL),(3,2,'Apple',NULL,'user@apple.com','','users/default.png','$2y$10$lVLT7hqAMkxUMVwucPZdLuKbpNTM9Sj60FFEGMp0qXhNWVeY52JAS','AJolu2rwtVZybpIVBt2p53CcESPzMmGQxaRKWaRYVrWxjb140YwvJWJhmXh6',NULL,'2018-08-14 15:33:53','2018-08-14 15:33:53',NULL),(4,2,'lin.htet.sept@gmail.com',NULL,'linhtetlhvoid@gmail.com','','users/default.png','$2y$10$iO38dvkS1SucuqULKEhM2eY28OphTTjhZgzimbXljauv.XptiQTMK','bBtYJsMGxBX9P1fOs2e3pCm5MF6VQXatjVCvP7V8bz5pwiz6pn0N5z2iDGkQ',NULL,'2018-08-14 15:36:17','2018-08-14 15:36:17',NULL),(5,2,'Soe Min Aung',NULL,'soeminaung@uit.edu.mm','','users/default.png','$2y$10$f2vtsOQxGfdz07OjrfvTjOp8/RtVLdk/ByoJrQ.w3JerMudoEdNjq','S3A87iNj2vtwlInfrJcNvrQLSRUxaerOkqExynd7ExXogoNskDWwuqTBbimA',NULL,'2018-08-15 00:44:25','2018-08-15 00:44:25',NULL),(6,2,'Lin Htet',NULL,'abc@gmail.com','','users/default.png','$2y$10$VI.q6MEW3s8JFWlPDhj1IuGA7ylFKX0Xt1.DeTAP4O5dKi7.bUTVu','LXZAVdCwqcHurTdGQyWiSG62NfGqHsymBsgcS1syeLGMEbbhQkYzPEdnLMw2',NULL,'2018-08-20 08:46:00','2018-08-20 08:46:00',NULL),(7,2,'lol',NULL,'lol1@gmail.com',NULL,'users/default.png','$2y$10$7SZD306go0CJ.BoGCXFiIemBf1bsGH0GC.uFHcy1CHMbY9WIq/DiC','JB28nxDQH0zIgSSUAdfTAg3h6tj3HmkQQduu7XfCPqwAYeFhWtzyLV3YP2D3',NULL,'2018-08-26 21:31:34','2018-08-26 21:31:34',NULL),(8,2,'OK',NULL,'ok@gmail.com',NULL,'users/default.png','$2y$10$cJSgCF/6.cIKG32ePSqXYehFK3W9dgcKO65q9DYhFBikFfBbWbxIq','EMK6jjbQUJ6MvkCVG7qdYq9GQkY0zqd71vl4DE9XasFkIkCihAUazWeN5lPn',NULL,'2018-08-26 21:38:30','2018-08-26 21:38:30',NULL),(9,2,'Myat Kaung Khant',NULL,'krazywolf43@gmail.com',NULL,'users/default.png','$2y$10$C9G3GeEJXWp2Yl42ce08keWS60xUhUCMxkpKF9FDflIymATBDvlZu','2ok6d03ApOGlZV1SOgvErBVbi612xU3cJ7DAvhvCxtjE3wTkcFSuxofGUjme',NULL,'2018-08-26 21:47:01','2018-08-26 21:47:01',NULL),(10,2,'main',NULL,'abcd@gmail.com',NULL,'users/default.png','$2y$10$aO7EUeSl56wTgG9vnR.FyO3rE6Hg5pVVp1u26.Ynxf61vZnGF5rB6','EfAnb56us7TYxPms5XsCig58h3wuqEWYAT6vHLntGlSHtGzJP69CPFe1eYHF',NULL,'2018-08-27 03:20:35','2018-08-27 03:20:35',NULL),(11,2,'stm',NULL,'stm@mail.com',NULL,'users/default.png','$2y$10$wRx9ZanYiG82hzwc1D5NPeerjnrhut64X7pnwvgyIbmAjakpdmAjC','MOhwzHpjG5Yp0B6BLvRmFuacXNAQeSdAY5LsYwbqSowYTngqoFaYwzcnztJ1',NULL,'2018-08-27 04:05:39','2018-08-27 04:05:39',NULL),(12,2,'hahahah123478','lol123456799999','lolololololol2345678@mail.com','88882345','/users/1535491758.jpg','$2y$10$k5vbYEkzxIeaF/yNFQ/C/ec/uXGIj5XAohv2U/j0JVs2APmOgy/6S','1j9cO57o5qEVeb6r6EB1a6s0NmMffSt0n2rTYSOyY6mcVheEenRU0JcGrvlg',NULL,'2018-08-28 08:31:40','2018-08-28 14:59:19',NULL),(13,2,'test2','test2','test2@mail.com',NULL,'users/default.png','$2y$10$JGHajOXtc4yOzib17D7sC.LKXwwj3ofKMSklJ5K4J6aYP3NkrvhcK','4UwaLRE1RyVdQFUVqqCiKR8tYuDEVG8poqaqQ7dxVc4ocltH2U6gxGVaGD0V',NULL,'2018-08-28 08:33:09','2018-08-28 08:33:09',NULL),(14,2,'test3','test3','test3@mail.com',NULL,'users/default.png','$2y$10$GFoFyKoYM3jd.1bT5C6iC.ZG7YnnyHcpGjwrOGOxL5ZdCLE9M1Hc2','qIr6YIvaWQ2K1t9Ar0uTbYDTwFlPep4kYc6zMatG9skE8MYU61xiTvUsLqrt',NULL,'2018-08-28 08:34:32','2018-08-28 08:34:32',NULL),(15,2,'test4','test4','test4@mail.com','t12345677','users/default.png','$2y$10$Szu02NZqLFB/XtyBjYKcheid5yKnEQlAs1pcg6wW.rmu1SUVftDIa','YUZyW9LKdmJrXe1YhJnkQEk1tUwNU8SVt7jTzJu42gIonwkJkfmMP7BB6Ycm',NULL,'2018-08-28 08:46:46','2018-08-28 08:46:46',NULL),(16,2,'test5','test5','test5@mail.com','124345678','users/default.png','$2y$10$u0yALglHQhAja49YK/uYduVSMuBbIswioY3wVLVMYZFQqD.8nyyr.','FesasKATTZ5OK48Zxl92coEhNP5QoFL2lmJBcK1do1Q81iyKHve2RZGwwhYm',NULL,'2018-08-28 20:57:56','2018-08-28 20:57:57',NULL);
+INSERT INTO `users` VALUES (1,1,'Admin','Admin','admin@admin.com','1234567','/users/1535580677.jpg','$2y$10$FSJx.elbqj2ZAOZRc2Buiuv31ICyES9AuXKLWlVdnsyLEHzKfP6XC','zp7IfugdLBuFZZj8jvHXU4JC8DbZGuopLarGpReVd5JyWjZEf3r9TFWwGEQo','{\"locale\":\"en\"}','2018-08-14 03:06:26','2018-08-29 15:48:18',NULL),(12,2,'hahahah123478','lol123456799999','lolololololol2345678@mail.com','88882345','/users/1535491758.jpg','$2y$10$k5vbYEkzxIeaF/yNFQ/C/ec/uXGIj5XAohv2U/j0JVs2APmOgy/6S','1j9cO57o5qEVeb6r6EB1a6s0NmMffSt0n2rTYSOyY6mcVheEenRU0JcGrvlg',NULL,'2018-08-28 08:31:40','2018-08-28 14:59:19',NULL),(13,2,'test2','test2','test2@mail.com',NULL,'users/default.png','$2y$10$JGHajOXtc4yOzib17D7sC.LKXwwj3ofKMSklJ5K4J6aYP3NkrvhcK','4UwaLRE1RyVdQFUVqqCiKR8tYuDEVG8poqaqQ7dxVc4ocltH2U6gxGVaGD0V',NULL,'2018-08-28 08:33:09','2018-08-28 08:33:09',NULL),(14,2,'test3','test3','test3@mail.com',NULL,'users/default.png','$2y$10$GFoFyKoYM3jd.1bT5C6iC.ZG7YnnyHcpGjwrOGOxL5ZdCLE9M1Hc2','qIr6YIvaWQ2K1t9Ar0uTbYDTwFlPep4kYc6zMatG9skE8MYU61xiTvUsLqrt',NULL,'2018-08-28 08:34:32','2018-08-28 08:34:32',NULL),(15,2,'test4','test4','test4@mail.com','t12345677','users/default.png','$2y$10$Szu02NZqLFB/XtyBjYKcheid5yKnEQlAs1pcg6wW.rmu1SUVftDIa','d8Z94e5sVZGtgDvMrBOB4pTzFyjlt5tPKxYNijfhAwR18pnoRR5YbuWCHgY1',NULL,'2018-08-28 08:46:46','2018-08-28 08:46:46',NULL),(16,2,'test5','test5','test5@mail.com','124345678','users/default.png','$2y$10$u0yALglHQhAja49YK/uYduVSMuBbIswioY3wVLVMYZFQqD.8nyyr.','FesasKATTZ5OK48Zxl92coEhNP5QoFL2lmJBcK1do1Q81iyKHve2RZGwwhYm',NULL,'2018-08-28 20:57:56','2018-08-28 20:57:57',NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -624,4 +649,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-08-30  3:00:10
+-- Dump completed on 2018-08-30 12:19:32
