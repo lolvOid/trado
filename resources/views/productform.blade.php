@@ -76,7 +76,7 @@
                                                         <div class="summernote"></div>
                                                     </div>
                                                 </div>
-                                                <button onclick="beforeSubmit();" type="submit" name="edit-save" id="edit-save" class="btn btn-success pull-right">Save</button>
+                                                <button onclick="beforeSubmit();" name="edit-save" id="edit-save" class="btn btn-success pull-right">Save</button>
                                             </form>
                                         </div>
                                     </div>
