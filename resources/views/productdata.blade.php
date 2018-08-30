@@ -183,11 +183,9 @@
                                                                                             {{-- <div class="form-group">
                                                                                                     <textarea id="description" name="descriptions" class="form-control" placeholder="Description" required>{{$product->description}}</textarea>
                                                                                             </div> --}}
-                                                                                            <script>
-                                                                                                var quill = new Quill('#editor', {
-                                                                                                  theme: 'snow'
-                                                                                                });
-                                                                                            </script>
+                                                                                            <div id="editor">
+                                                                                            </div>
+                                                                                            
                                                                                                 <input class="form-control" type="file" data-name="product_img" name="product_img" id="product_img">
                                                                                             
                                                                                         </div>
@@ -215,5 +213,10 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <script>
+                                            var quill = new Quill('#editor', {
+                                              theme: 'snow'
+                                            });
+                                        </script>
                 </div><!-- Main Wrapper -->
         @endsection()
