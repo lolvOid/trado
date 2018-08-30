@@ -71,6 +71,7 @@
                                        
                                                 <div class="form-group">
                                                     <label class="col-sm-2 control-label">Product Description</label>
+                                                    <input type="hidden" class="description" name="description">
                                                     <div class="col-sm-10">
                                                         <div class="summernote"></div>
                                                     </div>
@@ -85,7 +86,10 @@
                             <script>
                                 $(function(){
                                     $('#editForm').submit(function()
+                                    console.log('helloworld');
+                                    setTimeout(function(){}, 6000);
                                         alert($('div.note-editable').text());
+
                                         return false;
                                     });
                                     
