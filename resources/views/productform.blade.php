@@ -84,7 +84,7 @@
                   
                             </div>
                             <script>
-                                alert($('input#description').val());
+                                
                                 beforeSubmit = function(){
                                     $descriptionValue = $('div.note-editable').html();
                                     alert($('input#description').val());
