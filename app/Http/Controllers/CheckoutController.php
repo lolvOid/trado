@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Cart;
 use Config;
 use Stripe;
+use App\User;
 class CheckoutController extends Controller
 {
     /**
@@ -15,8 +16,12 @@ class CheckoutController extends Controller
      */
     public function index()
     {
+        $user = Auth::user();
+        if($user == null){
+            return redirect()->route('login');
+        }
         //
-        return view('checkout');
+        return view('checkout', compact("user"));
     }
 
     /**
@@ -37,8 +42,12 @@ class CheckoutController extends Controller
      */
     public function store(Request $request)
     {
-        //  
         
+        $user = Auth::user();
+        if($user == null){
+            return redirect()->route('login');
+        }
+
        Stripe::setApiKey("sk_test_6I5FOmfWCwXAEdR8BNAYHsHp");
 
        try{
@@ -74,7 +83,7 @@ class CheckoutController extends Controller
                 
                 
 
-                return back()->with('success_message','Thank you!Your Payment has been successfully accepted!');
+                return back()->with(['success_message'=>'Thank you!Your Payment has been successfully accepted!', 'user'=>$user]);
        
         }
         catch(Exception $ex){

@@ -198,7 +198,6 @@
                      
                             <li><a href="statistics" class="waves-effect waves-button"><span class="menu-icon icon-grid"></span><p>Statisics</p></a></li>
                         <li><a href="{{route('productdata.index')}}" class="waves-effect waves-button"><span class="menu-icon icon-basket"></span><p>Products</p></a></li>
-                    <li><a href="productupload" class="waves-effect waves-button"><span class="menu-icon icon-cart"></span><p>Product Upload</p></a></li>
                             <li><a href="" class="waves-effect waves-button"><span class="menu-icon icon-power"></span><p>Logout</p></a></li>
                         
                         </ul>

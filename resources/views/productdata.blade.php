@@ -138,17 +138,19 @@
                                                                 <td>
                                                                     {{-- <input value= --}}
                                                                         
-                                                                            
-                                                                            <input type="submit" id="save" class="btn btn-info m-b-sm" data-toggle="modal" data-target="#editModel{{$product->id}}" value="Edit">
+                                                                        <form method="post" action="{{route('products.edit')}} ">
+                                                                                {{csrf_field()}}
+                                                                            <input type="hidden" name="id" value="{{$product->id}}">
+                                                                            <input type="submit" id="save" class="btn btn-info m-b-sm" value="Edit">
                                                                             <br><br>
-
+                                                                        </form>
                                                                             <form method="post" action="{{route('products.delete')}} ">
                                                                                 {{csrf_field()}}
                                                                                 <input type="hidden" value="{{ $product->id}}" name="id" id="id">
                                                                                 <input type="submit" class="btn btn-danger m-b-sm" value="Delete">
                                                                             </form>
 
-                                                                            <form method="POST" action="{{route('products.edit')}}" enctype="multipart/form-data">
+                                                                            {{--<form method="POST" action="{{route('products.edit')}}" enctype="multipart/form-data">
                                                                                     {{csrf_field()}}
                                                                             <div class="modal fade" id="editModel{{$product->id}}" tab dashboard="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                                                 <div class="modal-dialog">
@@ -195,9 +197,9 @@
                                                                                             </div> 
                                                                                            
                                                                                             
-                                                                                            {{-- <div id="edit-description">
+                                                                                            <div id="edit-description">
                                                                                                     <input type="hidden" id="hiddeninput" name="description">
-                                                                                            </div> --}}
+                                                                                            </div>
                                                                                             
                                                                                                 <input class="form-control" type="file" data-name="product_img" name="product_img" id="product_img">
                                                                                             
@@ -209,7 +211,7 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                   </form>
+                                                                            </form> --}}
                                                                         {{-- <button type="button" class="btn btn-success m-b-sm">Edit</button>
                                                                         <br> <br>
                                                                         <button type="button" class="btn btn-success m-b-sm">Delete</button> --}}

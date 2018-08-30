@@ -2,7 +2,7 @@
 
 @section('dashboard')
 
- <div class="row">
+                            <div class="row">
                               <div class="col-md-12">
                                     <div class="panel panel-white">
                                         <div class="panel-heading clearfix">
@@ -75,5 +75,5 @@
                                     </div>
                                 </div>
                   
-                </div>
+                            </div>
         @endsection()

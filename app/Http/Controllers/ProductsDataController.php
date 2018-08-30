@@ -100,6 +100,23 @@ class ProductsDataController extends Controller
      */
     public function edit(Request $request)
     {
+        // dd($request);
+        $user = Auth::user();
+        $productId = $request->id;
+        $product = Product::where('id' , '=', $productId)->get();
+        
+        return view('productform', compact("product", "user"));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
         $uid = Auth::id();
         if($uid == null){
             return redirect()->route('login');
@@ -138,18 +155,6 @@ class ProductsDataController extends Controller
         $product->save();
 
         return redirect()->route('productdata.index')->with('success','Product Edit Successful');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
     }
 
     /**
