@@ -68,6 +68,7 @@
                                                         <div class="summernote"></div>
                                                     </div>
                                                 </div>
+                                                <button type="submit" name="edit-save" id="add-row" class="btn btn-success">Save</button>
                                             </form>
                                         </div>
                                     </div>
