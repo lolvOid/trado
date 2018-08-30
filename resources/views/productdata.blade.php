@@ -1,10 +1,10 @@
 @extends('dashmaster')
 
 @section('dashboard')
-<link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.core.css">
+{{-- <link rel="stylesheet" href="https://cdn.quilljs.com/1.3.6/quill.core.css">
 <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
 <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> --}}
 <div class="page-inner">
                 <div class="page-title">
                     <div class="page-breadcrumb">

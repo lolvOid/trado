@@ -103,7 +103,7 @@ class ProductsDataController extends Controller
         // dd($request);
         $user = Auth::user();
         $productId = $request->id;
-        $product = Product::where('id' , '=', $productId)->get();
+        $product = Product::where('id' , '=', $productId)->first();
         
         return view('productform', compact("product", "user"));
     }
