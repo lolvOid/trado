@@ -3,10 +3,18 @@
 @section('dashboard')
 
                             <div class="page-inner">
+                                    <div class="page-title">
+                                            <div class="page-breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li><a href="dashboard">Home</a></li>
+                                                    <li class="active">Product Edit</li>
+                                                </ol>
+                                            </div>
+                                        </div>
                               <div class="col-md-12">
                                     <div class="panel panel-white">
                                         <div class="panel-heading clearfix">
-                                                <h4 class="panel-title">Form Elements</h4>
+                                                <h4 class="panel-title">Product Edit</h4>
                                         </div>
                                         <div class="panel-body">
                                             <form class="form-horizontal">
@@ -54,7 +62,7 @@
                                                <div class="form-group">
                                                     <label class="col-sm-2 control-label">Type</label>
                                                     <div class="col-sm-10">
-                                                        <select class="form-control m-b-sm">
+                                                        <select name="category" class="form-control m-b-sm" value="{{$product->category_id}}">
                                                                 @foreach ($categories as $category)
                                                                 <option value="{{$category->id}}">{{$category->name}}</option>
                                                                 @endforeach
