@@ -87,7 +87,7 @@ class ShopController extends Controller
         }
         $product = Product::where('slug',$slug)->firstOrFail();
         $related = Product::where('slug','!=',$slug)->related()->get();
-        dd($user);
+
         return view('product')->with(['product'=>$product,'related' =>$related, 'user'  => $user]);
     }
 
@@ -107,7 +107,7 @@ class ShopController extends Controller
                             ->orWhere('description','like',"%$query%")
                             ->paginate(10);
         //$products = Product::search($query);
-        dd($user);
+
         return view('search-results-table')->with(['products'=>$products, 'user'=>$user ]);
 
 
