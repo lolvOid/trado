@@ -58,7 +58,7 @@
                                                 {{ csrf_field() }}
                                             {{method_field('DELETE')}}
                                         
-                                        <div class="col-6 col-md-2 price"><button class="btn btn-primary" type="submit" style="background-color:#ff4f44;"><i class="fa fa-trash-o"></i></button></div>
+                                        <div class="col-6 col-md-2 price"><button class="btn btn-default" type="submit"><i class="fa fa-trash-o"></i></button></div>
                                     </form>
                                     </div> 
                                 </div>
