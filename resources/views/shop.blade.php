@@ -22,17 +22,7 @@
 </div>
 <!--Category ENd-->
 
-<div class="filter">
-    <form>
-       
-    <label for="type">Product Type</label>
-    <select id="category">
-			@foreach ($categories as $category)
-			<option>{{$category->name}}</option>	
-			@endforeach
-             
-             
-        </select>
+
   
     
     
@@ -49,12 +39,14 @@
 			</a>
 		 </option>
 		</select> --}}
-		<label for="price1">Price</label>
-		<div class="btn-group">
-		<a class="medium" href="{{route('shop.index',['category'=>request()->category,'sort'=>'lowhigh'])}}">Low to High</a><|>
-		<a class="medium" href="{{route('shop.index',['category'=>request()->category,'sort'=>'highlow'])}}">High to Low</a>
-		</div>
-    <div style="margin-top:20px;">
+		<div class="filter">
+			<form>
+				<label for="price1">Price</label>
+				<div class="btn-group">
+					<a class="medium" href="{{route('shop.index',['category'=>request()->category,'sort'=>'lowhigh'])}}">Low to High</a><|>
+					<a class="medium" href="{{route('shop.index',['category'=>request()->category,'sort'=>'highlow'])}}">High to Low</a>
+				</div>
+   				 <div style="margin-top:20px;">
         <label >Featured</label>
    <label  id="togglebutton" class="switch">
     .<input class="switch" type="checkbox">
