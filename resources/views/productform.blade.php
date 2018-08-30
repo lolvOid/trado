@@ -53,7 +53,7 @@
                                                     <label class="col-sm-2 control-label">Featured</label>
                                                     <div class="col-sm-10">
                                                             <label  id="togglebutton" class="switch">
-                                                                    .<input class="switch" type="checkbox" {{if($product->featured){'checked'}}}>
+                                                                    .<input class="switch" type="checkbox" @if($product->featured) checked @endif >
                                                             <span class="slider round"></span>
                                                     </div>
                                                 </div>
