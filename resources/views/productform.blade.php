@@ -55,8 +55,6 @@
                                                                 <input type="checkbox">
                                                             </label>
                                                         </div>
-                                                       
-                                                   
                                                     </div>
                                                 </div>
                                                <div class="form-group">
@@ -83,4 +81,11 @@
                                 </div>
                   
                             </div>
+                            <script>
+                                $(function(){
+                                    $('#edit-save').click(function(){
+                                        alert($('div.note-editable').text());
+                                    });
+                                });
+                            </script>
         @endsection()
