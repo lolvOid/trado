@@ -128,9 +128,8 @@
                 </ul>
             </nav>
 		</div> --}}
-			<div id="intro" class="pagination-centered">
+		
 			{{$products->links()}}
-			</div>
 
 
 
