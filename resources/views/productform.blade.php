@@ -52,11 +52,9 @@
                                                 <div class="form-group">
                                                     <label class="col-sm-2 control-label">Featured</label>
                                                     <div class="col-sm-10">
-                                                        <div class="checkbox" checked={{$product->featured}}>
-                                                            <label>
-                                                                <input type="checkbox">
-                                                            </label>
-                                                        </div>
+                                                            <label  id="togglebutton" class="switch">
+                                                                    .<input class="switch" type="checkbox" {{if($product->featured){'checked'}}}>
+                                                            <span class="slider round"></span>
                                                     </div>
                                                 </div>
                                                <div class="form-group">
