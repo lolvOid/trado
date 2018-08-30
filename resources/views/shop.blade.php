@@ -128,9 +128,9 @@
                 </ul>
             </nav>
 		</div> --}}
-		<div class="text-center">
+		<span class="align-middle">
 		{{$products->links()}}
-		</div>
+		</span>
 
 
 
