@@ -54,25 +54,12 @@
         <script src="{{ URL::asset('js/pages/dashboard.js') }}"></script>
  	 
 
-       <script src="{{ URL::asset('plugins/summernote-master/summernote.min.js') }}"></script>
+       <script src="{{ URL::asset('plugins/summernote-master/summernote.js') }}"></script>
         <script src="{{ URL::asset('plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
         <script src="{{ URL::asset('plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js') }}"></script>
         <script src="{{ URL::asset('plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js') }}"></script>
         <script src="{{ URL::asset('plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js') }}"></script>
         <script src="{{ URL::asset('js/pages/form-elements.js') }}"></script>
-        <script>
-            $('#summernote').summernote({
-                toolbar: [
-                    // [groupName, [list of button]]
-                    ['style', ['bold', 'italic', 'underline', 'clear']],
-                    ['font', ['strikethrough', 'superscript', 'subscript']],
-                    ['fontsize', ['fontsize']],
-                    ['color', ['color']],
-                    ['para', ['ul', 'ol', 'paragraph']],
-                    ['height', ['height']]
-                ]
-                });
-        </script>
 	<script src="{{ URL::asset('js/pages/charts-flot.js') }}"></script>
         <script src="{{ URL::asset('plugins/flot/jquery.flot.min.js') }}"></script>
         <script src="{{ URL::asset('plugins/flot/jquery.flot.time.min.js') }}"></script>
