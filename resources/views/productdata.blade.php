@@ -86,6 +86,8 @@
                                                                                             <span class="slider round"></span>
                                                                                         </label>
                                                                                     </div>
+                                                                                <div id="editor">
+                                                                                </div>
                                                                                 <div class="form-group">
                                                                                         <textarea type="text" id="descriptions" name="descriptions" class="form-control" placeholder="Description" required></textarea>
                                                                                 </div>
@@ -224,7 +226,8 @@
                                             toolbar: '#editor'
                                         },
                                         placeholder: 'Compose an epic...',
-                                        theme: 'snow'
+                                        theme: 'snow',
+                                        name: 'description'
                                         });
                                         </script>
                 </div><!-- Main Wrapper -->
