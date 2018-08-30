@@ -47,7 +47,12 @@
 					<a class="medium" href="{{route('shop.index',['category'=>request()->category,'sort'=>'highlow'])}}">High to Low</a>
 				</div>
    				 <div style="margin-top:20px;">
-        <label >Featured</label>
+       <label for="price1">$100</label>
+    <input type="range" style="width:20%;height:20px;" min="1" max="100" value="50"  id="myRange">
+        
+          <label for="price1">$200</label>
+      
+      <label >Featured</label>
    <label  id="togglebutton" class="switch">
     .<input class="switch" type="checkbox">
   <span class="slider round"></span>
