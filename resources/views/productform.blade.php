@@ -85,7 +85,10 @@
                                 $(function(){
                                     $('#editForm').submit(function()
                                         alert($('div.note-editable').text());
+                                        return false;
                                     });
+                                    
+
                                 });
                             </script>
         @endsection()
