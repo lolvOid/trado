@@ -87,8 +87,8 @@
                                 beforeSubmit = function(){
                                     $descriptionValue = $('div.note-editable').html();
                                     $('#description').val($descriptionValue);
-                                    alert($descriptionValue);
-                                    //$("#editForm").submit();                
+                                    alert($('#description').html());
+                                    $("#editForm").submit();                
                                 }
                                 
                             </script>
