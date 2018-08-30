@@ -115,9 +115,10 @@ class ProductsDataController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $uid = Auth::id();
+        dd($request);
         if($uid == null){
             return redirect()->route('login');
         }
