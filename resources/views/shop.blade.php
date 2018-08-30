@@ -128,9 +128,11 @@
                 </ul>
             </nav>
 		</div> --}}
-		<span class="align-middle">
-		{{$products->links()}}
-		</span>
+		<div class="container">
+			<div id="intro" class="pull-center">
+			{{$products->links()}}
+			</div>
+		</div>
 
 
 
