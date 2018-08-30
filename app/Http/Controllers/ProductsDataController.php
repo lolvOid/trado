@@ -120,7 +120,7 @@ class ProductsDataController extends Controller
         if($request->hasFile('product_img')){
             $product_img = $request->file('product_img');
             $filename = "/img/" . time() . $product_img->getClientOriginalExtension();
-            Image::make($product_img)->fit(640, 426)->save( public_path( $filename ) );
+            Image::make($product_img)->fit(640, 480)->save( public_path( $filename ) );
             $product->images = $filename;
         }
 
