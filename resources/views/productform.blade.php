@@ -23,7 +23,7 @@
                                                 <div class="form-group">
                                                     <label for="input-Default" class="col-sm-2 control-label">Name</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" name="name" value="{{$product->name}}" placeholder="iPhoneX" class="form-control" id="input-Default">
+                                                        <input type="text" name="name" value="{{$product->name}}" placeholder="Product Name" class="form-control" id="input-Default">
                                                     </div>
                                                 </div>
 
@@ -44,7 +44,7 @@
                                                         <div class="form-group">
                                                                 <label for="input-Default" class="col-sm-2 control-label">Price</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" name="price" value="{{($product->price)/100}}" placeholder="$1000" class="form-control" id="input-Default">
+                                                                    <input type="text" name="price" value="{{($product->price)/100}}" placeholder="Price" class="form-control" id="input-Default">
                                                                 </div>
                                                             </div>
 
