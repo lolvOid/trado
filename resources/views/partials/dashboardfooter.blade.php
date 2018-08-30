@@ -52,7 +52,7 @@
         <script src="{{ URL::asset('plugins/chartjs/Chart.bundle.min.js') }}"></script>
         <script src="{{ URL::asset('js/meteor.min.js') }}"></script>
         <script src="{{ URL::asset('js/pages/dashboard.js') }}"></script>
-
+ 	 <script src="{{ URL::asset('js/pages/form-elements.js') }}"></script>
 
        
         
