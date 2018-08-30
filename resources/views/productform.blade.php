@@ -74,7 +74,9 @@
                                                     <label class="col-sm-2 control-label">Product Description</label>
                                                     <input type="hidden" class="description" id="description" name="description" value="haha">
                                                     <div class="col-sm-10">
-                                                        <div class="summernote"></div>
+                                                        <div class="summernote">
+                                                            {!! $product->description !!}
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <input type="button" onclick="beforeSubmit();" name="edit-save" id="edit-save" value="Save" class="btn btn-success pull-right">
@@ -91,20 +93,6 @@
                                     $('input#description').val($descriptionValue);
                                     $("#editForm").submit();                
                                 }
-                                $("#summernote").summernote({
-                                    height: 300,
-                                    toolbar: [
-                                        [ 'style', [ 'style' ] ],
-                                        [ 'font', [ 'bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'clear'] ],
-                                        [ 'fontname', [ 'fontname' ] ],
-                                        [ 'fontsize', [ 'fontsize' ] ],
-                                        [ 'color', [ 'color' ] ],
-                                        [ 'para', [ 'ol', 'ul', 'paragraph', 'height' ] ],
-                                        [ 'table', [ 'table' ] ],
-                                        [ 'view', [ 'undo', 'redo', 'fullscreen', 'codeview', 'help' ] ]
-                                    ]
-                                });
-                                
                                 
                             </script>
         @endsection()
