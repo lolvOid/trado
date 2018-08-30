@@ -22,11 +22,11 @@ class ShopController extends Controller
         //
         $user = Auth::user();
         $users = User::all();
-        
+        cleanProducts();
         if(request()->category){
             $products = Product::with('categories')->whereHas('categories',function($query){
                 $query->where('slug',request()->category);
-            })->get()   ;
+            })->get();
             $categories = Category :: all();
             $categoryName = $categories->where('slug',request()->category)->first()->name;
         }else{
