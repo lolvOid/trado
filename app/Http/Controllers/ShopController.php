@@ -31,7 +31,7 @@ class ShopController extends Controller
             $categoryName = $categories->where('slug',request()->category)->first()->name;
         }else{
             $products = Product::inRandomOrder()->take(14);
-            $products = $products->paginate(9);
+            $products = $products->paginate(3);
             $categories = Category::all();    
             $categoryName = 'Featured';
         }
@@ -41,13 +41,14 @@ class ShopController extends Controller
         }else if(request()->sort == 'highlow'){
             $products = $products -> sortByDesc('price');
         }
-        
+        $trendings = Product::where('featured',true)->take(6)->inRandomOrder()->get();
         return view('shop')->with([
             'products'=>$products,
             'categories'=>$categories,
             'categoryName'=>$categoryName,
             'user'=>$user,
-            'users'=>$users
+            'users'=>$users,
+            'trendings'=>$trendings
             ]);
     }
 

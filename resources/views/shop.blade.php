@@ -83,10 +83,10 @@
 			</small>
             
             <div class="start-icon"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i>
-                <h6 class="product-price">{{$product->presentPrice()}}<small>USD</small></h6>
+                <span style="color:#000;">{{$product->presentPrice()}}<small>USD</small></span>
             </div><small class="product-review">3 - 272 reviews</small>
             <div>
-                <h3 class="product-description">{{str_limit($product->description,20)}}</h3>
+                <h3 class="product-description">{{str_limit($product->description,40)}}</h3>
 				{{-- {{ route('shop.show',$product->slug)}} --}}
 			{{-- <a href="" class="btn btn-primary pull-right"> --}}
 				<form method="GET" action="{{ route('shop.show',$product->slug)}}">
@@ -116,7 +116,7 @@
 	
 
 	<!--Pagination -->
-    <div style="background-color:#ffffff;">
+    {{-- <div style="background-color:#ffffff;">
         <div class="container">
             <nav class="align-content-end">
                 <ul class="pagination center-block">
@@ -129,8 +129,8 @@
                     <li class="page-item"><a class="page-link" aria-label="Next"><span aria-hidden="true">»</span></a></li>
                 </ul>
             </nav>
-		</div>
-		
+		</div> --}}
+		{{$products->links()}}
 
 
 
@@ -151,61 +151,25 @@
 			<div class="carousel-inner">
 				<div class="item carousel-item active">
 					<div class="row">
+						@foreach ($trendings as $trending)
 						<div class="col-sm-3">
-							<div class="thumb-wrapper">
-								<div class="img-box">
-									<img src="https://www.tutorialrepublic.com/examples/images/products/ipad.jpg" class="img-responsive img-fluid" alt="">
+								<div class="thumb-wrapper">
+									<div class="img-box">
+										<img src="{{$trending->images}}" class="img-responsive img-fluid" alt="">
+									</div>
+									<div class="thumb-content">
+										<h4>{{$trending->name}}</h4>
+									<p class="item-price"><strike>{{$trending->presentPrice()}}</strike> <span>{{discountPrice($trending->price,10)}}</span></p>
+										
+										<a href="#" class="btn btn-primary">Add to Cart</a>
+									</div>						
 								</div>
-								<div class="thumb-content">
-									<h4>Apple iPad</h4>
-									<p class="item-price"><strike>$400.00</strike> <span>$369.00</span></p>
-									
-									<a href="#" class="btn btn-primary">Add to Cart</a>
-								</div>						
 							</div>
-						</div>
-						<div class="col-sm-3">
-							<div class="thumb-wrapper">
-								<div class="img-box">
-									<img src="https://www.tutorialrepublic.com/examples/images/products/headphone.jpg" class="img-responsive img-fluid" alt="">
-								</div>
-								<div class="thumb-content">
-									<h4>Sony Headphone</h4>
-									<p class="item-price"><strike>$25.00</strike> <span>$23.99</span></p>
-									
-									<a href="#" class="btn btn-primary">Add to Cart</a>
-								</div>						
-							</div>
-						</div>		
-						<div class="col-sm-3">
-							<div class="thumb-wrapper">
-								<div class="img-box">
-									<img src="https://www.tutorialrepublic.com/examples/images/products/macbook-air.jpg" class="img-responsive img-fluid" alt="">
-								</div>
-								<div class="thumb-content">
-									<h4>Macbook Air</h4>
-									<p class="item-price"><strike>$899.00</strike> <span>$649.00</span></p>
-									
-									<a href="#" class="btn btn-primary">Add to Cart</a>
-								</div>						
-							</div>
-						</div>								
-						<div class="col-sm-3">
-							<div class="thumb-wrapper">
-								<div class="img-box">
-									<img src="https://www.tutorialrepublic.com/examples/images/products/nikon.jpg" class="img-responsive img-fluid" alt="">
-								</div>
-								<div class="thumb-content">
-									<h4>Nikon DSLR</h4>
-									<p class="item-price"><strike>$315.00</strike> <span>$250.00</span></p>
-									
-									<a href="#" class="btn btn-primary">Add to Cart</a>
-								</div>						
-							</div>
-						</div>
+						@endforeach
+						
 					</div>
 				</div>
-				<div class="item carousel-item">
+				{{-- <div class="item carousel-item">
 					<div class="row">
 						<div class="col-sm-3">
 							<div class="thumb-wrapper">
@@ -316,7 +280,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</div> --}}
 			</div>
               
               

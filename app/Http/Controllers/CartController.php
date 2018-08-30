@@ -15,7 +15,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
+        $user = Auth::user(); 
         if($user == null){
             return redirect()->route("login");
         }
