@@ -134,7 +134,7 @@
                                                                 <td>{{$product->slug}}</td>
                                                                 <td>{{$product->details}}</td>                                           
                                                                 <td>{{$product->presentPrice()}}</td>
-                                                                <td style="column-width: 300px;">{{!! $product->description !!}}</td>
+                                                                <td style="column-width: 300px;">{ !! $product->description !! }</td>
                                                                 <td>
                                                                     {{-- <input value= --}}
                                                                         
