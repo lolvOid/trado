@@ -33,7 +33,7 @@
             <div class="col-md-4">
                 <div class="product-inner">
                     <div data-lightbox="photos" class="product-wrap">
-                        <img src="{{'storage/'.$product->image}}">
+                        <img src="{{$product->images}}">
                             <div class="actions">
                                 <a href="" class="add-to-cart"></a>
                                 <a href="{{route('shop.show',$product->slug)}}" class="quickview"></a>
