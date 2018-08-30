@@ -2,7 +2,7 @@
 
 @section('dashboard')
 
-                            <div class="row">
+                            <div class="page-inner">
                               <div class="col-md-12">
                                     <div class="panel panel-white">
                                         <div class="panel-heading clearfix">
@@ -42,7 +42,7 @@
                                                 <div class="form-group">
                                                     <label class="col-sm-2 control-label">Featured</label>
                                                     <div class="col-sm-10">
-                                                        <div class="checkbox">
+                                                        <div class="checkbox" checked={{$product->featured}}>
                                                             <label>
                                                                 <input type="checkbox">
                                                             </label>
@@ -55,11 +55,9 @@
                                                     <label class="col-sm-2 control-label">Type</label>
                                                     <div class="col-sm-10">
                                                         <select class="form-control m-b-sm">
-                                                            <option>Laptop</option>
-                                                            <option>Desktop</option>
-                                                            <option>Mobile Phone</option>
-                                                            <option>Gadget</option>
-                                                            <option></option>
+                                                                @foreach ($categories as $category)
+                                                                <option value="{{$category->id}}">{{$category->name}}</option>
+                                                                @endforeach
                                                         </select>
                                                         </div>
                                                 </div>
