@@ -35,7 +35,33 @@
         <link href="{{ URL::asset('plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css') }}" rel="stylesheet" type="text/css"/>
         <link href="{{ URL::asset('plugins/bootstrap-tagsinput/bootstrap-tagsinput.css') }}" rel="stylesheet" type="text/css"/>
         <link href="{{ URL::asset('plugins/bootstrap-timepicker/css/bootstrap-timepicker.min.css') }}" rel="stylesheet" type="text/css"/>
-
+<style>
+        #token-txs-11 {
+            line-height: 1.8;
+            border-radius: 8px;
+            max-width: 700px !important;
+            background-blend-mode: darken;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        #token-txs-11 .txs.big-screen-table td .tx-amount{
+            display: inline-block;
+            width: 150px;
+            white-space: nowrap;
+        }
+        #token-txs-11 .txs.big-screen-table td .tx-link{
+            max-width: 120px;
+        }
+        #token-txs-11 .txs.big-screen-table td .tx-link:last-child{
+            max-width: 150px;
+        }
+        #token-txs-11 .txs.big-screen-table td .tx-amount a:nth-child(1){
+            max-width: 110px !important;
+        }
+        #token-txs-11 .txs.big-screen-table td .tx-amount  a:nth-child(2){
+            max-width: 50px !important;
+        }
+    
+    </style>
         	
         <!-- Theme Styles -->
         <link href="{{ URL::asset('css/meteor.min.css') }}" rel="stylesheet" type="text/css"/>
@@ -206,7 +232,7 @@
                         <ul class="menu accordion-menu">
                             <li ><a href="dashboard" class="waves-effect waves-button"><span class="menu-icon icon-home"></span><p>Dashboard</p></a></li>
                             <li><a href="profile" class="waves-effect waves-button"><span class="menu-icon icon-user"></span><p>Profile</p><span class="active-page"></span></a></li>
-                     
+                      <li><a href="wallet" class="waves-effect waves-button"><span class="menu-icon icon-wallet"></span><p>Wallet</p></a></li>
                             <li><a href="statistics" class="waves-effect waves-button"><span class="menu-icon icon-grid"></span><p>Statisics</p></a></li>
                         <li><a href="{{route('productdata.index')}}" class="waves-effect waves-button"><span class="menu-icon icon-basket"></span><p>Products</p></a></li>
                             <li><a href="" class="waves-effect waves-button"><span class="menu-icon icon-power"></span><p>Logout</p></a></li>
