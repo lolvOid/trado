@@ -162,7 +162,7 @@
                                                                                                 <input type="text" id="details" name="details" class="form-control" value="{{$product->details}}" placeholder="Details" required>
                                                                                             </div>
                                                                                             <div class="form-group">
-                                                                                                <input type="number" id="price" name="price" class="form-control date-picker" value="{{$product->price}}" placeholder="Price" required>
+                                                                                                <input type="number" id="price" name="price" class="form-control date-picker" value="{{($product->price)/100}}" placeholder="Price" required>
                                                                                             </div>
                                                                                             <div class="form-group">
                                                                                                 <label >Featured</label>

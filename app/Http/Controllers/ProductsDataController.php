@@ -103,14 +103,20 @@ class ProductsDataController extends Controller
         if($uid == null){
             return view('/login');
         }
-        
+        $featured = $request->input('featured');
+       if($featured == 'on'){
+           $featured = 1;
+       }else{
+           $featured = 0;
+       }
+
         $product = Product::find($request->input('id'));
         $product->name = $request->input('name');
         $product->slug = $request->input('slug');
         $product->details = $request->input('details');
         $product->price = $request->input('price') * 100;
         $product->description = $request->input('descriptions');
-        $product->featured = $request->input('featured');
+        $product->featured = $featured;
         if($request->hasFile('product_img')){
             $product_img = $request->file('product_img');
             $filename = "/img/" . time() . $product_img->getClientOriginalExtension();
