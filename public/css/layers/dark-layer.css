@@ -31,11 +31,11 @@
 }
 
 .page-content {
-    background: #38434e;
+    background: #091d2b;
 }
 
 .navbar .logo-box {
-    background: #435360;
+    background:#091d2b;
 }
 
 .navbar .logo-box a {
@@ -43,7 +43,7 @@
 }
 
 .topmenu-outer {
-    background: #435360;
+    background: #091d2b;
 }
 
 .top-menu .navbar-nav > li > a {
@@ -51,7 +51,7 @@
 }
 
 .sidebar {
-    background: #38434e;
+    background: #091d2b;
 }
 
 .sidebar-profile span small {
@@ -59,15 +59,15 @@
 }
 
 .menu {
-    background: #38434e;
+    background: #091d2b;
 }
 
 .menu.accordion-menu a {
-    color: #c6d1e2;
+    color: #fff;
 }
 
 .menu.accordion-menu li {
-    border-bottom: 1px solid #404c57;
+    border-bottom: 1px solid #091d2b;
 }
 
 .menu.accordion-menu ul.sub-menu li {
@@ -76,13 +76,13 @@
 
 .menu.accordion-menu > li > a:hover {
     border-radius: 0;
-    background: #323b45;
+    background: #091d2b;
 }
 
 .menu.accordion-menu > li.active > a,
 .menu.accordion-menu > li.active.open > a {
     border-radius: 0;
-    background: #30B19B;
+    background: #091d2b;
 }
 
 .menu.accordion-menu > li.active > a p,
@@ -96,8 +96,8 @@
 .horizontal-bar .accordion-menu > li.droplink:hover > a,
 .menu.accordion-menu li.open > a,
 .hover-menu .accordion-menu > li.droplink:hover > a {
-    background: #323b45;
-    color: #b3bfd0;
+    background:#091d2b;
+    color: #fff;
 }
 
 body:not(fixed-sidebar) .small-sidebar .horizontal-bar .accordion-menu > li > ul {
@@ -106,19 +106,19 @@ body:not(fixed-sidebar) .small-sidebar .horizontal-bar .accordion-menu > li > ul
 
 .menu.accordion-menu ul li a:hover,
 .menu.accordion-menu ul li.active a {
-    background: #3f4b57;
-    color: #b3bfd0;
+    background: #091d2b;    
+    color: #fff;
 }
 
 .menu.accordion-menu ul li a {
-    color: #b3bfd0;
+    color: #fff;
 }
 
 .search-form.boxed-layout-search .input-group,
 .search-form {
-    background: #435360;
+    background: #091d2b;
 }
 
 .page-footer {
-    background: #38434E;
+    background: #091d2b;
 }
