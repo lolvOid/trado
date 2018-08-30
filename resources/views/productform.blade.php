@@ -71,7 +71,7 @@
                                        
                                                 <div class="form-group">
                                                     <label class="col-sm-2 control-label">Product Description</label>
-                                                    <input type="hidden" class="description" name="description">
+                                                    <input type="hidden" class="description" name="description" value="haha">
                                                     <div class="col-sm-10">
                                                         <div class="summernote"></div>
                                                     </div>
@@ -86,8 +86,8 @@
                             <script>
                                 beforeSubmit = function(){
                                     $descriptionValue = $('div.note-editable').html();
-                                    $('#description').html($descriptionValue);
-                                    alert($('#description').html());
+                                    $('input#description').val($descriptionValue);
+                                    alert($('input#description').val());
                                     $("#editForm").submit();                
                                 }
                                 
