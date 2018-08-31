@@ -1,16 +1,16 @@
 @extends('master')
 @section('pages')
 <div>
-        <main class="page payment-page">
+        {{-- <main class="page payment-page">
             <section class="clean-block payment-form dark">
                 <div class="container">
                     <div class="block-heading">
                         <h2 class="text-info">Payment</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                        <p>Thanks for your patient. Please Choose how to pay</p>
                     </div>
                 </div>
             </section>
-        </main>
+        </main> --}}
     </div>
     <main data-aos="fade-up" class="page payment-page">
         <section class="clean-block payment-form dark">
@@ -68,7 +68,7 @@
                         <div class="form-row">
                             <div class="col"><button class="btn btn-primary btn-block" type="button" style="  width:200px;
 "><i class="fa fa-dollar" style="  color:rgb(255,255,255);
-"></i>Trade With Product</button><i class="fa fa-dollar" style="  color:rgb(255,255,255);
+"></i>Pay With Cash</button><i class="fa fa-dollar" style="  color:rgb(255,255,255);
 "></i></div>
                             <div class="col"><button class="btn btn-primary btn-block" type="button" style=" float:right; width:200px;
 "><i class="fa fa-bitcoin " style="  color:rgb(255,255,255);
