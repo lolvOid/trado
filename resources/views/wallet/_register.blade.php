@@ -14,7 +14,7 @@
             <div class="form-group"><label>Enter your password</label><input class="form-control" type="password" name="password" placeholder="Password"></div>
             <div class="form-group"><label>Retype your password</label><input class="form-control" type="password" name="password-confirm" placeholder="Password"></div>
             <div class="form-group"><button class="btn btn-primary btn-block" type="submit" style="background-color:rgb(28,28,28);">Create</button></div>
-            <a href="#" class="forgot">i Accept the terms and conditions</a>
+             <a href="#" class="forgot">i Accept the terms and conditions</a>
             <div class="form-group">
                     <p class="text-center text-info"><a href="{{route('wallet.login')}}" > I have a Wallet </a></p></div>
         </form>

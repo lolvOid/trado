@@ -80,7 +80,7 @@
                                                                                     <input type="text" id="details" name="details" class="form-control" placeholder="Details" required>
                                                                                 </div>
                                                                                 <div class="form-group">
-                                                                                    <input type="number" id="price" name="price" class="form-control date-picker" placeholder="Price" min="1" max="9999999999" required>
+                                                                                    <input type="number" id="price" name="price" class="form-control" placeholder="Price" min="1" max="9999999999" required>
                                                                                 </div>
                                                                                 <div class="form-group">
                                                                                         <label >Featured</label>
