@@ -101,8 +101,9 @@ class ShopController extends Controller
         }
         $product = Product::where('category_id',$id)->firstOrFail();
        // $related = Product::where('slug','!=',$slug)->related()->get();
-
-        return view('shop')->with(['product'=>$product, 'user'  => $user]);
+       $categories = Category::all();
+       $users = User::all();
+        return view('shop')->with(['product'=>$product, 'user'  => $user, 'users'=>$users, 'categories'=>$categories]);
     }
 
     public function search(Request $request){
@@ -120,9 +121,8 @@ class ShopController extends Controller
                             ->orWhere('description','like',"%$query%")
                             ->paginate(10);
         //$products = Product::search($query);
-        $categories = Category::all();
-        $users = User::all();
-        return view('search-results-table')->with(['products'=>$products, 'user'=>$user, 'users'=>$users ]);
+
+        return view('search-results-table')->with(['products'=>$products, 'user'=>$user ]);
 
 
     }
