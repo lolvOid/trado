@@ -86,23 +86,22 @@ class ShopController extends Controller
             $user = new User();
         }
         $product = Product::where('slug',$slug)->firstOrFail();
-        $related = Product::where('slug','!=',$slug)->related()->get();
 
-        return view('product')->with(['product'=>$product,'related' =>$related, 'user'  => $user]);
+        return view('product')->with(['product'=>$product,'user'  => $user]);
     }
 
     public function showcategory(Request $request, $id)
     {
-        dd($id);
+        
         //
         $user = Auth::user();
         if($user == null){
             $user = new User();
         }
-        $product = Product::where('slug',$slug)->firstOrFail();
-        $related = Product::where('slug','!=',$slug)->related()->get();
+        $product = Product::where('category_id',$id)->firstOrFail();
+       // $related = Product::where('slug','!=',$slug)->related()->get();
 
-        return view('product')->with(['product'=>$product,'related' =>$related, 'user'  => $user]);
+        return view('product')->with(['product'=>$product, 'user'  => $user]);
     }
 
     public function search(Request $request){
