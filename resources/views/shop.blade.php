@@ -12,8 +12,7 @@
                 <div class="container">
 					<h1 class="text-center"></h1>
 					<!--Category Start-->
-					{{-- <div class="filtr-controls"> --}}
-						<div>
+					<div class="filtr-controls">
 							<a href="{{ route('shop.index') }}">
 								<span 
 								@if ($category_id == 0)
