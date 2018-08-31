@@ -11,7 +11,7 @@
                 <div class="page-title">
                     <div class="page-breadcrumb">
                         <ol class="breadcrumb">
-                            <li><a href="{{('/')}}">Home</a></li>
+                            <li><a href="/">Home</a></li>
                             <li class="active">Dashboard</li>
                         </ol>
                     </div>

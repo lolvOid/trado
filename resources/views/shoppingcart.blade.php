@@ -48,7 +48,7 @@
                                         </div>
                                         <div class="col-md-5 product-info"><a href="{{route('shop.show',$item->model->slug)}}" class="product-name">{{$item->model->name}}</a>
                                             <div class="product-specs">
-                                                <div><span>Display:&nbsp;</span><span class="value">{{str_limit($item->model->description,30)}}</span></div>
+                                                <div><span>Display:&nbsp;</span><span class="value">{!!$item->model->description!!}</span></div>
                                                 {{-- <div><span>RAM:&nbsp;</span><span class="value">4GB</span></div>
                                                 <div><span>Memory:&nbsp;</span><span class="value">32GB</span></div> --}}
                                             </div>
