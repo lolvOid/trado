@@ -55,6 +55,8 @@ function topFunction() {
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
         </script>
+        <script src="{{ URL::asset('js/backtotop.js') }}"></script> 
+<a href="#0" class="cd-top js-cd-top"><i  style="color:#fff;"class="fa fa-angle-up"></i></a>
 </body>
 
 </html>
