@@ -91,9 +91,9 @@ class ShopController extends Controller
         return view('product')->with(['product'=>$product,'related' =>$related, 'user'  => $user]);
     }
 
-    public function showcategory($slug)
+    public function showcategory(Request $request)
     {
-        dd($slug);
+        dd($request);
         //
         $user = Auth::user();
         if($user == null){

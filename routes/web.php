@@ -5,7 +5,7 @@ Route::get('/','MainPageController@index')->name('landing');
 
 Route::get('/shop','ShopController@index')->name('shop.index');
 Route::get('/shop/{product}','ShopController@show')->name('shop.show');
-Route::get('/shop/category/{product}','ShopController@show')->name('shop.categoryshow');
+Route::get('/shop/category/{category}','ShopController@showcategory')->name('shop.categoryshow');
 
 Route::get('/cart','CartController@index')->name('cart.index'); 
 Route::post('/cart','CartController@store')->name('cart.store');
