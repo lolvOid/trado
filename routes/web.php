@@ -49,6 +49,12 @@ Route::post('/productUpdate','ProductsDataController@update')->name('products.up
 
 Route::post('/productDelete','ProductsDataController@destroy')->name('products.delete');
  
+Route::get('/wallet','WalletController@index')->middleware('auth')->name('wallet.index');
+Route::get('/wallet/login','WalletController@login')->middleware('auth')->name('wallet.login');
+Route::post('/wallet/create','WalletController@create')->middleware('auth')->name('wallet.create');
+Route::post('/wallet/auth','WalletController@walletstore')->middleware('auth')->name('wallet.store');
+Route::get('/wallet/showdata','WalletController@show')->middleware('auth')->name('wallet.show');
+Route::post('/wallet/transaction','WalletController@makeTransaction')->middleware('auth')->name('wallet.payment');
 
 Route::view('/auth/register','register');
 Route::view('/auth/login','login');
