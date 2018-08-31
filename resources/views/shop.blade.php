@@ -128,8 +128,10 @@
                 </ul>
             </nav>
 		</div> --}}
-		
-			{{$products->links()}}
+			@if ($category_id == null)
+				{{$products->links()}}	
+			@endif
+			
 
 
 

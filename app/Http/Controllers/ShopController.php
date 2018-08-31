@@ -100,11 +100,12 @@ class ShopController extends Controller
             $user = new User();
         }
         // $products = Product::paginate(9);
-        $products = Product::where('category_id',$id)->get()->paginate(9);
+        // $paginatedProducts = Product::paginate(9);
+        $products = Product::where('category_id',$id)->get();
        // $related = Product::where('slug','!=',$slug)->related()->get();
        $categories = Category::all();
        $users = User::all();
-        return view('shop')->with(['products'=>$products, 'user'  => $user, 'users'=>$users, 'categories'=>$categories]);
+        return view('shop')->with(['products'=>$products, 'user'  => $user, 'users'=>$users, 'categories'=>$categories, 'category_id'=>$id]);
     }
 
     public function search(Request $request){
