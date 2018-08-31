@@ -99,7 +99,8 @@ class ShopController extends Controller
         if($user == null){
             $user = new User();
         }
-        $products = Product::where('category_id',$id)->get();
+        // $products = Product::paginate(9);
+        $products = Product::where('category_id',$id)->get()->paginate(9);
        // $related = Product::where('slug','!=',$slug)->related()->get();
        $categories = Category::all();
        $users = User::all();
