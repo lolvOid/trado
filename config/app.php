@@ -162,7 +162,7 @@ return [
 
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         Cartalyst\Stripe\Laravel\StripeServiceProvider::class,
-        
+        Maxtee\Blockchain\BlockchainServiceProvider::class,
 
     ],
 
@@ -183,6 +183,7 @@ return [
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
         'Blade' => Illuminate\Support\Facades\Blade::class,
+        'Blockchain' => Maxtee\Blockchain\Facades\Blockchain::class,
         'Broadcast' => Illuminate\Support\Facades\Broadcast::class,
         'Bus' => Illuminate\Support\Facades\Bus::class,
         'Cart'=> Gloudemans\Shoppingcart\Facades\Cart::class,
