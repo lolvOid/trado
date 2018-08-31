@@ -40,7 +40,7 @@
 		 </option>
 		</select> --}}
 		<div class="filter">
-			<form>
+			{{-- <form>
 				<label for="price1">Price</label>
 				<div class="btn-group">
 					<a class="medium" href="{{route('shop.index',['category'=>request()->category,'sort'=>'lowhigh'])}}">Low to High</a><|>
@@ -55,10 +55,10 @@
    				<label  id="togglebutton" class="switch">
     				.<input class="switch" type="checkbox">
   					<span class="slider round"></span>
-	</label>
-    </div>
-    
-    </form>
+				</label>
+				</div>
+				
+			</form> --}}
 
 </div>
 <!--Product Row Start-->
