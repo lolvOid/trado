@@ -13,9 +13,9 @@
 					<h1 class="text-center"></h1>
 					<!--Category Start-->
 					<div class="filtr-controls">
-						<span class="active" data-filter="all">all</span>
+							<a href="{{ route('shop.index') }}"><span class="active" data-filter="all">all</span></a>
 						@foreach ($categories as $category)
-						<a href="/"><span style="font-size:15px" data-filter="{{$category->id}}" class="medium">{{$category->name}}</span></a>						
+						<a href="{{ '/shop/category/'.$category->id }}"><span style="font-size:15px" data-filter="{{$category->id}}" class="medium">{{$category->name}}</span></a>						
 						@endforeach
 	
     
