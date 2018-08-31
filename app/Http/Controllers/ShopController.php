@@ -99,11 +99,11 @@ class ShopController extends Controller
         if($user == null){
             $user = new User();
         }
-        $product = Product::where('category_id',$id)->firstOrFail();
+        $products = Product::where('category_id',$id)->get();
        // $related = Product::where('slug','!=',$slug)->related()->get();
        $categories = Category::all();
        $users = User::all();
-        return view('shop')->with(['product'=>$product, 'user'  => $user, 'users'=>$users, 'categories'=>$categories]);
+        return view('shop')->with(['products'=>$products, 'user'  => $user, 'users'=>$users, 'categories'=>$categories]);
     }
 
     public function search(Request $request){
