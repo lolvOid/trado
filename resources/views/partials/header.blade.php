@@ -24,30 +24,9 @@
     <link rel="stylesheet" href="{{ URL::asset('https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/styles.min.css') }}">
    
-       <style>
-         
-         #myBtn {
-    display: none; /* Hidden by default */
-    position: fixed; /* Fixed/sticky position */
-    bottom: 50px; /* Place the button at the bottom of the page */
-    right: 30px; /* Place the button 30px from the right */
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    background-color:#72bbff; /* Set a background color */
-    color: #fff; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    padding: 30px; /* Some padding */
-    border-radius: 30px; /* Rounded corners */
-    font-size: 18px; /* Increase font size */
-}
-.buttontop i{
-    color:#fff;
-}
-#myBtn:hover {
-    background-color:#4ca4c4; /* Add a dark-grey background on hover */
-}
-          </style>
+      <link rel="stylesheet" href="{{ URL::asset('css/reset.css') }}"> <!-- CSS reset -->
+	<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}"> <!-- Resource style -->
+	<link rel="stylesheet" href="{{ URL::asset('css/demo.css') }}"> <!-- Demo style -->
 
       
 </head>
@@ -125,10 +104,7 @@
             </ul>
           
         </div>
-     <button onclick="topFunction()" id="myBtn" title="Go to top">
-     <i style="color:#fff;"class="buttontop fa fa-chevron-up">
-     </i>
-     </button> 
+   
      </div>
    </div>
 </nav>
