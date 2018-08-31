@@ -101,7 +101,9 @@
     </div>
 </div>
 @empty
-	   <div class="large">No Items</div>
+	   <div class="large">
+			<div class="col-12 col-sm-10 col-md-3 col-lg-3 col-xl-4 offset-sm-0 col-md-12 card filtr-item"  data-category="0"">
+	   </div>
 @endforelse<!--Product End-->
 <!--DATA CATEGORY IS FOR THE PRODUCT CATEGORY A TAG-->
 	
