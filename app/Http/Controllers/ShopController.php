@@ -86,8 +86,9 @@ class ShopController extends Controller
             $user = new User();
         }
         $product = Product::where('slug',$slug)->firstOrFail();
+        $related = Product::where('slug','!=',$slug)->related()->get();
 
-        return view('product')->with(['product'=>$product,'user'  => $user]);
+        return view('product')->with(['product'=>$product,'related' =>$related, 'user'  => $user]);
     }
 
     public function showcategory(Request $request, $id)
@@ -119,8 +120,9 @@ class ShopController extends Controller
                             ->orWhere('description','like',"%$query%")
                             ->paginate(10);
         //$products = Product::search($query);
-
-        return view('search-results-table')->with(['products'=>$products, 'user'=>$user ]);
+        $categories = Category::all();
+        $users = User::all();
+        return view('search-results-table')->with(['products'=>$products, 'user'=>$user, 'users'=>$users ]);
 
 
     }
