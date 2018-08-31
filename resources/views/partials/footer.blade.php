@@ -56,7 +56,7 @@ function topFunction() {
 }
         </script>
         <script src="{{ URL::asset('js/backtotop.js') }}"></script> 
-<a href="#0" class="cd-top js-cd-top"><i  style="color:#fff;"class="fa fa-angle-up"></i></a>
+<a href="#0" class="cd-top js-cd-top"></a>
 </body>
 
 </html>
