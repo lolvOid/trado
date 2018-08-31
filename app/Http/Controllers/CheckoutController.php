@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Cart;
+use Auth;
 use Config;
 use Stripe;
 use App\User;
