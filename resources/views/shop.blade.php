@@ -15,7 +15,7 @@
 					<div class="filtr-controls">
 						<span class="active" data-filter="all">all</span>
 						@foreach ($categories as $category)
-					<a href="/" style="font-size:15px" data-filter="{{$category->id}}" class="medium">{{$category->name}}</a>						
+						<a href="/"><span style="font-size:15px" data-filter="{{$category->id}}" class="medium">{{$category->name}}</span></a>						
 						@endforeach
 	
     
