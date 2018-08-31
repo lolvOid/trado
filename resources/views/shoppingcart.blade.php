@@ -75,8 +75,8 @@
                                 <h4><span class="text" style="color:#a6a6a6;">Total</span><span class="float-right price" style="color:#a6a6a6;">{{presentPrice(Cart::total())}}</span></h4>
                                 <div class="row">
                                   
-                                    <div class="col-md-6"><a href="{{route('checkout.index')}}" class="btn btn-primary btn-block btn-lg" type="button" style="width:164px;background-color:rgb(49,117,254);"><i class="fa fa-dollar" style="color:rgb(255,255,255);"></i>Pay With Cash</a></div>
-                                <div class="col-md-6"><button class="btn btn-primary btn-block btn-lg" type="button"><i class="fa fa-bitcoin" style="color:rgb(255,252,252);"></i>Pay with Coin</button></div>
+                                    <div class="col-md-6"><a href="{{route('checkout.index')}}" class="btn btn-primary btn-block btn-lg" type="button" style="width:164px;background-color:rgb(49,117,254);"><i class="fa fa-dollar" style="color:rgb(255,255,255);"></i>Checkout</a></div>
+                                
                                 </div> 
                                 <div class="row">
                                     <div class="col"></div>
