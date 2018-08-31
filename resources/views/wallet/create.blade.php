@@ -16,7 +16,11 @@
                        <div class="form-group"><input type="password" name="password-confirm" required placeholder="Retype Password" class="form-control" /></div>
                        <div class="form-group">
                            <button class="btn btn-dark btn-block" type="submit">Create</button></div>
-                           <a href="#" class="forgot">Forgot Password?</a>
+                           
+                           
+                           <a href="/wallet/login" class="pull-right" >I have a Wallet.</a>
+                           <br/>
+                           
                         </form>
                 </div>
                 

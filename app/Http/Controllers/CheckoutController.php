@@ -54,6 +54,7 @@ class CheckoutController extends Controller
        try{
         $token = $request->stripeToken;
         $testToken = "tok_visa";
+        //dd(Cart::total()/100);
         $charge = Stripe::charges()->create([
             'amount' => Cart::total()/100,
             'currency' => 'usd',

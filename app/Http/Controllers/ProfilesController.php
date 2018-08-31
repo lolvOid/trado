@@ -134,4 +134,18 @@ class ProfilesController extends Controller
         }
         return redirect()->route('profile.index');
     }
+
+    public function viewer(Request $request, $id)
+    {
+        $user = Auth::user();
+        $owner = User::whereId($id)->first();
+        $products = Product::where('owner_id',$id)->get();
+        if($owner== null){
+            return;
+        }
+        if($user==null){
+            return;
+        }
+        return view('guestview')->with(["user" => $user, "products"=>$products, "owner"=>$owner]);
+    }
 }

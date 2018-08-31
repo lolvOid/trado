@@ -16,8 +16,8 @@ class WalletController extends Controller
 
 
     public function index(){
-        
-        return view('wallet/create');
+        $user = Auth::user();
+        return view('wallet/_register')->with('user',$user);
     }
 
 
@@ -52,7 +52,7 @@ class WalletController extends Controller
                 'user_id'=>Auth::user()->id,
             ]);
             
-            return view('wallet/login');
+            return view('wallet/_login')->with(['success_message'=> 'Your walletId is '.$guid.' and mail is sent to your account.', 'user'=>Auth::user()]);
            
        } 
        catch(\Exception $e){
@@ -63,14 +63,23 @@ class WalletController extends Controller
 ///Return to PAGE
     }
     public function show(){
-
-        return view('wallet/showdata');
+        $user = Auth::user();
+        $wallets = Wallet::where('user_id',$user->id)->get();
+        if($user == null){
+            return redirect()->route('wallet.login')->with('user',$user);
+        }
+        
+        if($wallets->first() == null){
+            return redirect()->route('wallet.login')->with('user',$user);
+        }
+        
+        return view('wallet/_wallet')->with(['user'=>$user, 'wallets'=>$wallets]);
     }
     
 
-    public function login(){  
-
-        return view('wallet/login');
+    public function login(){ 
+        $user = Auth::user(); 
+        return view('wallet/_login')->with('user', $user);
     }
 
     public function walletstore(Request $request)
@@ -89,15 +98,16 @@ class WalletController extends Controller
 
  
             
-             return view('wallet/showdata')->with([  
+             return view('wallet/_wallet')->with([  
                                                 'mybalance'=>$my_balance,
                                                 'addressList'=>$addressList,
                                                 'guid'=>$guid, 
+                                                'user'=>$user
                                             ]);
             }
             catch(\Exception $e){
-                    
-                    return $msg;
+                $message = "Can't LOGIN to wallet service,Please Try Again!";
+                return $message;  
             }
             
     }

@@ -33,7 +33,7 @@
     <script src="{{ URL::asset('https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ URL::asset('https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js') }}"></script>
     <script src="{{ URL::asset('https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js') }}"></script>
-    <script src="{{ URL::asset('https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js') }}"></script>
+  <!--  <script src="{{ URL::asset('https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js') }}"></script>-->
     <script src="{{ URL::asset('https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js') }}"></script>
     <script src="{{ URL::asset('https://use.fontawesome.com/1744f3f671.js') }}"></script>
     <script src="{{ URL::asset('js/script.min.js') }}"></script>

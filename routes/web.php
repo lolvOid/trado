@@ -25,7 +25,7 @@ Route::get('/search-results','ShopController@search')->name('search');
 
 //Route::view('/shop','shop');
 //Route::view('/product','product');
-Route::view('/wallet','coinwallet');
+// Route::view('/wallet','coinwallet');
 
 
 Route::view('/contact','contact');
@@ -37,6 +37,7 @@ Route::get('/dashboard','DashboardController@index')->name('dashboard.index');
 Route::get('/profile','ProfilesController@index')->name('profile.index');
 Route::post('/profile','ProfilesController@store')->name('profile.store');
 Route::post('upload', 'ProfilesController@upload');
+Route::get('/profile/{id}','ProfilesController@viewer')->name('profile.public');
 
 Route::get('/statistics','StatisticsController@index')->name('statistics.index');
 
@@ -55,6 +56,8 @@ Route::post('/wallet/create','WalletController@create')->middleware('auth')->nam
 Route::post('/wallet/auth','WalletController@walletstore')->middleware('auth')->name('wallet.store');
 Route::get('/wallet/showdata','WalletController@show')->middleware('auth')->name('wallet.show');
 Route::post('/wallet/transaction','WalletController@makeTransaction')->middleware('auth')->name('wallet.payment');
+
+
 
 Route::view('/auth/register','register');
 Route::view('/auth/login','login');

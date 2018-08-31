@@ -5,6 +5,13 @@
 
     <div class="container" >
             <div class="col-md-4 offset-4">
+                @if(\Session::has('success_message'))
+                    <div class='alert alert-success'>
+                        <p>
+                            {{\Session::get('success_message')}}
+                        </p>
+                    </div>
+                @endif
                 <div class="form-group">
                     <form method="post" action="{{route('wallet.store')}}">
 

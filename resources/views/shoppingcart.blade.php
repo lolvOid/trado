@@ -42,11 +42,11 @@
                                     
                                
                                 <div class="product">
-                                    <div class="row justify-content-center align-items-center">
-                                        <div class="col-md-3">
+                                    <div class="row  align-items-center">
+                                        <div style="float:none;margin:0 auto;"class="col-md-3">
                                             <div class="product-image"><img class="img-fluid d-block mx-auto image" src="{{$item->model->images}}"></div>
                                         </div>
-                                        <div class="col-md-5 product-info"><a href="{{route('shop.show',$item->model->slug)}}" class="product-name">{{$item->model->name}}</a>
+                                        <div class="col-md-4 center-block product-info"><a href="{{route('shop.show',$item->model->slug)}}" class="product-name">{{$item->model->name}}</a>
                                             <div class="product-specs">
                                                 <div><span>Display:&nbsp;</span><span class="value">{!!$item->model->description!!}</span></div>
                                                 {{-- <div><span>RAM:&nbsp;</span><span class="value">4GB</span></div>
@@ -66,7 +66,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-12 col-lg-4" style="background-color:#fdfdfe;">
+                        <div class="col-md-12 col-lg-12 md-block" style="background-color:#fdfdfe;">
                             <div class="summary">   
                                 <h3 class="text-center" style="color:rgb(118,115,115);font-size:35px;">Summary</h3>
                                 <h4><span class="d-inline-block text" style="color:#a6a6a6;">Subtotal</span><span class="float-right price" style="color:#a6a6a6;">{{presentPrice(Cart::subtotal())}}</span></h4>
@@ -75,9 +75,14 @@
                                 <h4><span class="text" style="color:#a6a6a6;">Total</span><span class="float-right price" style="color:#a6a6a6;">{{presentPrice(Cart::total())}}</span></h4>
                                 <div class="row">
                                   
-                                    <div class="col-md-6"><a href="{{route('checkout.index')}}" class="btn btn-primary btn-block btn-lg" type="button" style="width:164px;background-color:rgb(49,117,254);"><i class="fa fa-dollar" style="color:rgb(255,255,255);"></i>Checkout</a></div>
+                                <div class="col-md-6 center-block"><a href="{{route('checkout.index')}}" class="btn btn-primary btn-block " type="button" style="width:164px;background-color:#6699ff;color:#fff;border-color:white;">
+                                       Checkout  <i class="fa fa-dollar" style="color:rgb(255,255,255);"></i></a></div>
                                 
                                 </div> 
+                                <div class="col-md-6 center-block"><a href="{{route('wallet.index')}}" class="btn btn-primary btn-block " type="button" style="width:164px;background-color:#6699ff;color:#fff;border-color:white;">
+                                         Pay with  <i class="fa fa-bitcoin" style="color:rgb(255,255,255);"></i></a></div>
+                                
+                                </div>
                                 <div class="row">
                                     <div class="col"></div>
                                 </div>

@@ -4,7 +4,6 @@
 use Illuminate\Support\Facades\Request;
 use App\Product;
 use App\User;
-use Blockchain;
 function productImage($path){
      return file_exists('storage/'.$path)?('storage/'.$path):('images/not found');
 }
@@ -57,4 +56,12 @@ function getChart($chartName,$timespan,$rollingAverage,$start,$format,$sampled)
     ];
     $url = $base_url.http_build_query($params);
     dd($url);
+}
+
+function getTimeToDate($time){
+    return explode(" ", $time)[0];
+}
+
+function getBtcBalance($guid, $password){
+    return Blockchain::getWalletBalance($guid, $password);
 }

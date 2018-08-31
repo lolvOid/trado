@@ -23,10 +23,10 @@
     <link rel="stylesheet" href="{{ URL::asset('https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/styles.min.css') }}">
-   
-      <link rel="stylesheet" href="{{ URL::asset('css/reset.css') }}"> <!-- CSS reset -->
-	<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}"> <!-- Resource style -->
-	<link rel="stylesheet" href="{{ URL::asset('css/demo.css') }}"> <!-- Demo style -->
+   <!--
+      <link rel="stylesheet" href="{{ URL::asset('css/reset.css') }}"> 
+	<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}"> 
+	<link rel="stylesheet" href="{{ URL::asset('css/demo.css') }}">-->
 
       
 </head>
@@ -107,6 +107,6 @@
    
      </div>
    </div>
-      <a href="#0" class="cd-top js-cd-top">Top</a>
+      {{-- <a href="#0" class="cd-top js-cd-top">Top</a> --}}
 </nav>
 

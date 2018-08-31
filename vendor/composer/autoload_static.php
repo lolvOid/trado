@@ -83,6 +83,7 @@ class ComposerStaticInit9149215aed0641d1b6c785541ca8ccc3
         'M' => 
         array (
             'Monolog\\' => 8,
+            'Maxtee\\Blockchain\\' => 18,
         ),
         'L' => 
         array (
@@ -285,6 +286,10 @@ class ComposerStaticInit9149215aed0641d1b6c785541ca8ccc3
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
         ),
+        'Maxtee\\Blockchain\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maxtee/blockchain/src',
+        ),
         'League\\Flysystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
@@ -481,9 +486,9 @@ class ComposerStaticInit9149215aed0641d1b6c785541ca8ccc3
         'App\\Http\\Controllers\\ProfilesController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfilesController.php',
         'App\\Http\\Controllers\\SearchController' => __DIR__ . '/../..' . '/app/Http/Controllers/SearchController.php',
         'App\\Http\\Controllers\\ShopController' => __DIR__ . '/../..' . '/app/Http/Controllers/ShopController.php',
-        'App\\Http\\Controllers\\ShoppingCartController' => __DIR__ . '/../..' . '/app/Http/Controllers/ShoppingCartController.php',
         'App\\Http\\Controllers\\StatisticsController' => __DIR__ . '/../..' . '/app/Http/Controllers/StatisticsController.php',
         'App\\Http\\Controllers\\Voyager\\ProductsController' => __DIR__ . '/../..' . '/app/Http/Controllers/Voyager/ProductsController.php',
+        'App\\Http\\Controllers\\WalletController' => __DIR__ . '/../..' . '/app/Http/Controllers/WalletController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
@@ -497,6 +502,7 @@ class ComposerStaticInit9149215aed0641d1b6c785541ca8ccc3
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\Wallet' => __DIR__ . '/../..' . '/app/Wallet.php',
         'Arrilot\\Widgets\\AbstractWidget' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/AbstractWidget.php',
         'Arrilot\\Widgets\\AsyncFacade' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/AsyncFacade.php',
         'Arrilot\\Widgets\\Console\\WidgetMakeCommand' => __DIR__ . '/..' . '/arrilot/laravel-widgets/src/Console/WidgetMakeCommand.php',
@@ -2876,6 +2882,10 @@ class ComposerStaticInit9149215aed0641d1b6c785541ca8ccc3
         'League\\Flysystem\\Util\\ContentListingFormatter' => __DIR__ . '/..' . '/league/flysystem/src/Util/ContentListingFormatter.php',
         'League\\Flysystem\\Util\\MimeType' => __DIR__ . '/..' . '/league/flysystem/src/Util/MimeType.php',
         'League\\Flysystem\\Util\\StreamHasher' => __DIR__ . '/..' . '/league/flysystem/src/Util/StreamHasher.php',
+        'Maxtee\\Blockchain\\Blockchain' => __DIR__ . '/..' . '/maxtee/blockchain/src/Blockchain.php',
+        'Maxtee\\Blockchain\\BlockchainServiceProvider' => __DIR__ . '/..' . '/maxtee/blockchain/src/BlockchainServiceProvider.php',
+        'Maxtee\\Blockchain\\Exceptions\\BlockchainException' => __DIR__ . '/..' . '/maxtee/blockchain/src/Exceptions/BlockchainException.php',
+        'Maxtee\\Blockchain\\Facades\\Blockchain' => __DIR__ . '/..' . '/maxtee/blockchain/src/Facades/Blockchain.php',
         'MenuItemsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/MenuItemsTableSeeder.php',
         'MenusTableSeeder' => __DIR__ . '/../..' . '/database/seeds/MenusTableSeeder.php',
         'Mockery' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
