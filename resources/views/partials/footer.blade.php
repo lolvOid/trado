@@ -37,6 +37,24 @@
     <script src="{{ URL::asset('https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js') }}"></script>
     <script src="{{ URL::asset('https://use.fontawesome.com/1744f3f671.js') }}"></script>
     <script src="{{ URL::asset('js/script.min.js') }}"></script>
+    <script>
+
+        window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+        </script>
 </body>
 
 </html>
