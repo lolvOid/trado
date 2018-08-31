@@ -102,7 +102,7 @@ class ShopController extends Controller
         $product = Product::where('category_id',$id)->firstOrFail();
        // $related = Product::where('slug','!=',$slug)->related()->get();
 
-        return view('product')->with(['product'=>$product, 'user'  => $user]);
+        return view('shop')->with(['product'=>$product, 'user'  => $user]);
     }
 
     public function search(Request $request){
