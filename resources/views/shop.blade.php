@@ -130,7 +130,7 @@
                 </ul>
             </nav>
 		</div> --}}
-			@if ($category_id == null)
+			@if ($category_id == 0)
 				{{$products->links()}}	
 			@endif
 			

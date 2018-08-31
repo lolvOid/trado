@@ -47,7 +47,8 @@ class ShopController extends Controller
             'categoryName'=>$categoryName,
             'user'=>$user,
             'users'=>$users,
-            'trendings'=>$trendings
+            'trendings'=>$trendings,
+            'category_id' => 0
             ]);
     }
 
