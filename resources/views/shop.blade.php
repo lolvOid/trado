@@ -13,9 +13,19 @@
 					<h1 class="text-center"></h1>
 					<!--Category Start-->
 					<div class="filtr-controls">
-							<a href="{{ route('shop.index') }}"><span class="active" data-filter="all">all</span></a>
+							<a href="{{ route('shop.index') }}">
+								<span 
+								@if ($category_id == 0)
+									class="active"
+								@endif  
+								data-filter="all">all
+							</span></a>
 						@foreach ($categories as $category)
-						<a href="{{ '/shop/category/'.$category->id }}"><span style="font-size:15px" data-filter="{{$category->id}}" class="medium">{{$category->name}}</span></a>						
+						<a href="{{ '/shop/category/'.$category->id }}"><span style="font-size:15px" data-filter="{{$category->id}}" 
+							@if ($category_id == $category->id)
+							class="active"
+							@endif
+							 >{{$category->name}}</span></a>						
 						@endforeach
 	
     
@@ -101,9 +111,7 @@
     </div>
 </div>
 @empty
-	   <div class="large">
-			<div class="col-12 col-sm-10 col-md-3 col-lg-3 col-xl-4 offset-sm-0 col-md-12 card filtr-item"  data-category="0"">
-	   </div>
+<span data-filter=1></span>
 @endforelse<!--Product End-->
 <!--DATA CATEGORY IS FOR THE PRODUCT CATEGORY A TAG-->
 	
