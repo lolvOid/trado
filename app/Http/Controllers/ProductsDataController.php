@@ -111,11 +111,11 @@ class ProductsDataController extends Controller
     public function add(Request $request)
     {
         // dd($request);
-        // $user = Auth::user();
+        $user = Auth::user();
         // $productId = $request->id;
         // $product = Product::where('id' , '=', $productId)->first();
         // $categories = Category::all();
-        return view('productadd');
+        return view('productadd', compact("user"));
     }
     /**
      * Update the specified resource in storage.
