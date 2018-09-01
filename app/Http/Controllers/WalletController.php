@@ -86,23 +86,19 @@ class WalletController extends Controller
     {
         
         $user = Auth::user();
-
+        $wallets = Wallet::where('user_id',$user->id)->get();
         
     try{
             $guid = $request->guid;     
-            $password = $request->password;    
+            // $password = $request->password;    
         
-            $my_balance = Blockchain::getWalletBalance($guid, $password);
-            $check      = enableHD($guid,$password);
-            $addressList = Blockchain::listAddress($guid,$password)['addresses'];
+            // $my_balance = Blockchain::getWalletBalance($guid, $password);
+            // $check      = enableHD($guid,$password);
+            // $addressList = Blockchain::listAddress($guid,$password)['addresses'];
 
- 
-            
-             return view('wallet/_wallet')->with([  
-                                                'mybalance'=>$my_balance,
-                                                'addressList'=>$addressList,
-                                                'guid'=>$guid, 
-                                                'user'=>$user
+             return view('wallet/_wallet')->with([
+                                                'user'=>$user,
+                                                'wallets'=>$wallets
                                             ]);
             }
             catch(\Exception $e){
