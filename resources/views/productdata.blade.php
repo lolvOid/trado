@@ -41,7 +41,7 @@
                                                     </form> --}}
                                                             <form method="post" action="{{route('products.edit')}} ">
                                                                 {{csrf_field()}}
-                                                                <input type="hidden" name="id" value="{{$product->id}}">
+                                                               
                                                                 <input type="submit" class="btn btn-success m-b-sm" value="Add new Product">
                                                             </form>
                                                                 <br>
