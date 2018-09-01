@@ -85,7 +85,7 @@
                     </div><!-- Row --> --}}
                         
                             
-                        <h3 style="color:red">Do not share your Wallet ID with others</h3><br/>
+                        <h3 style="color:red">Do not share your Wallet ID with others</h3>
                         <div class="row" style="padding-top:30px">
                                 @foreach ($wallets as $wallet)
                             <div class="col-md-4 offset-4" style="padding-bottom:10px">
