@@ -94,7 +94,7 @@
                 <span style="color:#000;">{{$product->presentPrice()}}<small>USD</small></span>
             </div><small class="product-review">3 - 272 reviews</small>
             <div>
-                <h3 class="product-description">{!!$product->description,40 !!}</h3>
+                <div class="product-description">{!!$product->description,40 !!}</div>
 				{{-- {{ route('shop.show',$product->slug)}} --}}
 			{{-- <a href="" class="btn btn-primary pull-right"> --}}
 				<form method="GET" action="{{ route('shop.show',$product->slug)}}">
