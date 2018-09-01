@@ -108,6 +108,15 @@ class ProductsDataController extends Controller
         return view('productform', compact("product", "user", "categories"));
     }
 
+    public function add(Request $request)
+    {
+        // dd($request);
+        // $user = Auth::user();
+        // $productId = $request->id;
+        // $product = Product::where('id' , '=', $productId)->first();
+        // $categories = Category::all();
+        return view('productadd');
+    }
     /**
      * Update the specified resource in storage.
      *

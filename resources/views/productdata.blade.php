@@ -39,7 +39,7 @@
                                                 {{-- <form method="GET" action="{{route('productUpdate.store')}}">
                                                         <button type='submit'>Ha ha</button>
                                                     </form> --}}
-                                                            <form method="post" action="{{route('products.edit')}} ">
+                                                            <form method="post" action="{{route('products.add')}} ">
                                                                 {{csrf_field()}}
                                                                
                                                                 <input type="submit" class="btn btn-success m-b-sm" value="Add new Product">

@@ -43,9 +43,10 @@ Route::get('/statistics','StatisticsController@index')->name('statistics.index')
 
 
 Route::get('/productdata','ProductsDataController@index')->name('productdata.index');
-Route::post('/productAdd','ProductsDataController@store')->name('products.store');
+Route::post('/productStore','ProductsDataController@store')->name('products.store');
 
 Route::post('/productEdit','ProductsDataController@edit')->name('products.edit');
+Route::post('/productAdd','ProductsDataController@add')->name('products.add');
 Route::post('/productUpdate','ProductsDataController@update')->name('products.update');
 
 Route::post('/productDelete','ProductsDataController@destroy')->name('products.delete');
