@@ -53,7 +53,7 @@
                                                     <label class="col-sm-2 control-label">Featured</label>
                                                     <div class="col-sm-10">
                                                             {{-- <label  id="togglebutton" class="switch"> --}}
-                                                                    .<input class="switch" type="checkbox">
+                                                                    <input class="switch" type="checkbox">
                                                             {{-- <span class="slider round"></span> --}}
                                                     </div>
                                                 </div>
@@ -66,6 +66,10 @@
                                                                 @endforeach
                                                         </select>
                                                         </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <input class="btn btn-default btn-md float-left" type="file" data-name="product_img" name="product_img" id="product_img" required>
                                                 </div>
                                        
                                                 <div class="form-group">
