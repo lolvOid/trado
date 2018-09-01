@@ -52,10 +52,10 @@
                                                 <div class="form-group">
                                                     <label class="col-sm-2 control-label">Featured</label>
                                                     <div class="col-sm-10">
-                                                           
+                                                            {{-- <label  id="togglebutton" class="switch"> --}}
                                                                     .<input class="switch" type="checkbox">
-                                                            
-                                                    
+                                                            {{-- <span class="slider round"></span> --}}
+                                                    </div>
                                                 </div>
                                                <div class="form-group">
                                                     <label class="col-sm-2 control-label">Type</label>
