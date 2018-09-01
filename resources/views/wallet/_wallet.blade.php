@@ -100,8 +100,10 @@
                                             <span name="address">{{$wallet->main_address}}</span>
                                         </li> 
                                     <li class="list-group-item">
+                                        <div class="btcBalance">
                                             <label for="label">Balance:</label>
                                             <span name="label">0.0000 <i class="fa fa-fa-bitcin"></i></span>
+                                        </div>
                                     </li>
                                 </ul>        
                             </div>
