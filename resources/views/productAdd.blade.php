@@ -79,9 +79,9 @@
                                                     <label class="col-sm-2 control-label">Product Description</label>
                                                     <input type="hidden" class="description" id="description" name="description">
                                                     <div class="col-sm-10">
-                                                        <div class="summernote">
-                                                            
-                                                        </div>
+                                                            <div id="editor">
+                                                                    {{-- {!! $product->description !!} --}}
+                                                            </div>
                                                     </div>
                                                 </div>
                                                 <input type="button" onclick="beforeSubmit();" name="add" id="add" value="Save" class="btn btn-success pull-right">
@@ -91,12 +91,22 @@
                                 </div>
                   
                             </div>
+                            <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
                             <script>
-
+                                var toolbarOptions = [
+                                    [{ 'color': [] }, { 'background': [] }],
+                                    
+                                ];
+                                var quill = new Quill('#editor', {
+                                    theme: 'snow',
+                                    modules: {
+                                        toolbar: toolbarOptions
+                                    }
+                                });
                                 beforeSubmit = function(){
-                                    $descriptionValue = $('div.note-editable').html();
+                                    $descriptionValue = $('div.ql-editor').html();
                                     $('input#description').val($descriptionValue);
-                                    $("#addForm").submit();                
+                                    $("#editForm").submit();                
                                 }
                                 
                             </script>
