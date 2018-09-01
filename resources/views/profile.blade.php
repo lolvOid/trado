@@ -31,7 +31,7 @@
                                         <form method="POST" action="{{ URL::to('upload') }}" enctype="multipart/form-data">
                                             {{csrf_field()}}
                                             <img src={{$user->avatar}} class="img-circle" style="width:200px; height:auto; clear:both; display:block; padding:2px; border:1px solid #ddd; margin-bottom:10px;">
-                                            <label>Image:</label><input class="btn btn-success btn-sm float-left" type="file" data-name="avatar" name="avatar" id="avatar">
+                                            <input class="btn btn-success btn-sm float-left" type="file" data-name="avatar" name="avatar" id="avatar">
                                             <button type="submit" class="btn btn-primary m-t-xs m-b-xs">Upload</button>
                                         </form>
                                     </div>
