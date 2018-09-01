@@ -75,7 +75,7 @@
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="col-sm-2 control-label">Product Description</label>
-                                                <input type="hidden" class="description" id="description" name="description" value="{!! $product->description !!}">
+                                                <input type="hidden" class="description" id="description" name="description" value="{{} $product->description }}">
                                                     <div class="col-sm-10">
                                                         <div id="editor">
                                                             {{-- {!! $product->description !!} --}}
