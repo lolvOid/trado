@@ -59,7 +59,7 @@ class ProductsDataController extends Controller
             Image::make($product_img)->resize(640, 426)->save( public_path( $filename ) );
             dd("here");
         }
-        dd($request);
+        dd($filename);
        $featured = $request->input('featured');
        
        if($featured == 'on'){
