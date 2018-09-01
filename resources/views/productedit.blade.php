@@ -14,37 +14,37 @@
                               <div class="col-md-12">
                                     <div class="panel panel-white">
                                         <div class="panel-heading clearfix">
-                                                <h4 class="panel-title">Add Product</h4>
+                                                <h4 class="panel-title">Product Edit</h4>
                                         </div>
                                         <div class="panel-body">
-                                            <form id="editForm" method="POST" action="{{route('products.store')}}" class="form-horizontal">
+                                            <form id="editForm" method="POST" action="{{route('products.update')}}" class="form-horizontal">
                                                 {{ csrf_field() }}
-                                                {{-- <input type="hidden" name="id" value="{{$product->id}}"> --}}
+                                                <input type="hidden" name="id" value="{{$product->id}}">
                                                 <div class="form-group">
                                                     <label for="input-Default" class="col-sm-2 control-label">Name</label>
                                                     <div class="col-sm-10">
-                                                        <input type="text" name="name" placeholder="Product Name" class="form-control" id="input-Default">
+                                                        <input type="text" name="name" value="{{$product->name}}" placeholder="Product Name" class="form-control" id="input-Default">
                                                     </div>
                                                 </div>
 
                                                 <div class="form-group">
                                                         <label for="input-Default" class="col-sm-2 control-label">Slug</label>
                                                         <div class="col-sm-10">
-                                                            <input type="text"  name="slug" placeholder="Slug" class="form-control" id="input-Default">
+                                                            <input type="text"  name="slug" value="{{$product->slug}}" placeholder="Slug" class="form-control" id="input-Default">
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group">
                                                             <label for="input-Default" class="col-sm-2 control-label">Details</label>
                                                             <div class="col-sm-10">
-                                                                <input type="text" name="details" placeholder="Details" class="form-control" id="input-Default">
+                                                                <input type="text" name="details" value="{{$product->details}}" placeholder="Details" class="form-control" id="input-Default">
                                                             </div>
                                                         </div>
 
                                                         <div class="form-group">
                                                                 <label for="input-Default" class="col-sm-2 control-label">Price</label>
                                                                 <div class="col-sm-10">
-                                                                    <input type="text" name="price" placeholder="Price" class="form-control" id="input-Default">
+                                                                    <input type="text" name="price" value="{{($product->price)/100}}" placeholder="Price" class="form-control" id="input-Default">
                                                                 </div>
                                                             </div>
 
@@ -53,14 +53,14 @@
                                                     <label class="col-sm-2 control-label">Featured</label>
                                                     <div class="col-sm-10">
                                                             <label  id="togglebutton" class="switch">
-                                                                    .<input class="switch" type="checkbox">
+                                                                    .<input class="switch" type="checkbox" @if($product->featured) checked @endif >
                                                             <span class="slider round"></span>
                                                     </div>
                                                 </div>
                                                <div class="form-group">
                                                     <label class="col-sm-2 control-label">Type</label>
                                                     <div class="col-sm-10">
-                                                        <select name="category">
+                                                        <select name="category" value="{{$product->category_id}}">
                                                                 @foreach ($categories as $category)
                                                                 <option value="{{$category->id}}">{{$category->name}}</option>
                                                                 @endforeach
@@ -73,7 +73,7 @@
                                                     <input type="hidden" class="description" id="description" name="description">
                                                     <div class="col-sm-10">
                                                         <div class="summernote">
-                                                            
+                                                            {!! $product->description !!}
                                                         </div>
                                                     </div>
                                                 </div>

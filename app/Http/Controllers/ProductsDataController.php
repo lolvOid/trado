@@ -105,7 +105,7 @@ class ProductsDataController extends Controller
         $productId = $request->id;
         $product = Product::where('id' , '=', $productId)->first();
         $categories = Category::all();
-        return view('productform', compact("product", "user", "categories"));
+        return view('productedit', compact("product", "user", "categories"));
     }
 
     public function add(Request $request)

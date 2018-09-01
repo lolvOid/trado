@@ -1,43 +1,96 @@
-
 @extends('dashmaster')
 
 @section('dashboard')
 
-<form>
-        <div class="modal fade" id="editModel" tab dashboard="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            
-                            <h4 class="modal-title" id="myModalLabel">Create Product</h4>
-                        </div>
-                        <div class="modal-body">
-                            
-                            <div class="form-group">
-                                <input type="text" id="name" class="form-control" name="name" placeholder="Name" required>
+                            <div class="page-inner">
+                                    <div class="page-title">
+                                            <div class="page-breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li><a href="dashboard">Home</a></li>
+                                                    <li class="active">Product Edit</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                              <div class="col-md-12">
+                                    <div class="panel panel-white">
+                                        <div class="panel-heading clearfix">
+                                                <h4 class="panel-title">Add Product</h4>
+                                        </div>
+                                        <div class="panel-body">
+                                            <form id="editForm" method="POST" action="{{route('products.store')}}" class="form-horizontal">
+                                                {{ csrf_field() }}
+                                                {{-- <input type="hidden" name="id" value="{{$product->id}}"> --}}
+                                                <div class="form-group">
+                                                    <label for="input-Default" class="col-sm-2 control-label">Name</label>
+                                                    <div class="col-sm-10">
+                                                        <input type="text" name="name" placeholder="Product Name" class="form-control" id="input-Default">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                        <label for="input-Default" class="col-sm-2 control-label">Slug</label>
+                                                        <div class="col-sm-10">
+                                                            <input type="text"  name="slug" placeholder="Slug" class="form-control" id="input-Default">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                            <label for="input-Default" class="col-sm-2 control-label">Details</label>
+                                                            <div class="col-sm-10">
+                                                                <input type="text" name="details" placeholder="Details" class="form-control" id="input-Default">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                                <label for="input-Default" class="col-sm-2 control-label">Price</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" name="price" placeholder="Price" class="form-control" id="input-Default">
+                                                                </div>
+                                                            </div>
+
+                                           
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">Featured</label>
+                                                    <div class="col-sm-10">
+                                                            <label  id="togglebutton" class="switch">
+                                                                    .<input class="switch" type="checkbox">
+                                                            <span class="slider round"></span>
+                                                    </div>
+                                                </div>
+                                               <div class="form-group">
+                                                    <label class="col-sm-2 control-label">Type</label>
+                                                    <div class="col-sm-10">
+                                                        <select name="category">
+                                                                @foreach ($categories as $category)
+                                                                <option value="{{$category->id}}">{{$category->name}}</option>
+                                                                @endforeach
+                                                        </select>
+                                                        </div>
+                                                </div>
+                                       
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label">Product Description</label>
+                                                    <input type="hidden" class="description" id="description" name="description">
+                                                    <div class="col-sm-10">
+                                                        <div class="summernote">
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <input type="button" onclick="beforeSubmit();" name="edit-save" id="edit-save" value="Save" class="btn btn-success pull-right">
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                  
                             </div>
-                            <div class="form-group">
-                                <input type="text" id="slug" name="slug" class="form-control"  placeholder="Slug" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <input type="text" id="details" name="details" class="form-control" placeholder="Details" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="number" id="price" name="price" class="form-control date-picker" placeholder="Price" required>
-                            </div>
-                            <div class="form-group">
-                                    <input type="text" id="description" name="descriptions" class="form-control" placeholder="Description" required>
-                            </div>
-                                <input class="form-control" type="file" data-name="product_img" name="product_img" id="product_img">
-                            
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                            <button type="submit" id="add-row" class="btn btn-success">Add</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-   </form>
+                            <script>
+
+                                beforeSubmit = function(){
+                                    $descriptionValue = $('div.note-editable').html();
+                                    $('input#description').val($descriptionValue);
+                                    $("#editForm").submit();                
+                                }
+                                
+                            </script>
+        @endsection()
