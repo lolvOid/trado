@@ -95,7 +95,21 @@
                 <span style="color:#000;">{{$product->presentPrice()}}<small>USD</small></span>
             </div><small class="product-review">3 - 272 reviews</small>
             <div>
-                <div class="product-description"> {!!$product->description !!}</div>
+				<div class="product-description{{$product->id}}"> {!!$product->description !!}</div>
+				<script>
+						$("div.product-description{{$product->id}}").each(function() {
+								var paragraph = $(this).text();
+								var maxlength = 100;
+								var strlength = paragraph.length;
+								if (strlength > maxlength) {
+									var introduction    = paragraph.substr(0,maxlength); // cut string
+									var search          = introduction.lastIndexOf(" "); // find position of last space (last word cannot be cut)
+									introduction        = introduction.substr(0, search); // cut string until last space
+									introduction        = introduction + "..."; // add ... in the end
+									$("div.product-description").text(introduction);
+								}
+						});
+					</script>
 				{{-- {{ route('shop.show',$product->slug)}} --}}
 			{{-- <a href="" class="btn btn-primary pull-right"> --}}
 				<form method="GET" action="{{ route('shop.show',$product->slug)}}">
@@ -143,23 +157,7 @@
 				{{$products->links()}}	
 			@endif
 			
-			<script>
-				$("div.product-description").each(function() {
-						var paragraph = $(this).text();
-						var maxlength = 100;
-						var strlength = paragraph.length;
-						if (strlength > maxlength) {
-							var introduction    = paragraph.substr(0,maxlength); // cut string
-							var search          = introduction.lastIndexOf(" "); // find position of last space (last word cannot be cut)
-							introduction        = introduction.substr(0, search); // cut string until last space
-							introduction        = introduction + "..."; // add ... in the end
-							$("div.product-description").text(introduction);
-						}
-				});
-				
-				
-
-			</script>
+			
        
     </div>
 
