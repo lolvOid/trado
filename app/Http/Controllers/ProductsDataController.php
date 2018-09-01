@@ -58,6 +58,7 @@ class ProductsDataController extends Controller
             $filename = "/img/" . time() . $product_img->getClientOriginalExtension();
             Image::make($product_img)->resize(640, 426)->save( public_path( $filename ) );
         }
+        dd($request);
        $featured = $request->input('featured');
        
        if($featured == 'on'){
