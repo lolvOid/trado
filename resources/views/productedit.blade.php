@@ -77,10 +77,10 @@
                                                     <label class="col-sm-2 control-label">Product Description</label>
                                                     <input type="hidden" class="description" id="description" name="description">
                                                     <div class="col-sm-10">
-                                                        {{-- <div class="summernote">
-                                                            {!! $product->description !!}
-                                                        </div> --}}
-                                                        <textarea></textarea>
+                                                        <div id="editor">
+                                                            {{-- {!! $product->description !!} --}}
+                                                        </div>
+                                                        
                                                     </div>
                                                 </div>
                                                 <input type="button" onclick="beforeSubmit();" name="edit-save" id="edit-save" value="Save" class="btn btn-success pull-right">
@@ -90,17 +90,11 @@
                                 </div>
                   
                             </div>
-                            
-                                <!-- Include external JS libs. -->
-                                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-                                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script>
-                                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script>
-                            
-                                <!-- Include Editor JS files. -->
-                                <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.4/js/froala_editor.pkgd.min.js"></script>
-                            
-                                <!-- Initialize the editor. -->
-                                <script> $(function() { $('textarea').froalaEditor() });
+                            <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+                            <script>
+                                var quill = new Quill('#editor', {
+                                    theme: 'snow'
+                                });
                                 // beforeSubmit = function(){
                                 //     $descriptionValue = $('div.note-editable').html();
                                 //     $('input#description').val($descriptionValue);
