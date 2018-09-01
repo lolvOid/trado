@@ -3,17 +3,17 @@
 
 
     @section('pages')
-    <div style="background-image:url('img/shophdwallpaper.jpg');height:800px;background-position:center;background-size:cover;background-repeat:no-repeat;">
+     <div style="background-image:url('img/cover.png');height:800px;background-position:center;background-size:cover;background-repeat:no-repeat;">
     <div class="d-flex justify-content-center align-items-center" style="height:inherit;min-height:initial;width:100%;position:absolute;left:0;background-color:rgba(30,41,99,0.53);">
         <div class="d-flex align-items-center order-12" style="height:200px;">
             <div class="container">
                 	<div class="caption v-middle text-center">
 					<h1 class="cd-headline clip">
-			            <span class="blc">TRADE WITH | </span>
-			            <span class="cd-words-wrapper">
-			              <b class="is-visible">TRUST</b>
-                          <b>US</b>
-                          <b>TRADO</b>
+			           <span  style="color:#000;" class="blc">TRADE WITH | </span>
+			            <span  style="color:#000;" class="cd-words-wrapper">
+			              <b   style="color:#000;"class="is-visible">TRUST</b>
+			          
+			              <b   style="color:#000;">TRADO</b>
 			            </span>
 	          		</h1>
 				</div>
