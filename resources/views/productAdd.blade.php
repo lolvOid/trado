@@ -107,7 +107,7 @@
                                     console.log('yes');
                                     $descriptionValue = $('div.ql-editor').html();
                                     $('input#description').val($descriptionValue);
-                                    $("#editForm").submit();                
+                                    $("#addForm").submit();                
                                 }
                                 
                             </script>
