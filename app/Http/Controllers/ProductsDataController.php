@@ -115,7 +115,7 @@ class ProductsDataController extends Controller
         // $productId = $request->id;
         // $product = Product::where('id' , '=', $productId)->first();
         // $categories = Category::all();
-        return view('productadd', compact("user"));
+        return view('productAdd', compact("user"));
     }
     /**
      * Update the specified resource in storage.
