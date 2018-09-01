@@ -92,14 +92,18 @@
                             </div>
                             <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
                             <script>
+                                var toolbarOptions = [];
                                 var quill = new Quill('#editor', {
                                     theme: 'snow'
+                                    modules: {
+                                        toolbar: toolbarOptions
+                                    }
                                 });
-                                // beforeSubmit = function(){
-                                //     $descriptionValue = $('div.note-editable').html();
-                                //     $('input#description').val($descriptionValue);
-                                //     $("#editForm").submit();                
-                                // }
+                                beforeSubmit = function(){
+                                    $descriptionValue = $('div.ql-editor').html();
+                                    $('input#description').val($descriptionValue);
+                                    $("#editForm").submit();                
+                                }
                                 
                             </script>
         @endsection()
