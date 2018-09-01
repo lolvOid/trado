@@ -51,7 +51,10 @@
                                            
                                                 <div class="form-group">
                                                     <label class="col-sm-2 control-label">Featured</label>
-                                                    <input class="switch" type="checkbox">
+                                                    <div class="col-sm-10">
+                                                           
+                                                                    .<input class="switch" type="checkbox">
+                                                            
                                                     
                                                 </div>
                                                <div class="form-group">
