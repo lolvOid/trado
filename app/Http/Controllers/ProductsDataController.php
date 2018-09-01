@@ -76,7 +76,7 @@ class ProductsDataController extends Controller
             'description'   => $request->input('description'),
             'images'        => $filename
         ]); 
-        return redirect()->route('productdata.index');
+        return redirect()->route('productdata.index')->with('success','Product Add Successful');;
     }
 
     /**
