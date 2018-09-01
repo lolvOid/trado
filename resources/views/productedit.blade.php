@@ -107,6 +107,6 @@
                                     $('input#description').val($descriptionValue);
                                     $("#editForm").submit();                
                                 }
-                                $('div.ql-editor').html($('input#description').val())
+                                $('div.ql-editor').html($('input#description').val());
                             </script>
         @endsection()
