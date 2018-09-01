@@ -106,7 +106,7 @@
                                 </ul>        
                             </div>
                             @endforeach
-                            <a class="btn btn-link" >Create A wallet</a>
+                            <a class="btn btn-link" href="{{route('wallet.create')}}" >Create A wallet</a>
                             </div>
                         </div>
 

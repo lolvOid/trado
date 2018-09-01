@@ -66,12 +66,12 @@ class WalletController extends Controller
         $user = Auth::user();
         $wallets = Wallet::where('user_id',$user->id)->get();
         if($user == null){
-            return redirect()->route('wallet.login')->with('user',$user);
+            return redirect()->route('login')->with('user',$user);
         }
         
-        if($wallets->first() == null){
-            return redirect()->route('wallet.login')->with('user',$user);
-        }
+        // if($wallets->first() == null){
+        //     return redirect()->route('wallet.login')->with('user',$user);
+        // }
         
         return view('wallet/_wallet')->with(['user'=>$user, 'wallets'=>$wallets]);
     }
