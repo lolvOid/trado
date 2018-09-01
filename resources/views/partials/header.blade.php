@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{{ URL::asset('https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/styles.min.css') }}">
+    <script src="{{ URL::asset('plugins/jquery/jquery-3.1.0.min.js') }}"></script>
    <!--
       <link rel="stylesheet" href="{{ URL::asset('css/reset.css') }}"> 
 	<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}"> 

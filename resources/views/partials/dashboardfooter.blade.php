@@ -30,7 +30,6 @@
 	
 
         <!-- Javascripts -->
-        <script src="{{ URL::asset('plugins/jquery/jquery-3.1.0.min.js') }}"></script>
         <script src="{{ URL::asset('plugins/jquery-ui/jquery-ui.min.js') }}"></script>
         <script src="{{ URL::asset('plugins/pace-master/pace.min.js') }}"></script>
         <script src="{{ URL::asset('plugins/jquery-blockui/jquery.blockui.js') }}"></script>
