@@ -2,7 +2,7 @@
 @section('pages')
 
 <!--Product Slider-->
-<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <section class="clean-block clean-catalog dark">
         <div class="container" style="background-color:#ffffff;">
             <div class="block-heading">
