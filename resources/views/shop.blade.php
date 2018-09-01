@@ -94,7 +94,7 @@
                 <span style="color:#000;">{{$product->presentPrice()}}<small>USD</small></span>
             </div><small class="product-review">3 - 272 reviews</small>
             <div>
-                <div class="product-description">{!!$product->description,40 !!}</div>
+                <div class="product-description"> {!!$product->description !!}</div>
 				{{-- {{ route('shop.show',$product->slug)}} --}}
 			{{-- <a href="" class="btn btn-primary pull-right"> --}}
 				<form method="GET" action="{{ route('shop.show',$product->slug)}}">
@@ -145,7 +145,7 @@
 			<script>
 				$("div.product-description").each(function() {
 					var paragraph = $(this).text();
-					var maxlength = 30;
+					var maxlength = 20;
 					var strlength = paragraph.length;
 					if (strlength > maxlength) {
 						var introduction    = paragraph.substr(0,maxlength); // cut string
