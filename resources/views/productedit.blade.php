@@ -92,7 +92,10 @@
                             </div>
                             <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
                             <script>
-                                var toolbarOptions = [''];
+                                var toolbarOptions = [
+                                    [{ 'color': [] }, { 'background': [] }],
+                                    
+                                ];
                                 var quill = new Quill('#editor', {
                                     theme: 'snow',
                                     modules: {
