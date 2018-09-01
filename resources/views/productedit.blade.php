@@ -67,7 +67,9 @@
                                                         </select>
                                                         </div>
                                                 </div>
-                                       
+                                                <div class="form-group">
+                                                    <input class="btn btn-default btn-md float-left" type="file" data-name="product_img" name="product_img" id="product_img" required>
+                                                </div>
                                                 <div class="form-group">
                                                     <label class="col-sm-2 control-label">Product Description</label>
                                                     <input type="hidden" class="description" id="description" name="description">

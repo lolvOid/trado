@@ -7,7 +7,7 @@
                                             <div class="page-breadcrumb">
                                                 <ol class="breadcrumb">
                                                     <li><a href="dashboard">Home</a></li>
-                                                    <li class="active">Product Edit</li>
+                                                    <li class="active">Product Add</li>
                                                 </ol>
                                             </div>
                                         </div>
@@ -17,7 +17,7 @@
                                                 <h4 class="panel-title">Add Product</h4>
                                         </div>
                                         <div class="panel-body">
-                                            <form id="editForm" method="POST" action="{{route('products.store')}}" class="form-horizontal">
+                                            <form id="addForm" method="POST" action="{{route('products.store')}}" enctype="multipart/form-data" class="form-horizontal">
                                                 {{ csrf_field() }}
                                                 {{-- <input type="hidden" name="id" value="{{$product->id}}"> --}}
                                                 <div class="form-group">
@@ -51,11 +51,8 @@
                                            
                                                 <div class="form-group">
                                                     <label class="col-sm-2 control-label">Featured</label>
-                                                    <div class="col-sm-10">
-                                                            <label  id="togglebutton" class="switch">
-                                                                    .<input class="switch" type="checkbox">
-                                                            <span class="slider round"></span>
-                                                    </div>
+                                                    <input class="switch" type="checkbox">
+                                                    
                                                 </div>
                                                <div class="form-group">
                                                     <label class="col-sm-2 control-label">Type</label>
@@ -77,7 +74,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <input type="button" onclick="beforeSubmit();" name="edit-save" id="edit-save" value="Save" class="btn btn-success pull-right">
+                                                <input type="button" onclick="beforeSubmit();" name="add" id="add" value="Save" class="btn btn-success pull-right">
                                             </form>
                                         </div>
                                     </div>
@@ -89,7 +86,7 @@
                                 beforeSubmit = function(){
                                     $descriptionValue = $('div.note-editable').html();
                                     $('input#description').val($descriptionValue);
-                                    $("#editForm").submit();                
+                                    $("#addForm").submit();                
                                 }
                                 
                             </script>
