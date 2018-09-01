@@ -16,7 +16,7 @@
                                                 <h4 class="panel-title">Product Edit</h4>
                                         </div>
                                         <div class="panel-body">
-                                            <form id="editForm" method="POST" action="{{route('products.update')}}" class="form-horizontal">
+                                            <form id="editForm" method="POST" action="{{route('products.update')}}" enctype="multipart/form-data" class="form-horizontal">
                                                 {{ csrf_field() }}
                                                 <input type="hidden" name="id" value="{{$product->id}}">
                                                 <div class="form-group">

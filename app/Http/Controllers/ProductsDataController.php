@@ -151,7 +151,6 @@ class ProductsDataController extends Controller
             Image::make($product_img)->fit(640, 480)->save( public_path( $filename ) );
             $product->images = $filename;
         }
-        dd($filename);
         // Product::create([
         //     'owner_id'      => $uid, 
         //     'name'          => $request->input('name'),
