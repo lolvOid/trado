@@ -9,7 +9,7 @@
             <h2 class="divider-style"><span>Billing form</span></h2>
         </div>
         <div class="row .payment-dialog-row">
-            <div class="col-12 col-md-4 center-block offset-md-8" style="background-color:none">
+            <div class="col-12 col-md-4  offset-md-4" style="background-color:none">
                     @if (session()->has('success_message'))
                 <div style="width:100%;"class="col-12 alert alert-success">
                         {{session()->get('success_message')}}
