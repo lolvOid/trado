@@ -95,7 +95,7 @@
                 <span style="color:#000;">{{$product->presentPrice()}}<small>USD</small></span>
             </div><small class="product-review">3 - 272 reviews</small>
             <div>
-				<div class="product-description{{$product->id}}"> {!!$product->description !!}</div>
+				<div class="product-description{{$product->id}}"> { !! strip_tags((str_limit($product->description, 30)) !!}</div>
 				
 				{{-- {{ route('shop.show',$product->slug)}} --}}
 			{{-- <a href="" class="btn btn-primary pull-right"> --}}
