@@ -13,7 +13,7 @@ class MainPageController extends Controller
 
     public function index(Request $request){
 
-         $products = Product::where('featured',true)->take(6)->inRandomOrder()->get();
+         $trendings = Product::where('featured',true)->take(3)->inRandomOrder()->get();
         //$products = Product::where('featured',true)->get();
         
         $user = User::find(Auth::id());
@@ -21,6 +21,6 @@ class MainPageController extends Controller
             $user = new User();
         }
         
-        return view('landing', compact('products','user'));
+        return view('landing', compact('trendings','user'));
     }
 }

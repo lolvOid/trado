@@ -55,12 +55,15 @@
         <div class="Push-20"></div>
         <div class="Push-20"></div>
         <!--Product-row-->
-{{--         <div class="row">
-            <!--Product-COlumn-->        
+        <div class="row">
+            <!--Product-COlumn-->   
+            @foreach ($trendings as $trending)
+                
+                
                 <div class="col-md-4">
                     <div class="product-inner">
                         <div data-lightbox="photos" class="product-wrap">
-                            <img src="assets/img/iPhoneX.png">
+                            <img src="{{$trending->images}}">
                             <div class="actions">
                                 <a href="" class="add-to-cart"></a>
                                 <a href="" class="quickview"></a>
@@ -68,13 +71,14 @@
                             </div>
                         </div>
                         <div class="product-info">
-                            <h3 class="product-title"><a href="">iPhoneX</a></h3>
-                            <span class="price">$500</span>
+                            <h3 class="product-title"><a href="">{{$trending->name}}</a></h3>
+                            <span class="price">{{$trending->presentPrice()}}</span>
                         </div>
                     </div>
                 </div><!--Product-COlumn-end-->
+                @endforeach 
             </div>
-        </div><!--Product-Row-end--> --}}
+        </div><!--Product-Row-end-->
 
 
     <div class="features-clean" style="background-color:rgb(255,255,255);">
