@@ -36,7 +36,7 @@
                         {{$product->name}}
                     </a> 
                 </td>
-                <td class="description">{{$product->description}}</td>
+                <td class="description"> {!! strip_tags(str_limit($product->description, 100)) !!}</td>
                 <td class="center-block">{{$product->presentprice()}}</td>
             </tr>
             @endforeach
