@@ -35,8 +35,7 @@
                         <img src="{{$trending->images}}">
                             <div class="actions">
                                 <a href="{{route('shop.show',$trending->slug)}}" class="add-to-cart"></a>
-                              
-				                <a href="" class="wishlist"></a>
+                            <a href="/profile/{{$trending->owner_id}}" class="wishlist"></a>
                                 
                             </div>
                     </div>
