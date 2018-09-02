@@ -41,7 +41,7 @@
 <!--Comment Section-->
 
 
-<div class="col-md-12 border border-light col-sm-12">
+<div class="col-md-12  col-sm-12">
 <div class="comments-app">
   <h1>comments</h1>
   
