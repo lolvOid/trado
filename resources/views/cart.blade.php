@@ -83,11 +83,11 @@
                                             <div class="form-row">
                                                 <div class="col-sm-12">
                                                     <div class="form-row">
-                                                        <div class="col"><button class="btn btn-primary btn-block" type="button" style="  width:180px;"><i class="fa fa-dollar" style="  color:rgb(255,255,255);"></i>Trade With Product</button>
+                                                        <div class="col"><a href="{{route('checkout.index')}}" class="btn btn-primary btn-block" type="button" style="  width:180px;"><i class="fa fa-dollar" style="  color:rgb(255,255,255);"></i>Pay With Cash</a>
                                                             <i class="fa fa-dollar" style="  color:rgb(255,255,255);"></i>
                                                         </div>
                                                         <div class="col">
-                                                            <button class="btn btn-primary btn-block" type="button" style="  float:right;width:180px;"><i class="fa fa-bitcoin " style="  color:rgb(255,255,255);"></i>Pay With Bitcoin</button></div>
+                                                            <a href="{{route('wallet.index')}}" class="btn btn-primary btn-block" type="button" style="  float:right;width:180px;"><i class="fa fa-bitcoin " style="  color:rgb(255,255,255);"></i>Pay With Bitcoin</button></div>
                                                     </div>
                                                    <!--for SPACING --> <div class="form-group"></div>
                                                    <!--for SPACING --> <div class="form-group"></div>
