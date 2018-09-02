@@ -138,7 +138,7 @@ class ProfilesController extends Controller
     public function viewer(Request $request, $id)
     {
         $user = Auth::user();
-        $owner = User::whereId($id)->first();
+        $owner = User::where('id',$id)->first();
         $products = Product::where('owner_id',$id)->get();
         dd([$user,$owner]);
         if($owner== null){
