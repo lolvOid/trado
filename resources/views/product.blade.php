@@ -45,7 +45,7 @@
 		<label for="comment">Comment:</label>
 		<input type="hidden" name="product_id" value="{{$product->id}}">
 		<input type="hidden" name="owner_id" value="{{$owner->id}}">
-		<textarea class="form-control" rows="5" name="comment" id="comment"></textarea>
+		<input type="text" class="form-control" rows="5" name="comment" id="comment">
 	</div>
 </form>
 </div>
