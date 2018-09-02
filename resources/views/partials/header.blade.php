@@ -40,7 +40,7 @@
 </head>
 
 <body style="background-color:rgb(255,255,255);"><nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
-    <div class="container"><a class="navbar-brand" href="/"><img src="/img/tradologo.png" style=" margin-left:13px;margin-bottom:10px;height:60px;width:130px;">
+    <div class="container"><a class="navbar-brand" href="/"><img src="/img/tradologo.png" style=" margin-left:13px;height:65px;width:160px;">
 </a>
     <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
         <span class="sr-only">
