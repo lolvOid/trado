@@ -36,7 +36,7 @@
 	</div>
 </form>
 @foreach ($comments as $comment)
-<p>{{User::where('id',$comment->user_id)->first()->name}}</p><br/>
+{{-- <p>{{User::where('id',$comment->user_id)->first()->name}}</p><br/> --}}
 <p>{{$comment->comment}}</p><br>
 @endforeach
 <form method="POST" action="{{route('comment.store')}}" >
