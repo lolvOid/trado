@@ -16,7 +16,6 @@
                           <b   style="color:#e5e5e5;">GOALS</b>
 			              <b   style="color:#e5e5e5;">WITH TRADO</b>
                         </span>
-
 	          		</h1>
 				</div>
             </div>
@@ -30,8 +29,6 @@
         <div class="row">
 
             @foreach ($trendings as $trending)
-                
-            
             <div class="col-md-4">
                 <div class="product-inner">
                     <div data-lightbox="photos" class="product-wrap">
