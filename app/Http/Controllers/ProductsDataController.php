@@ -146,7 +146,7 @@ class ProductsDataController extends Controller
         $product->price = $request->input('price') * 100;
         $product->description = $request->input('description');
         $product->category_id = $request->input('category');
-        $product->featured = $featured;
+        $product->featured = true;
         if($request->hasFile('product_img')){
             $product_img = $request->file('product_img');
             $filename = "/img/" . time() . $product_img->getClientOriginalExtension();
