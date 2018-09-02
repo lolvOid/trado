@@ -87,7 +87,7 @@
                                                             <i class="fa fa-dollar" style="  color:rgb(255,255,255);"></i>
                                                         </div>
                                                         <div class="col">
-                                                            <a href="{{route('wallet.index')}}" class="btn btn-primary btn-block" type="button" style="  float:right;width:180px;"><i class="fa fa-bitcoin " style="  color:rgb(255,255,255);"></i>Pay With Bitcoin</button></div>
+                                                            <a href="{{route('wallet.index')}}" class="btn btn-primary btn-block" type="button" style="  float:right;width:180px;"><i class="fa fa-bitcoin " style="  color:rgb(255,255,255);"></i>Pay With Bitcoin</a></div>
                                                     </div>
                                                    <!--for SPACING --> <div class="form-group"></div>
                                                    <!--for SPACING --> <div class="form-group"></div>
