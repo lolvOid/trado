@@ -56,18 +56,21 @@
                                                                     <input class="switch" type="checkbox">
                                                             {{-- <span class="slider round"></span> --}}
                                                     </div>
-                                                </div>
-                                                <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="old_new" id="old_new1" value="old" checked>
-                                                        <label class="form-check-label" for="old_new1">
-                                                          Old
+                                                </div>  
+                                                <div class="form-group">
+                                                    <label  class="col-sm-2 control-label">Old or New</label>
+                                                    <div class="form-check  form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="old_new" id="old_new1" value="old" checked>
+                                                            <label class="form-check-label" for="old_new1">
+                                                            Old
+                                                            </label>
+                                                    </div>
+                                                    <div class="form-check  form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="old_new" id="old_new2" value="new">
+                                                        <label class="form-check-label" for="old_new2">
+                                                                New
                                                         </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="old_new" id="old_new2" value="new">
-                                                    <label class="form-check-label" for="old_new2">
-                                                            New
-                                                    </label>
+                                                    </div>
                                                 </div>
                             
                                                <div class="form-group">
