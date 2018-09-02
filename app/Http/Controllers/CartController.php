@@ -22,7 +22,7 @@ class CartController extends Controller
         $cart = Cart::count();
        
         $related = Product::related()->get();
-        return view('shoppingcart')->with(['related'=>$related, 'user'=>$user]);
+        return view('cart')->with(['related'=>$related, 'user'=>$user]);
     }
 
     /**

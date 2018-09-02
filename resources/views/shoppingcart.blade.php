@@ -6,11 +6,6 @@
                 <div class="block-heading">
                     <h2 class="text-info">Shopping Cart</h2>
                     <p>Here is the cash list of your transaction, Please verify your amount.</p>
-
-                    
-
-
-
                 </div>
                 <div class="content">
                         @if(session()->has('success_message'))
