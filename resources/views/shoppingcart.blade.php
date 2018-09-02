@@ -23,7 +23,6 @@
                             </ul>
                         </div>
                         @endif
-                        
                     <div class="row no-gutters">
                         @if (Cart::count()>0)
                             <h2>{{Cart::count()}} items in Shopping Cart</h2>
