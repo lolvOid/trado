@@ -81,22 +81,7 @@
                   required>
       </div>
 
-      <div class=" col-md-12 col-sm-12 form-row">
-        <input
-               class="input"
-              
-               placeholder="Email"
-               type="email">
-      </div>
-
-      <div class="form-row text-right">
-        <input
-               id="comment-anonymous"
-               
-               type="checkbox">
-        <label for="comment-anonymous">Anonymous</label>
-      </div>
-
+      
       <div class="form-row">
         <input type="submit" value="Add Comment">
       </div>
