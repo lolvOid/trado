@@ -1,14 +1,14 @@
 @extends('master')
 
 
-
+ 
     @section('pages')
      <div style="background-image:url('img/cover.png');height:800px;background-position:center;background-size:cover;background-repeat:no-repeat;">
     <div class="d-flex justify-content-center align-items-center" style="background-color:rgba(30,41,99,0.53);height:inherit;min-height:initial;width:100%;position:absolute;left:0;">
         <div class="d-flex align-items-center order-12" style="height:200px;">
             <div class="container">
                 	<div class="caption v-middle text-center">
-					<h1 class="cd-headline clip"><.
+					<h1 class="cd-headline clip">
                        <span  style="color:#fff;" class="blc">MAKE YOUR DREAM|</span>
                       
 			            <span  style="color:#fff;" class="cd-words-wrapper">
@@ -112,8 +112,7 @@
                 </div>
             </div>
         </div>
-    </div> 
-    <section class="newsletter-area section-padding-100-0">
+    </div> <section class="newsletter-area section-padding-100-0">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Newsletter Text -->
