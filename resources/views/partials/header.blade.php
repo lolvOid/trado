@@ -80,7 +80,7 @@
                 <li class="dropdown">
                     <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="">
                         
-                    <img style="width:50px;height:50px;" src="assets/img/user-astronaut 150px.png" class="dropdown-image" />
+                    <i style="font-size:50px" class="fa fa-user-circle" aria-hidden="true"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" role="menu">
                     <a class="dropdown-item" role="presentation" href="{{route('login')}}">Login</a>

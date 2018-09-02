@@ -9,12 +9,14 @@
             <div class="container">
                 	<div class="caption v-middle text-center">
 					<h1 class="cd-headline clip">
-			           <span  style="color:silver;" class="blc">MAKE YOUR DREAM| </span>
-			            <span  style="color:silver;" class="cd-words-wrapper">
-			              <b   style="color:silver;"class="is-visible">TRUE</b>
-			          
-			              <b   style="color:silver;">REAL</b>
-			            </span>
+                       <span  style="color:#e5e5e5;" class="blc">MAKE YOUR DREAM|</span>
+                      
+			            <span  style="color:#e5e5e5;" class="cd-words-wrapper">
+                          <b   style="color:#e5e5e5;"class="is-visible">TRUE</b>
+                          <b   style="color:#e5e5e5;">GOALS</b>
+			              <b   style="color:#e5e5e5;">WITH TRADO</b>
+                        </span>
+
 	          		</h1>
 				</div>
             </div>
