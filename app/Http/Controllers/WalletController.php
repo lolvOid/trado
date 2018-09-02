@@ -90,13 +90,16 @@ class WalletController extends Controller
         
     try{
             $guid = $request->guid;     
-            // $password = $request->password;    
+            $password = $request->password;    
         
-            // $my_balance = Blockchain::getWalletBalance($guid, $password);
-            // $check      = enableHD($guid,$password);
-            // $addressList = Blockchain::listAddress($guid,$password)['addresses'];
+            $my_balance = Blockchain::getWalletBalance($guid, $password);
+            $check      = enableHD($guid,$password);
+            $addressList = Blockchain::listAddress($guid,$password)['addresses'];
 
              return view('wallet/showdata')->with([
+                                                'guid'=>$guid,
+                                                'my_balance'=>$my_balance,
+                                                'addressList'=>$addressList,
                                                 'user'=>$user,
                                                 'wallets'=>$wallets
                                             ]);
