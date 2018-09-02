@@ -16,7 +16,9 @@ class DashboardController extends Controller
         //
         
         $user = Auth::user();
-
+        if($user == null){
+            return redirect()->route("login");
+        }
         return view('dashboard', compact('user'));
     }
 
