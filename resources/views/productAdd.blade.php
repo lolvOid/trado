@@ -62,10 +62,9 @@
                                                     <div class="form-check  form-check-inline">
                                                             <input class="form-check-input" type="radio" name="old_new" id="old_new1" value="old" checked>
                                                             <label class="form-check-label" for="old_new1">
-                                                            Old
+                                                                Old
                                                             </label>
-                                                    </div>
-                                                    <div class="form-check  form-check-inline">
+
                                                         <input class="form-check-input" type="radio" name="old_new" id="old_new2" value="new">
                                                         <label class="form-check-label" for="old_new2">
                                                                 New
