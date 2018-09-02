@@ -11,7 +11,7 @@
      <div class='_1'>THE PAGE</div>
      <div class='_2'>WAS NOT FOUND</div>
 
-     <a class='btn' href='#'>BACK TO HOME</a>
+     <a class='btn404' href='#'>BACK TO HOME</a>
  </div>
 
 </div>
