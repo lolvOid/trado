@@ -44,6 +44,7 @@ class CommentController extends Controller
             'comment' =>$request->input('comment'),
              'cmt_user_id' =>$user->id,
         ]);
+        return redirect()->back();
     }
 
     /**
