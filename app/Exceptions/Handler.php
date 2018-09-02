@@ -46,7 +46,7 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        // if ($this->isHttpException($e)) {
+         if ($this->isHttpException($e)) {
 
             $statusCode = $e->getStatusCode();
     
