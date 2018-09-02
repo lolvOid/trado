@@ -30,4 +30,5 @@ class User extends \TCG\Voyager\Models\User
     protected $attributes = [
         'avatar' => "/users/default.png"
     ];
+
 }
