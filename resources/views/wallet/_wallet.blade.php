@@ -103,8 +103,9 @@
                                         </li> 
                                     <li class="list-group-item">
                                         <div class="btcBalance">
-                                            <label for="label">Balance:</label>
-                                            <span name="label">0.0000 <i class="fa fa-fa-bitcin"></i></span>
+                                            <input id="passwordbtn" type="button" class="btn btn-default" onclick="passwordbtn" value="Click Password To see balance">
+                                            {{-- <label for="label">Balance:</label>
+                                            <span name="label">0.0000 <i class="fa fa-fa-bitcin"></i></span> --}}
                                         </div>
                                     </li>
                                 </ul>        
@@ -116,5 +117,9 @@
 
                 </div>
 
-
+                <script>
+                    passwordbtn = function(){
+                        console.log( $( this ).text() );
+                    }
+                </script>
         @endsection()
