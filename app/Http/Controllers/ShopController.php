@@ -92,7 +92,7 @@ class ShopController extends Controller
         $product = Product::where('slug',$slug)->firstOrFail();
         $owner = User::where('id',$product->owner_id)->first();
         $related = Product::where('slug','!=',$slug)->related()->get();
-        $comments = Product::where('product_id',$product->id)->get();
+        $comments = comment::where('product_id',$product->id)->get();
         return view('product')->with(['product'=>$product,'related' =>$related, 'user'  => $user,'owner'=>$owner, 'comments'=>$comments]);
     }
 
