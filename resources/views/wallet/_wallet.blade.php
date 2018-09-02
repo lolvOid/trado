@@ -7,7 +7,7 @@
                     <h3 class="breadcrumb-header">Wallet Tables</h3>
                     <div class="page-breadcrumb">
                         <ol class="breadcrumb breadcrumb-with-header">
-                            <li><a href="dashboard">Home</a></li>
+                            <li><a href="{{route('dashboard.index')}}">Home</a></li>
                           
                             <li class="active">Coin Wallet</li>
                         </ol>
