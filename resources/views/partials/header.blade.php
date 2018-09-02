@@ -24,11 +24,7 @@
     <link rel="stylesheet" href="{{ URL::asset('https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/styles.min.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/comment.css') }}">
-<<<<<<< HEAD
-      <link rel="stylesheet" href="{{ URL::asset('css/404.css') }}">
-=======
-     <link rel="stylesheet" href="{{ URL::asset('css/404.css') }}">
->>>>>>> 3f1e87068011d2af5b5a5a23ad3412a4f790abbe
+     {{-- <link rel="stylesheet" href="{{ URL::asset('css/404.css') }}"> --}}
     <script src="{{ URL::asset('plugins/jquery/jquery-3.1.0.min.js') }}"></script>
    <!--
       <link rel="stylesheet" href="{{ URL::asset('css/reset.css') }}"> 
