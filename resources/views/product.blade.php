@@ -37,10 +37,13 @@
 </form>
 @foreach ($comments as $comment)
 {{-- <p>{{User::where('id',$comment->user_id)->first()->name}}</p><br/> --}}
-<br>
-<br><p>{{$comment->comment}}</p><br>
+<p>{{$comment->comment}}</p><br>
 @endforeach
 <form method="POST" action="{{route('comment.store')}}" >
+	@foreach ($comments as $comment)
+	{{-- <p>{{User::where('id',$comment->user_id)->first()->name}}</p><br/> --}}
+	<p>{{$comment->comment}}</p><br>
+	@endforeach
 	{{ csrf_field() }}
 	<div class="form-group">
 		<label for="comment">Comment:</label>

@@ -37,7 +37,9 @@ class CommentController extends Controller
     public function store(Request $request)
     {
         $user = Auth::user();
-        
+        if($user == null){
+            return redirect()->route("login");
+        }
         comment::create([
             'owner_id' => $request->input('owner_id'),
             'product_id' => $request->input('product_id'),
