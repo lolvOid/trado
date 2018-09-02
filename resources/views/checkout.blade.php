@@ -4,26 +4,27 @@
 @section('pages')
 <script src="https://js.stripe.com/v3/"></script>
  <div class="container">
-        @if (session()->has('success_message'))
-        <div class="alert alert-success">
-            {{session()->get('success_message')}}
-        </div>
-        @endif
-
-        @if (count($errors)>0)
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{$error}}</li>
-                @endforeach
-            </ul>
-        </div>
-        @endif
+       
         <div style="text-align:center;">
             <h2 class="divider-style"><span>Billing form</span></h2>
         </div>
         <div class="row .payment-dialog-row">
-            <div class="col-12 col-md-8 center-block offset-md-8" style="background-color:none">
+            <div class="col-12 col-md-4 center-block offset-md-8" style="background-color:none">
+                    @if (session()->has('success_message'))
+                <div style="width:100%;"class="col-12 alert alert-success">
+                        {{session()->get('success_message')}}
+                    </div>
+                    @endif
+            
+                    @if (count($errors)>0)
+                    <div style="width:100%;"class="col-12 alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{$error}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
                     <form action="{{route('checkout.store')}}" method="POST" payment-form">
                             {{ csrf_field() }}
                                 {{-- <div class="products">
