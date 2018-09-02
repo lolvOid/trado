@@ -55,6 +55,7 @@ class Handler extends ExceptionHandler
                 case '404':
                     return view('/404');
             }
+        }
         
         return parent::render($request, $exception);
     }
