@@ -4,6 +4,8 @@
 use Illuminate\Support\Facades\Request;
 use App\Product;
 use App\User;
+use App\comment;
+
 function productImage($path){
      return file_exists('storage/'.$path)?('storage/'.$path):('images/not found');
 }
@@ -64,4 +66,12 @@ function getTimeToDate($time){
 
 function getBtcBalance($guid, $password){
     return Blockchain::getWalletBalance($guid, $password);
+}
+
+function getCommentedUserName($comment){
+    return User::where('id', $comment->cmt_user_id)->first()->name;
+}
+
+function getCommentedUserAvatar($comment){
+    return User::where('id', $comment->cmt_user_id)->first()->avatar;
 }

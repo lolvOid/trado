@@ -76,7 +76,7 @@
     <div class="comment">
       <!-- Comment Avatar -->
       <div class="comment-avatar">
-        <img src="{{User::where('id',$comment->cmt_user_id)->first()->avatar}}">
+        <img src="{{getCommentedUserAvatar($comment)}}">
       </div>
 
       <!-- Comment Box -->
@@ -85,7 +85,7 @@
         <div class="comment-footer">
           <div class="comment-info">
             <span class="comment-author">
-              <a href="">{{User::where('id',$comment->cmt_user_id)->first()->name}}</a>
+            <a href="/profile/{{$comment->cmt_user_id}}">{{getCommentedUserName($comment)}}</a>
             </span>
           </div>
         </div>
