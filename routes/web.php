@@ -31,7 +31,7 @@ Route::get('/search-results','ShopController@search')->name('search');
 Route::view('/contact','contact');
 Route::view('/about','about');
 Route::get('/blog','BlogController@index')->name('blog');
-
+Route::get('/about','AboutController@index')->name('about.index');
 Route::get('/dashboard','DashboardController@index')->name('dashboard.index');
 
 Route::get('/profile','ProfilesController@index')->name('profile.index');

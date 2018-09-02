@@ -17,7 +17,9 @@
                         <h3 class="name">Lin Htet Moe</h3>
                         <p class="title">Proeject manager</p>
                         <p class="description">He is the mastermind and the one worthy leader to handle all the tasks. He oversees all the struggles and diffculties of our project. He encourages our team to make awesomethings<br><br></p>
-                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                        <div class="social"><a href="https://www.facebook.com/l.htet.me?fb_dtsg_ag=Ady2RXZ8uoylTNd5mwaZeZHAsvPIyI5-3oCQw9kqBWvO_w%3AAdwGyypR5lw-saio363jxgjmb7ZiQfuIV-iLXQ0-XE3M6w">
+                        <i class="fa fa-facebook-official"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 item">
@@ -26,7 +28,7 @@
                         <p class="title">ux designer</p>
                         <p class="description">He is the creative guy in our team and always think about UI/UX for the project.He has a strong vision. His visionary to the design is unrivalled.He make good UI and better Ux for the project.This leads our project to the peak
                             .<br><br></p>
-                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                        <div class="social"><a href="https://www.facebook.com/yek.tayar?fb_dtsg_ag=Ady2RXZ8uoylTNd5mwaZeZHAsvPIyI5-3oCQw9kqBWvO_w%3AAdwGyypR5lw-saio363jxgjmb7ZiQfuIV-iLXQ0-XE3M6w"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 item">
@@ -43,17 +45,23 @@
                         <h3 class="name">Lynn Htet Aung</h3>
                         <p class="title">DATABASE Adminstrator</p>
                         <p class="description"><br>studying roles and skills for business development<br>Enjoys listening to classical music and interested in 90 pop cultures.<br>Spends free time watching Sci-fi movies<br><br></p>
-                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                        <div class="social"><a href="https://www.facebook.com/LinnHtetAung.hza?fb_dtsg_ag=Ady2RXZ8uoylTNd5mwaZeZHAsvPIyI5-3oCQw9kqBWvO_w%3AAdwGyypR5lw-saio363jxgjmb7ZiQfuIV-iLXQ0-XE3M6w"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 item">
-</div>
+                    <div class="box"><img class="rounded-circle" src=" img/stmpp.jpg">
+                        <h3 class="name">Si Thu Myoe</h3>
+                        <p class="title">Server Administrator</p>
+                        <p class="description">He is the experienced Professional Network Engineer who worked in a field of networking security for three years.His skills in networking are unrivalable.<br></p>
+                        <div class="social"><a href="https://www.facebook.com/sithu.myo.56?fb_dtsg_ag=Ady2RXZ8uoylTNd5mwaZeZHAsvPIyI5-3oCQw9kqBWvO_w%3AAdwGyypR5lw-saio363jxgjmb7ZiQfuIV-iLXQ0-XE3M6w"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                    </div>
+                </div>
                 <div class="col-md-6 col-lg-4 item">
                     <div class="box"><img class="rounded-circle" src=" img/spppp.jpg">
                         <h3 class="name">Satt Paing Phyoe</h3>
                         <p class="title">backend developer</p>
                         <p class="description">He is our planner.He thought every theory and principles of backend codes. And He is mastermind at backend developing.Our website processes become stronger thanks to his amazing codes<br><br></p>
-                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                        <div class="social"><a href="https://www.facebook.com/Seth.spp21"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                     </div>
                 </div>
             </div>

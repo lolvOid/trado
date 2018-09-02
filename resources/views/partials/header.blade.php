@@ -57,6 +57,7 @@
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{ url('/') }}">Home</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="{{route('shop.index')}}">Shop</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" href="blog">Blog</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="{{route('about.index)}}">About</a></li>
             </ul>
 
 
