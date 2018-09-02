@@ -87,11 +87,11 @@
         <div class="col-sm-10 col-md-12 col-lg-12 col-xl-12 offset-sm-9 offset-lg-0 offset-xl-0 offset-md-1 col-md-6" style="margin-left:0px;padding-left:21px;">
 			<h2 class="product-text-color">{{$product->name}}</h2>
 			@if ($product->old)
-				<span style="color:gainsboro;background-color:black">
+				<span style="color:#fff;background-color:#ff4e44">
 					old!!
 				</span>
 			@else
-			<span style="color:white;background-color:green">
+			<span style="color:#fff;background-color:#3fc8ff">
 					<i>new!!</i>
 				</span>
 			@endif
