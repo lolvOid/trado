@@ -2,9 +2,7 @@
 
 @section('pages')
 
-<?
-use App\User;
-?>
+@inject('User', 'App\User')
 
   <div class="Push-20"></div>
   <form action="{{route('cart.store',$product)}}" method="POST">
