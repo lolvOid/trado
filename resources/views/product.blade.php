@@ -10,7 +10,8 @@
 		<input type="hidden" value="{{$product->id}}" name="id" id="id">
 		<input type="hidden" value="{{$product->name}}" name="name" id="name">
 		<input type="hidden" value="{{$product->price}}" name="price" id="price">
-  <div class="Push-20"></div><div class="container" style=" border-color:#373737;background-color:#ffffff;">
+  <div class="Push-20"></div>
+  <div class="container" style=" border:1px solid #f4f4f4;background-color:#ffffff;">
 	
 	<div class="row">
         <div class="col-8 col-sm-8 col-xs-12 col-md-6">
