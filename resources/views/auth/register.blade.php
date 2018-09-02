@@ -3,7 +3,6 @@
 
 @extends('master')
     @section('pages')
-  s
     <div class="row register-form">
         <div class="col-md-8 offset-md-2">
                 <form class="custom-form" method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
