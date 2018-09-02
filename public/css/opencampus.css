@@ -107,7 +107,7 @@ div.jumbotron.hero-nature {
 
 h1.hero-title, h2.hero-title, h3.hero-title {
   /*text-shadow:0 3px 3px rgba(0,0,0,0.4);*/
-  color:#212121;
+  color:#fff;
   /*background-color:rgba(30,41,99,0.53);*/
   font-weight:bold;
 }
@@ -115,7 +115,7 @@ h1.hero-title, h2.hero-title, h3.hero-title {
 p.hero-subtitle {
   max-width:600px;
   margin:25px auto;
-  color:#000000;
+  color:#fff;
   font-weight:bold;
 }
 
