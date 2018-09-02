@@ -8,7 +8,7 @@
         <div class="d-flex align-items-center order-12" style="height:200px;">
             <div class="container">
                 	<div class="caption v-middle text-center">
-					<h1 class="cd-headline clip">
+					<h1 class="cd-headline clip"><.
                        <span  style="color:#fff;" class="blc">MAKE YOUR DREAM|</span>
                       
 			            <span  style="color:#fff;" class="cd-words-wrapper">
@@ -112,7 +112,8 @@
                 </div>
             </div>
         </div>
-    </div> <section class="newsletter-area section-padding-100-0">
+    </div> 
+    <section class="newsletter-area section-padding-100-0">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Newsletter Text -->
