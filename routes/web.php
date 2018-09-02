@@ -48,9 +48,10 @@ Route::post('/productStore','ProductsDataController@store')->name('products.stor
 Route::post('/productEdit','ProductsDataController@edit')->name('products.edit');
 Route::post('/productAdd','ProductsDataController@add')->name('products.add');
 Route::post('/productUpdate','ProductsDataController@update')->name('products.update');
-
 Route::post('/productDelete','ProductsDataController@destroy')->name('products.delete');
- 
+
+Route::post('/commentStore', 'CommentController@store')->name('comment.store');
+
 Route::get('/wallet','WalletController@index')->middleware('auth')->name('wallet.index');
 Route::get('/wallet/login','WalletController@login')->middleware('auth')->name('wallet.login');
 Route::post('/wallet/create','WalletController@create')->middleware('auth')->name('wallet.create');

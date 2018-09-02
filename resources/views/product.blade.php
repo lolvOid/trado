@@ -22,13 +22,15 @@
 			@foreach ($comments as $comment)
 				
 			
-			<p>User</p><br/>
-			<p>User's Comment</p><br>
+			<p>{{User::where('id',$comment->user_id)->first()->name}}</p><br/>
+			<p>{{$comment->comment}}</p><br>
 			@endforeach
-			<div class="form-group">
-				<label for="comment">Comment:</label>
-				<textarea class="form-control" rows="5" id="comment"></textarea>
-			</div>
+			<form method="POST" action="{{route('')}}" >
+				<div class="form-group">
+					<label for="comment">Comment:</label>
+					<textarea class="form-control" rows="5" id="comment"></textarea>
+				</div>
+			</form>
 
             <div class="row">
                 <div class="col-6 col-sm-6 col-md-6"></div>
