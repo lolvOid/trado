@@ -140,11 +140,12 @@ class ProfilesController extends Controller
         $user = Auth::user();
         $owner = User::whereId($id)->first();
         $products = Product::where('owner_id',$id)->get();
+        dd([$user,$owner]);
         if($owner== null){
             return;
         }
         if($user==null){
-            return;
+            return redirect()->route('login');
         }
         return view('guestview')->with(["user" => $user, "products"=>$products, "owner"=>$owner]);
     }
