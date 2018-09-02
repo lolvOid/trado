@@ -30,7 +30,7 @@ Route::get('/search-results','ShopController@search')->name('search');
 
 Route::view('/contact','contact');
 Route::view('/about','about');
-Route::view('/blog','blog');
+Route::get('/blog','BlogController@index')->name('blog');
 
 Route::get('/dashboard','DashboardController@index')->name('dashboard.index');
 
