@@ -9,11 +9,11 @@
             <div class="container">
                 	<div class="caption v-middle text-center">
 					<h1 class="cd-headline clip">
-			           <span  style="color:#000;" class="blc">TRADE WITH | </span>
-			            <span  style="color:#000;" class="cd-words-wrapper">
-			              <b   style="color:#000;"class="is-visible">TRUST</b>
+			           <span  style="color:silver;" class="blc">MAKE YOUR DREAM| </span>
+			            <span  style="color:silver;" class="cd-words-wrapper">
+			              <b   style="color:silver;"class="is-visible">TRUE</b>
 			          
-			              <b   style="color:#000;">TRADO</b>
+			              <b   style="color:silver;">REAL</b>
 			            </span>
 	          		</h1>
 				</div>
