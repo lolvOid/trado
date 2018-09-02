@@ -28,7 +28,13 @@
       <link rel="stylesheet" href="{{ URL::asset('css/reset.css') }}"> 
 	<link rel="stylesheet" href="{{ URL::asset('css/style.css') }}"> 
 	<link rel="stylesheet" href="{{ URL::asset('css/demo.css') }}">-->
-
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-3756779259391878",
+        enable_page_level_ads: true
+      });
+    </script>
       
 </head>
 
