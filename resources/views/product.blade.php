@@ -29,9 +29,6 @@
             <p style="font-size:18px;">{!!$product->description!!}</p>
             <h2 class="text-center text" style="  color:#4d5fff;
 "><strong>{!!$product->presentPrice()!!}</strong></h2>
-
-		<button class=" btn-sm button" type="submit" data-hover="SURE!"><span>Buy It?</span></button>
-		
 		<button class=" btn-sm button" type="submit" data-hover="SURE!"><span>Buy It?</span></button>
 	</div>
 </form>

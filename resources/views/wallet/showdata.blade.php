@@ -36,16 +36,16 @@
                                     <h2>Make Payment</h2>
                                 </div>
                                 <div class="form-group">
-                                <input type="text" name="address_a" class="form-control" placeholder="Enter Your Address" value="{{$addressList[0]['address']}}" disabled>
+                                <input type="text" name="address_a" class="form-control" placeholder="Enter Your Address" required>
                                 </div>
                                 <div class="form-group">
-                                        <input type="text" name="address_b" class="form-control" placeholder="Enter Payment Address">
+                                        <input type="text" name="address_b" class="form-control" placeholder="Enter Payment Address" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="number" name="amount" id="" class="form-control" placeholder="Enter Amount" step="0.0001">
+                                    <input type="number" name="amount" id="" class="form-control" placeholder="Enter Amount" step="0.0001" required>
                                 </div>
                                 <div class="form-group">
-                                        <input type="password" name="password" id="" class="form-control" placeholder="Enter Password">
+                                        <input type="password" name="password" id="" class="form-control" placeholder="Enter Password" required> 
                                     </div>
                                 <div class="form-group">
                                     <label class="col-form-label">USD:</label><span>$122</span><br/>
