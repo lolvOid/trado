@@ -53,9 +53,7 @@ class Handler extends ExceptionHandler
             switch ($statusCode) {
     
                 case '404':
-                    return response()->view('/404', [
-                        'content' => view('/404')
-                    ]);
+                    return view('/404');
             }
         
         return parent::render($request, $exception);
