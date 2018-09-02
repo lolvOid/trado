@@ -4,9 +4,9 @@
     
 
     <div class="container" >
-            <div class="col-md-4 offset-4">
+            <div class="col-md-12 offset-12">
                 @if(\Session::has('success_message'))
-                    <div class='alert alert-success'>
+                    <div style="width:100%;" class=' col-md-12 alert alert-success'>
                         <p>
                             {{\Session::get('success_message')}}
                         </p>
