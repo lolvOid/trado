@@ -25,16 +25,24 @@
                 <div class="col-md-6 col-lg-4 item">
                     <div class="box"><img class="rounded-circle" src=" img/kmmpp.jpg">
                         <h3 class="name">Khant Myat Min</h3>
-                        <p class="title">ux designer</p>
+                        <p class="title">UX designer</p>
                         <p class="description">He is the creative guy in our team and always think about UI/UX for the project.He has a strong vision. His visionary to the design is unrivalled.He make good UI and better Ux for the project.This leads our project to the peak
                             .<br><br></p>
                         <div class="social"><a href="https://www.facebook.com/yek.tayar?fb_dtsg_ag=Ady2RXZ8uoylTNd5mwaZeZHAsvPIyI5-3oCQw9kqBWvO_w%3AAdwGyypR5lw-saio363jxgjmb7ZiQfuIV-iLXQ0-XE3M6w"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                     </div>
                 </div>
+                  <div class="col-md-6 col-lg-4 item">
+                    <div class="box"><img class="rounded-circle" src=" img/stmpp.jpg">
+                        <h3 class="name">Si Thu Myoe</h3>
+                        <p class="title">Server Administrator</p>
+                        <p class="description">He is the experienced Professional Network Engineer who worked in a field of networking security for three years.His skills in networking are unrivalable.<br></p>
+                        <div class="social"><a href="https://www.facebook.com/sithu.myo.56?fb_dtsg_ag=Ady2RXZ8uoylTNd5mwaZeZHAsvPIyI5-3oCQw9kqBWvO_w%3AAdwGyypR5lw-saio363jxgjmb7ZiQfuIV-iLXQ0-XE3M6w"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                    </div>
+                </div>
                 <div class="col-md-6 col-lg-4 item">
                     <div class="box"><img class="rounded-circle" src=" img/mkkpp.jpg">
                         <h3 class="name">Myat Kaung Khant&nbsp;</h3>
-                        <p class="title">ui developer</p>
+                        <p class="title">Frontend developer</p>
                         <p class="description"><br>He is the developer that match with the design. He handles all the codes to make the dsign. His goal is to make awesome and reliable UX for the website.<br><br></p>
                         <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                     </div>
@@ -48,18 +56,11 @@
                         <div class="social"><a href="https://www.facebook.com/LinnHtetAung.hza?fb_dtsg_ag=Ady2RXZ8uoylTNd5mwaZeZHAsvPIyI5-3oCQw9kqBWvO_w%3AAdwGyypR5lw-saio363jxgjmb7ZiQfuIV-iLXQ0-XE3M6w"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src=" img/stmpp.jpg">
-                        <h3 class="name">Si Thu Myoe</h3>
-                        <p class="title">Server Administrator</p>
-                        <p class="description">He is the experienced Professional Network Engineer who worked in a field of networking security for three years.His skills in networking are unrivalable.<br></p>
-                        <div class="social"><a href="https://www.facebook.com/sithu.myo.56?fb_dtsg_ag=Ady2RXZ8uoylTNd5mwaZeZHAsvPIyI5-3oCQw9kqBWvO_w%3AAdwGyypR5lw-saio363jxgjmb7ZiQfuIV-iLXQ0-XE3M6w"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-                    </div>
-                </div>
+              
                 <div class="col-md-6 col-lg-4 item">
                     <div class="box"><img class="rounded-circle" src=" img/spppp.jpg">
                         <h3 class="name">Satt Paing Phyoe</h3>
-                        <p class="title">backend developer</p>
+                        <p class="title">S</p>
                         <p class="description">He is our planner.He thought every theory and principles of backend codes. And He is mastermind at backend developing.Our website processes become stronger thanks to his amazing codes<br><br></p>
                         <div class="social"><a href="https://www.facebook.com/Seth.spp21"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                     </div>
