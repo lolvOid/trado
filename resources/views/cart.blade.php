@@ -36,6 +36,7 @@
                             <div class="row">
                                 <!--Product Column-->
                                 @foreach (Cart::content() as $item)
+                                {{dd(Cart::content())}}
                                 <div class="col-12 col-md-12 d-block  center-block" style="  align:center; width:1215px;">
                                 <div class="product">
                                     <div class="row justify-content-center align-items-center">
