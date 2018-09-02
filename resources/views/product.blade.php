@@ -44,7 +44,7 @@
             <p style="font-size:18px;">{!!$product->description!!}</p>
 			<h2 class="text-center text" style="  color:#4d5fff;">
 				<button class=" btn-sm button" type="submit" data-hover="SURE!"><span>Buy It?</span></button>
-        <strong>{!!$product->presentPrice()!!}</strong> / <strong>{{getUSDToBtc($product->price)}} Btc</strong>
+        <strong>{!!$product->presentPrice()!!}</strong> / <p>{{getUSDToBtc($product->price)}} Btc</p>
 			</h2>
 		
 	</div>
