@@ -60,7 +60,7 @@ Route::get('/wallet/showdata','WalletController@show')->middleware('auth')->name
 Route::post('/wallet/transaction','WalletController@makeTransaction')->middleware('auth')->name('wallet.payment');
 
 
-
+Route::view('/404','404');
 Route::view('/auth/register','register');
 Route::view('/auth/login','login');
 Auth::routes();
