@@ -75,8 +75,6 @@
                                                                     font-weight:600;
                                                                     line-height:1;undefined:undefined;  ">
                                         <div class="products">
-                                            <h2 class="text-center title" style="  color:#373737;font-size:29px;">Checkout
-                                        </h2>
                                             <div class="total" style="  background-color:#ffffff;"><span style="  font-size:22px;">Total</span>
 <span class="float-right price" style="  font-size:22px;">{{presentPrice(Cart::total())}}</span></div>
                                         </div>
