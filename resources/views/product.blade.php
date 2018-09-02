@@ -41,7 +41,7 @@
 <!--Comment Section-->
 
 
-<div style="border:1px;border-color:#373737;"class="col-md-12  col-sm-12">
+<div style="border:1px solid #373737;"class="col-md-12  col-sm-12">
 <div class="comments-app">
   <h1>comments</h1>
   
