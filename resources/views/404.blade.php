@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link >
+        <link rel="stylesheet" href="{{ URL::asset('css/404.css') }}">
     </head>
 <body>
 <div class="container">
