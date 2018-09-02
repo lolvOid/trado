@@ -134,7 +134,7 @@ class WalletController extends Controller
             return redirect('wallet/showdata')->with(['data'=>$json_feed,'fee'=>$fees,'amount'=>$amount, 'success_message'=>$success_message]);
         }catch(\Exception $e){
             $errors = "Transaction failed";
-            return redirect()->back()->with(['errors'=>$errors]);
+            return redirect()->route('wallet.index')->with(['errors'=>$errors]);
         }
     }
     
