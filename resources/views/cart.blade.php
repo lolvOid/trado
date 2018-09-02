@@ -30,69 +30,34 @@
                         
                         <div class="container">
                             <!--Product Row-->
+                           
+                                
+                            
                             <div class="row">
                                 <!--Product Column-->
-
+                                @foreach (Cart::content() as $item)
                                 <div class="col-12 col-md-12 d-block  center-block" style="  align:center; width:1215px;">
                                 <div class="product">
                                     <div class="row justify-content-center align-items-center">
                                         <div class="col-md-3">
-                                            <div class="product-image"><img class="img-fluid d-block mx-auto image" src="assets/img/tech/image2.jpg"></div>
+                                            <div class="product-image"><img class="img-fluid d-block mx-auto image" src="{{$item->model->images}}"></div>
                                         </div>
-                                        <div class="col-md-5 product-info"><a href="#" class="product-name">Lorem Ipsum dolor</a>
+                                        <div class="col-md-5 product-info"><a href="#" class="product-name">{{$item->model->name}}</a>
                                             <div class="product-specs">
-                                                <div><span>Display:&nbsp;</span><span class="value">5 inch</span></div>
-                                                <div><span>RAM:&nbsp;</span><span class="value">4GB</span></div>
-                                                <div><span>Memory:&nbsp;</span><span class="value">32GB</span></div>
+                                                {!! strip_tags(str_limit($item->model->description,100)) !!}
                                             </div>
                                         </div>
-                                        <div class="col-6 col-md-2 quantity"><span>$120</span></div>
-                                        <div class="col-6 col-md-2 price"><button class="btn btn-primary" type="button" style="background-color:#ff3b3b;"><i class="fa fa-trash"></i></button></div>
+                                        <div class="col-6 col-md-2 quantity"><span>${{$item->model->presentPrice()}}</span></div>
+                                        <form action="{{route('cart.destroy',$item->rowId)}}" method="POST">
+                                            {{ csrf_field() }}
+                                            {{method_field('DELETE')}}
+                                            <div class="col-6 col-md-2 price"><button class="btn btn-primary" type="submit" style="background-color:#ff3b3b;"><i class="fa fa-trash"></i></button></div>
+                                        </form>
                                     </div>
                                 </div>                                
                             </div>
-
-                             <!--Product Column-->
-<div class="col-12 col-md-12 d-block  center-block" style="  align:center; width:1215px;">
-                                <div class="product">
-                                    <div class="row justify-content-center align-items-center">
-                                        <div class="col-md-3">
-                                            <div class="product-image"><img class="img-fluid d-block mx-auto image" src="assets/img/tech/image2.jpg"></div>
-                                        </div>
-                                        <div class="col-md-5 product-info"><a href="#" class="product-name">Lorem Ipsum dolor</a>
-                                            <div class="product-specs">
-                                                <div><span>Display:&nbsp;</span><span class="value">5 inch</span></div>
-                                                <div><span>RAM:&nbsp;</span><span class="value">4GB</span></div>
-                                                <div><span>Memory:&nbsp;</span><span class="value">32GB</span></div>
-                                            </div>
-                                        </div>
-                                            <div class="col-6 col-md-2 quantity"><span>$120</span></div>
-                                        <div class="col-6 col-md-2 price"><button class="btn btn-primary" type="button" style="background-color:#ff3b3b;">
-                                        <i class="fa fa-trash"></i></button></div>
-                                    </div>
-                                </div>                                
-                            </div>
-
-
-                             <!--Product Column-->
-<div class="col-12 col-md-12 d-block  center-block" style="  align:center; width:1215px;">
-                                <div class="product">
-                                    <div class="row justify-content-center align-items-center">
-                                        <div class="col-md-3">
-                                            <div class="product-image"><img class="img-fluid d-block mx-auto image" src="assets/img/tech/image2.jpg"></div>
-                                        </div>
-                                        <div class="col-md-5 product-info"><a href="#" class="product-name">Lorem Ipsum dolor</a>
-                                            <div class="product-specs">
-                                                <div><span>Display:&nbsp;</span><span class="value">5 inch</span></div>
-                                                <div><span>RAM:&nbsp;</span><span class="value">4GB</span></div>
-                                                <div><span>Memory:&nbsp;</span><span class="value">32GB</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-6 col-md-2 quantity"><span>$120</span></div>
-                                        <div class="col-6 col-md-2 price"><button class="btn btn-primary" type="button" style="background-color:#ff3b3b;"><i class="fa fa-trash"></i></button></div>
-                                    </div>
-                                </div>                                
-                            </div>
+                            @endforeach                        
+                        </div>
 
 
 
