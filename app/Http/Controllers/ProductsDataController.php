@@ -49,7 +49,6 @@ class ProductsDataController extends Controller
     public function store(Request $request)
     {
         $uid = Auth::id();
-        dd($request);
         if($uid == null){
             return redirect()->route('login');
         }
