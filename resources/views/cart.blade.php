@@ -47,7 +47,7 @@
                                                 {!! strip_tags(str_limit($item->model->description,100)) !!}
                                             </div>
                                         </div>
-                                        <div class="col-6 col-md-2 quantity"><span>${{$item->model->presentPrice()}}</span></div>
+                                        <div class="col-6 col-md-2 quantity"><span>{{$item->model->presentPrice()}}</span></div>
                                         <form action="{{route('cart.destroy',$item->rowId)}}" method="POST">
                                             {{ csrf_field() }}
                                             {{method_field('DELETE')}}
