@@ -1,6 +1,6 @@
 @extends('master')
 
-
+ 
  
     @section('pages')
      <div style="background-image:url('img/cover.png');height:800px;background-position:center;background-size:cover;background-repeat:no-repeat;">
