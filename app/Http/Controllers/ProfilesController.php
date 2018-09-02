@@ -138,15 +138,10 @@ class ProfilesController extends Controller
     public function viewer(Request $request, $id)
     {
         $user = Auth::user();
-        dd($id);
         $owner = User::where('id',$id)->first();
         $products = Product::where('owner_id',$id)->get();
-        dd([$user,$owner]);
         if($owner== null){
             return;
-        }
-        if($user==null){
-            return redirect()->route('login');
         }
         return view('guestview')->with(["user" => $user, "products"=>$products, "owner"=>$owner]);
     }
