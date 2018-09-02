@@ -35,7 +35,7 @@
                         <img src="{{$trending->images}}">
                             <div class="actions">
                                 <a href="{{route('shop.show',$trending->slug)}}" class="add-to-cart"></a>
-                                {{-- <a href="{{route('shop.show',$trending->slug)}}" class="quickview"></a> --}}
+                                <a href="{{route('shop.show',$trending->slug)}}" class="quickview"></a>
 				                <a href="" class="wishlist"></a>
                                 
                             </div>
