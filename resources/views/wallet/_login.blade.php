@@ -4,13 +4,14 @@
 
     @section('pages')
 @if (isset($success_message))
-<div class="alert alert-success">
+<div style="width:100%;"class="col-md-12 alert alert-success">
     {{$success_message}}
 </div>
 @endif
 
 @if (count($errors)>0)
-<div class="alert alert-danger">
+<div style="width:100%;"class="col-md-12 alert alert-danger">
+    <div class="alert alert-danger">
     <ul>
         @foreach ($errors->all() as $error)
             <li>{{$error}}</li>
