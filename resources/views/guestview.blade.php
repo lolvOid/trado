@@ -26,7 +26,7 @@
         <li class="nav-item"><a role="tab" data-toggle="tab" href="#tab-3" class="nav-link">Related Friends</a></li> --}}
     </ul>
     <div class="tab-content panel-body">
-        <div role="tabpanel" class="tab-pane" id="tab-1">
+        <div role="tabpanel" class="tab-pane" id="tab-1 ">
             <div class="row justify-content-center align-items-center" style="margin-left:0px;margin-right:0px;">
                 @foreach ($products as $product)
                     
@@ -36,9 +36,16 @@
                         <div class="col-sm-10 col-md-12 col-xl-12 offset-sm-0 col-md-5">
                             <div style="background-color:#ffffff;width:200px;"></div><img src="{{$product->images}}" style="height:242px;" /></div>
                         <div class="col-sm-10 col-md-12 col-lg-12 col-xl-12 offset-sm-9 offset-lg-0 offset-xl-0 offset-md-1 col-md-6" style="margin-left:0px;padding-left:21px;">
-                            <h1 class="product-text-color">{{$product->name}}</h1><small style="font-style:oblique;">{{$owner->username}}<i class="fa fa-user"></i></small>
-                                <small>{{$product->presentprice()}} USD</small>
                             
+                                <a href="{{ route('shop.show',$product->slug)}}">
+                                    <h1 class="product-text-color">
+                                        {{$product->name}}
+                                    </h1>
+                                </a>
+                            
+                            <small style="font-style:oblique;">{{$owner->username}}<i class="fa fa-user"></i></small>
+                                <small>{{$product->presentprice()}} USD</small>
+                             
                             
                                 <h3 class="product-description"> {!! strip_tags(str_limit($product->description, 100)) !!}</h3>
                             </div>
