@@ -98,7 +98,7 @@
 				
 			@endif 
 			
-			
+			<br/>
 			{{-- @endif --}}
 			
 			<small style="font-style:oblique;">
