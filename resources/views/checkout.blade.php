@@ -4,6 +4,21 @@
 @section('pages')
 <script src="https://js.stripe.com/v3/"></script>
  <div class="container">
+        @if (session()->has('success_message'))
+        <div class="alert alert-success">
+            {{session()->get('success_message')}}
+        </div>
+        @endif
+
+        @if (count($errors)>0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
         <div style="text-align:center;">
             <h2 class="divider-style"><span>Billing form</span></h2>
         </div>
