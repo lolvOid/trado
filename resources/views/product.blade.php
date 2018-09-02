@@ -61,8 +61,9 @@
 
 <!--Comment Section-->
 
+
 <div class="col-md-12  col-sm-12">
-<div class="comments-app" ng-app="commentsApp">
+<div class="comments-app">
   <h1>comments</h1>
   
   <!-- From -->
@@ -72,10 +73,10 @@
       <img src="http://lorempixel.com/200/200/people">
     </div>
 
-    <form class="form" name="form" ng-submit="form.$valid && cmntCtrl.addComment()" novalidate>
+    <form class="form" name="form" >
       <div class="form-row">
         <input  type="text"               class="input"
-                  ng-model="cmntCtrl.comment.text"
+                 
                   placeholder="Add comment..."
                   required>
       </div>
@@ -105,30 +106,7 @@
   <!-- Comments List -->
   <div class="comments">
     <!-- Comment -->
-    <div class="comment" ng-repeat="comment in cmntCtrl.comments | orderBy: '-date'">
-      <!-- Comment Avatar -->
-      <div class="comment-avatar">
-        <img ng-src="{{ comment.avatarSrc }}">
-      </div>
-
-      <!-- Comment Box -->
-      <div class="comment-box">
-        <div class="comment-text">{{ comment.text }}</div>
-        <div class="comment-footer">
-          <div class="comment-info">
-            <span class="comment-author">
-              <em ng-if="comment.anonymous">Anonymous</em>
-              <a ng-if="!comment.anonymous" href="{{ comment.author }}">{{ comment.author }}</a>
-            </span>
-           
-          </div>
-
-          <div class="comment-actions">
-            <a href="#">Reply</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    
 
     <!-- Comment - Dummy -->
     <div class="comment">
@@ -207,9 +185,6 @@
   </div>
 </div>
 </div>
-
-
-
 <!--Comment Section End-->
 
 	<!--Related Products-->
