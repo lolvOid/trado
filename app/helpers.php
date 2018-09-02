@@ -75,3 +75,10 @@ function getCommentedUserName($comment){
 function getCommentedUserAvatar($comment){
     return User::where('id', $comment->cmt_user_id)->first()->avatar;
 }
+
+function getUSDToBtc($usd){
+    $url = "https://blockchain.info/tobtc?currency=USD&value=" . $usd;
+    $data = file_get_contents($url);
+    dd($data);
+    return $data;
+}
