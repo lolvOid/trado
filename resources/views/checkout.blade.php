@@ -23,7 +23,7 @@
             <h2 class="divider-style"><span>Billing form</span></h2>
         </div>
         <div class="row .payment-dialog-row">
-            <div class="col-12 col-md-4 offset-md-4" style="background-color:none">
+            <div class="col-12 col-md-8 center-block offset-md-8" style="background-color:none">
                     <form action="{{route('checkout.store')}}" method="POST" payment-form">
                             {{ csrf_field() }}
                                 {{-- <div class="products">
