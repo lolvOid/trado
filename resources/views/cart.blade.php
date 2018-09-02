@@ -77,18 +77,8 @@
                                         <div class="products">
                                             <h2 class="text-center title" style="  color:#373737;font-size:29px;">Checkout
                                         </h2>
-                                        <div class="item" style="  color:#f5f6ff;background-color:#ffffff;">
-                                               <!--Product NAME-->     <p class="item-name" style="  font-size:22px;">iPhoneX
-                                                 <!--Product PRICE-->   <span class="float-right price" style="  font-family:Montserrat,;font-size:22px;">$120</span></p>
-                                             <!--dESCRIPTION-->   <p class="item-description">This is the description</p>
-                                            </div>
-                                            <div class="item" style="  background-color:#ffffff;">
-                                                <p class="text-nowrap text-truncate text-left item-name" style="  font-size:22px;">Product 2
-<span class="float-right price" style="  font-family:Montserrat,;font-size:22px;">$120</span></p>
-                                                <p class="item-description">This is the description too</p>
-                                            </div>
                                             <div class="total" style="  background-color:#ffffff;"><span style="  font-size:22px;">Total</span>
-<span class="float-right price" style="  font-size:22px;">$320</span></div>
+<span class="float-right price" style="  font-size:22px;">{{presentPrice(Cart::total())}}</span></div>
                                         </div>
                                         <div class="card-details">
                                             <h3 class="title">Credit Card Details</h3>
