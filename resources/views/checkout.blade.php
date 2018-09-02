@@ -23,7 +23,7 @@
             <h2 class="divider-style"><span>Billing form</span></h2>
         </div>
         <div class="row .payment-dialog-row">
-            <div class="col-12 col-md-4 offset-md-4" style="background-color:none">
+            <div class="col-12 col-md-12 offset-md-12" style="background-color:none">
                     <form action="{{route('checkout.store')}}" method="POST" payment-form">
                             {{ csrf_field() }}
                                 {{-- <div class="products">
@@ -42,31 +42,31 @@
                                     <div class="">
                                         <div class="form-row form-group">
                                             <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Name </label></div>
-                                            <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
+                                            <div class="col-sm-8 input-column"><input class="form-control" type="text"></div>
                                         </div>
                                         <div class="form-row form-group">
                                             <div class="col-sm-4 label-column"><label class="col-form-label" for="email-input-field">Email </label></div>
-                                            <div class="col-sm-6 input-column"><input class="form-control" type="email"></div>
+                                            <div class="col-sm-8 input-column"><input class="form-control" type="email"></div>
                                         </div>
                                         <div class="form-row form-group">
                                             <div class="col-sm-4 label-column"><label class="col-form-label" for="address" >Address</label></div>
-                                            <div class="col-sm-6 input-column"><input class="form-control" type="text" id="address" name="address"></div>
+                                            <div class="col-sm-8 input-column"><input class="form-control" type="text" id="address" name="address"></div>
                                         </div>
                                         <div class="form-row form-group">
                                             <div class="col-sm-4 label-column"><label class="col-form-label" for="city">City</label></div>
-                                            <div class="col-sm-6 input-column"><input class="form-control" type="text" id="city" name="city"></div>
+                                            <div class="col-sm-8 input-column"><input class="form-control" type="text" id="city" name="city"></div>
                                         </div>
                                         <div class="form-row form-group">
                                             <div class="col-sm-4 label-column"><label class="col-form-label" for="province">Province</label></div>
-                                            <div class="col-sm-6 input-column"><input class="form-control" type="text" id="province" name="province"></div>
+                                            <div class="col-sm-8 input-column"><input class="form-control" type="text" id="province" name="province"></div>
                                         </div>
                                         <div class="form-row form-group">
                                             <div class="col-sm-4 label-column"><label class="col-form-label" for="postal_code">Postal Code</label></div>
-                                            <div class="col-sm-6 input-column"><input class="form-control" type="text" id="postal_code" name="postal_code"></div>
+                                            <div class="col-sm-8 input-column"><input class="form-control" type="text" id="postal_code" name="postal_code"></div>
                                         </div>
                                         <div class="form-row form-group">
                                             <div class="col-sm-4 label-column"><label class="col-form-label" for="phone">Phone</label></div>
-                                            <div class="col-sm-6 input-column"><input class="form-control" type="text" id="phone" name="phone"></div>
+                                            <div class="col-sm-8 input-column"><input class="form-control" type="text" id="phone" name="phone"></div>
                                         </div>
                                     </div>
                                 </div>
