@@ -93,7 +93,7 @@
 				
 			@else
 			<span style="color:#fff;background-color:#3fc8ff">
-					<i>new!!</i>
+					new!!
 				</span>
 				
 			@endif 
