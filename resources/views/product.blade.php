@@ -25,7 +25,7 @@
 			<p>{{User::where('id',$comment->user_id)->first()->name}}</p><br/>
 			<p>{{$comment->comment}}</p><br>
 			@endforeach
-			<form method="POST" action="{{route('')}}" >
+			<form method="POST" action="{{route('comment.store')}}" >
 				<div class="form-group">
 					<label for="comment">Comment:</label>
 					<textarea class="form-control" rows="5" id="comment"></textarea>
