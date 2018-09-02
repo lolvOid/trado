@@ -13,7 +13,7 @@
                             </div>
                         </div>
                         @if(session()->has('success_message'))
-                        <div class=" col-md-12 alert alert-success">
+                        <div style="width:100%;"class=" alert alert-success">
                             {{session()->get('success_message')}}
                         </div>
                         @endif
