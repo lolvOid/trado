@@ -43,8 +43,9 @@
                                                                 {{csrf_field()}}
                                                                
                                                                 <input type="submit" class="btn btn-success m-b-sm" value="Add new Product">
-                                                            </form>
                                                                 <a href="/shop" class="btn btn-default m-b-sm">Go To Shop</a>
+                                                            </form>
+                                                                
                                                                 <br>
                                                                 @if(\Session::has('success'))
                                                                     <div class='alert alert-success'>
