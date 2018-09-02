@@ -62,10 +62,17 @@ class ProductsDataController extends Controller
        $featured = $request->input('featured');
        
        if($featured == 'on'){
-           $featured = 1;
+           $featured = true;
        }else{
-           $featured = 0;
+           $featured = false;
        }
+       $old = $request->input('old');
+       if($old == "1"){
+           $old = true;
+       }else{
+           $old=false;
+       }
+
         Product::create([
             
             'owner_id'      => $uid, 
@@ -75,7 +82,7 @@ class ProductsDataController extends Controller
             'details'       => $request->input('details'),
             'price'         => ($request->input('price') * 100),
             'featured'      => $featured,
-            'old'           => $request->input('old'),
+            'old'           => $old,
             'description'   => $request->input('description'),
             'images'        => $filename
         ]); 
@@ -135,9 +142,15 @@ class ProductsDataController extends Controller
         }
         $featured = $request->input('featured');
        if($featured == 'on'){
-           $featured = 1;
+           $featured = true;
        }else{
-           $featured = 0;
+           $featured = false;
+       }
+       $old = $request->input('old');
+       if($old == "1"){
+           $old = true;
+       }else{
+           $old=false;
        }
         $product = Product::find($request->input('id'));
         $product->name = $request->input('name');
@@ -146,7 +159,8 @@ class ProductsDataController extends Controller
         $product->price = $request->input('price') * 100;
         $product->description = $request->input('description');
         $product->category_id = $request->input('category');
-        $product->featured = true;
+        $product->featured = $featured;
+        $product->old = $old;
         if($request->hasFile('product_img')){
             $product_img = $request->file('product_img');
             $filename = "/img/" . time() . $product_img->getClientOriginalExtension();

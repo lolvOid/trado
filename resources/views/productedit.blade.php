@@ -56,6 +56,22 @@
                                                             <span class="slider round"></span>
                                                     </div>
                                                 </div>
+                                                <div class="form-group">
+                                                        <label  class="col-sm-2 control-label">Old or New</label>
+                                                        <div class="form-check  form-check-inline col-sm-10">
+                                                            <input type="radio" name="old" id="old_new1" value="1" 
+                                                            @if ($product->old)
+                                                                checked
+                                                            @endif
+                                                            >Old<br/>
+                                                            <input type="radio" name="old" id="old_new2" value="0"
+                                                            @if (! $product->old)
+                                                                checked
+                                                            @endif
+                                                            >New
+                                                            
+                                                        </div>
+                                                    </div>
                                                <div class="form-group">
                                                     <label class="col-sm-2 control-label">Type</label>
                                                     <div class="col-sm-10">
