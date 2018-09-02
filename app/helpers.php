@@ -77,5 +77,6 @@ function getCommentedUserAvatar($comment){
 }
 
 function getUSDToBtc($usd){
-    return file_get_contents("https://blockchain.info/tobtc?currency=USD&value=" . $usd);
+    dd("https://blockchain.info/tobtc?currency=USD&value=" . $usd);
+    // return file_get_contents("https://blockchain.info/tobtc?currency=USD&value=" . $usd);
 }
