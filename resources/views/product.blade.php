@@ -27,9 +27,11 @@
         <div class="col-md-5">
             <h1 style="color:#373737;font-size:37px;">{{$product->name}}</h1>
             <p style="font-size:18px;">{!!$product->description!!}</p>
-            <h2 class="text-center text" style="  color:#4d5fff;
-"><strong>{!!$product->presentPrice()!!}</strong></h2>
-		<button class=" btn-sm button" type="submit" data-hover="SURE!"><span>Buy It?</span></button>
+			<h2 class="text-center text" style="  color:#4d5fff;">
+				<button class=" btn-sm button" type="submit" data-hover="SURE!"><span>Buy It?</span></button>
+				<strong>{!!$product->presentPrice()!!}</strong>
+			</h2>
+		
 	</div>
 </form>
 {{-- @foreach ($comments as $comment)
