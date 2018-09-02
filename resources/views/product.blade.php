@@ -73,12 +73,12 @@
       <img src="http://lorempixel.com/200/200/people">
     </div>
 
-    <form class="form" name="form" >
+    <form  method="POST" action="{{route('comment.store')}}" class="form" name="form" >
       <div class="form-row">
-        <input  type="text"               class="input"
-                 
-                  placeholder="Add comment..."
-                  required>
+          {{ csrf_field() }}
+          <input type="hidden" name="product_id" value="{{$product->id}}">
+          <input type="hidden" name="owner_id" value="{{$owner->id}}">
+        <input  type="text" class="input" name="comment" placeholder="Add comment..." required>
       </div>
 
       
@@ -92,7 +92,7 @@
   <div class="comments">
     <!-- Comment -->
     
-
+    @foreach ($comments as $comment)
     <!-- Comment - Dummy -->
     <div class="comment">
       <!-- Comment Avatar -->
@@ -102,7 +102,7 @@
 
       <!-- Comment Box -->
       <div class="comment-box">
-        <div class="comment-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto temporibus iste nostrum dolorem natus recusandae incidunt voluptatum.</div>
+        <div class="comment-text">{{$comment->comment}}</div>
         <div class="comment-footer">
           <div class="comment-info">
             <span class="comment-author">
@@ -117,8 +117,8 @@
         </div>
       </div>
     </div>
-
-       <div class="comment">
+    @endforeach
+       {{-- <div class="comment">
       <!-- Comment Avatar -->
       <div class="comment-avatar">
         <img src="http://gravatar.com/avatar/412c0b0ec99008245d902e6ed0b264ee?s=80">
@@ -166,7 +166,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
   </div>
 </div>
 </div>
