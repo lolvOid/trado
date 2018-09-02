@@ -57,7 +57,7 @@ class Handler extends ExceptionHandler
                         'content' => view('/404')
                     ]);
             }
-        }
+        
         return parent::render($request, $exception);
     }
 }
