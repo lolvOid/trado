@@ -60,10 +60,8 @@
                                                 <div class="form-group">
                                                     <label  class="col-sm-2 control-label">Old or New</label>
                                                     <div class="form-check  form-check-inline col-sm-10">
-                                                            <input class="form-check-input" type="radio" name="old_new" id="old_new1" value="old" checked>Old
-                                                            
-
-                                                        <input class="form-check-input" type="radio" name="old_new" id="old_new2" value="new">New
+                                                        <input type="radio" name="old_new" id="old_new1" value="old" checked>Old<br/>
+                                                        <input type="radio" name="old_new" id="old_new2" value="new">New
                                                         
                                                     </div>
                                                 </div>
