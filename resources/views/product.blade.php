@@ -49,7 +49,7 @@
   <div class="comment-form">
     <!-- Comment Avatar -->
     <div class="comment-avatar">
-      <img src="/{{$user->avatar}}">
+      <img src="{{$user->avatar}}">
     </div>
 
     <form  method="POST" action="{{route('comment.store')}}" class="form" name="form" >
