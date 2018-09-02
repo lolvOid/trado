@@ -19,19 +19,6 @@
                 <div class="col-6 col-sm-6 col-md-6"></div>
                 <div class="col-6 col-sm-6 col-md-6"></div>
 			</div>
-			@foreach ($comments as $comment)
-				
-			
-			<p>{{User::where('id',$comment->user_id)->first()->name}}</p><br/>
-			<p>{{$comment->comment}}</p><br>
-			@endforeach
-			<form method="POST" action="{{route('comment.store')}}" >
-				<div class="form-group">
-					<label for="comment">Comment:</label>
-					<textarea class="form-control" rows="5" id="comment"></textarea>
-				</div>
-			</form>
-
             <div class="row">
                 <div class="col-6 col-sm-6 col-md-6"></div>
                 <div class="col-6 col-sm-6 col-md-6"></div>
@@ -46,6 +33,19 @@
 		<button class=" btn-sm button" type="submit" data-hover="SURE!"><span>Buy It?</span></button>
 		
 		<button class=" btn-sm button" type="submit" data-hover="SURE!"><span>Buy It?</span></button>
+	</div>
+</form>
+@foreach ($comments as $comment)
+<p>{{User::where('id',$comment->user_id)->first()->name}}</p><br/>
+<p>{{$comment->comment}}</p><br>
+@endforeach
+<form method="POST" action="{{route('comment.store')}}" >
+	{{ csrf_field() }}
+	<div class="form-group">
+		<label for="comment">Comment:</label>
+		<input type="hidden" name="product_id" value="{{$product->id}}">
+		<input type="hidden" name="owner_id" value="{{$owner->id}}">
+		<textarea class="form-control" rows="5" name="comment" id="comment"></textarea>
 	</div>
 </form>
 </div>

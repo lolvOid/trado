@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\comment;
 use Illuminate\Http\Request;
-
+use Auth;
+use App\User;
 class CommentController extends Controller
 {
     /**
@@ -35,7 +36,14 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
+        $user = Auth::user();
         
+        comment::create([
+            'owner_id' => $request->input('owner_id'),
+            'product_id' => $request->input('product_id'),
+            'comment' =>$request->input('comment'),
+             'cmt_user_id' =>$user->id,
+        ]);
     }
 
     /**
