@@ -85,7 +85,18 @@
         <div class="col-sm-12 col-md-12 col-xl-12 offset-sm-0 col-md-5">
 		<div style="background-color:#ffffff;width:200px;"></div><img src="{{$product->images}}" style="height:242px;" /></div>
         <div class="col-sm-10 col-md-12 col-lg-12 col-xl-12 offset-sm-9 offset-lg-0 offset-xl-0 offset-md-1 col-md-6" style="margin-left:0px;padding-left:21px;">
-			<h2 class="product-text-color">{{$product->name}}</h2><small style="font-style:oblique;">
+			<h2 class="product-text-color">{{$product->name}}</h2>
+			@if ($product->old)
+				<span style="color:gainsboro;background-color:black">
+					old!!
+				</span>
+			@else
+			<span style="color:white;background-color:green">
+					<i>new!!</i>
+				</span>
+			@endif
+			
+			<small style="font-style:oblique;">
 				<a href="/profile/{{$product->owner_id}}">
 					{{$users->where('id',$product->owner_id)->first()->username}}
 				</a>
