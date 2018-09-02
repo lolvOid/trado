@@ -15,7 +15,7 @@
                       <a href="about">  <h3>About Us</h3></a>
                         <ul>
                             <li><a href="about">Company</a></li>
-                            <li><a href="#">Team</a></li>
+                            <li><a href="about">Team</a></li>
                             <li></li>
                         </ul>
                     </div>
