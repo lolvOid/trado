@@ -34,9 +34,9 @@
                     <div data-lightbox="photos" class="product-wrap">
                         <img src="{{$trending->images}}">
                             <div class="actions">
-                                <a href="" class="add-to-cart"></a>
-                                <a href="{{route('shop.show',$trending->slug)}}" class="quickview"></a>
-				                                <a href="" class="wishlist"></a>
+                                <a href="{{route('shop.show',$trending->slug)}}" class="add-to-cart"></a>
+                                {{-- <a href="{{route('shop.show',$trending->slug)}}" class="quickview"></a> --}}
+				                <a href="" class="wishlist"></a>
                                 
                             </div>
                     </div>
