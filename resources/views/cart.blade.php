@@ -83,7 +83,7 @@
                                             <div class="form-row">
                                                 <div class="col-sm-12">
                                                     <div class="form-row">
-                                                        <div class="col"><a href="{{route('checkout.index')}}" class="btn btn-primary btn-block" type="button" style=" background-color:#373737;color:#fff; width:180px;"><i class="fa fa-dollar" style="  color:rgb(255,255,255);"></i>Pay With Cash</a>
+                                                        <div class="col"><a href="{{route('checkout.index')}}" class="btn btn-primary btn-block" type="button" style=" background-color:#3d9eff;color:#fff; border:none;width:180px;"><i class="fa fa-dollar" style="  color:rgb(255,255,255);"></i>Pay With Cash</a>
                                                             <i class="fa fa-dollar" style="  color:rgb(255,255,255);"></i>
                                                         </div>
                                                         <div class="col">
