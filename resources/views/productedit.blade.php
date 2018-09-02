@@ -75,9 +75,13 @@
                                                <div class="form-group">
                                                     <label class="col-sm-2 control-label">Type</label>
                                                     <div class="col-sm-10">
-                                                        <select name="category" value="{{$product->category_id}}">
+                                                        <select name="category">
                                                                 @foreach ($categories as $category)
-                                                                <option value="{{$category->id}}">{{$category->name}}</option>
+                                                                <option value="{{$category->id}}"
+                                                                    @if ($product->category_id == $category->id)
+                                                                        selected
+                                                                    @endif
+                                                                    >{{$category->name}}</option>
                                                                 @endforeach
                                                         </select>
                                                         </div>
