@@ -1,9 +1,9 @@
-@extends('master')
-
-
-@section('pages')
-
-           <div class="container">
+<html>
+    <head>
+        <link >
+    </head>
+<body>
+<div class="container">
  
  <div class='c'>
      <div class='_404'>404</div>
@@ -15,6 +15,6 @@
  </div>
 
 </div>
-@endsection()
-
+</body>
    
+</html>
