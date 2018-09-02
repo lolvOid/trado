@@ -21,7 +21,7 @@
             <p><i class="fa fa-location-arrow fa-fw"></i> Yangon<br>
             <span class="small"><i class="fa fa-calendar fa-fw"></i> Joined Tradoexchange on {{ getTimeToDate($owner->created_at)  }}</span></p><div class="panel panel-default">
              <ul class="nav nav-tabs panel-heading">
-        <li class="nav-item"><a role="tab" data-toggle="tab" href="#tab-1" class="nav-link active show">Products Uploaded</a></li>
+        <li class="nav-item"><a role="tab" data-toggle="tab" href="#tab-1" class="nav-link show">Products Uploaded</a></li>
         {{-- <li class="nav-item"><a role="tab" data-toggle="tab" href="#tab-2" class="nav-link active">Recent Log</a></li>
         <li class="nav-item"><a role="tab" data-toggle="tab" href="#tab-3" class="nav-link">Related Friends</a></li> --}}
     </ul>
