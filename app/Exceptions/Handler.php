@@ -49,7 +49,7 @@ class Handler extends ExceptionHandler
         //  if ($this->isHttpException($e)) {
 
         //     $statusCode = $e->getStatusCode();
-    
+
         //     switch ($statusCode) {
     
         //         case '404':

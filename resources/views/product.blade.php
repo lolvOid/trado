@@ -25,6 +25,19 @@
                 <div class="col-6 col-sm-6 col-md-6"></div>
             </div>
         </div>
+        @if ($product->old)
+			<span style="color:#fff;background-color:#ff4e44">
+				!! old !!
+			</span>
+				
+			@else
+			<span style="color:#fff;background-color:#3fc8ff">
+					!! new !!
+				</span>
+				
+			@endif 
+			
+			<br/>
         <div class="col-md-5">
             <h1 style="color:#373737;font-size:37px;">{{$product->name}}</h1>
             <p style="font-size:18px;">{!!$product->description!!}</p>
