@@ -76,7 +76,7 @@
     <div class="comment">
       <!-- Comment Avatar -->
       <div class="comment-avatar">
-        <img src="{{getCommentedUserAvatar($comment)}}">
+        <img src="/{{getCommentedUserAvatar($comment)}}">
       </div>
 
       <!-- Comment Box -->
