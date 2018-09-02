@@ -24,7 +24,7 @@
         <link href="{{ URL::asset('plugins/3d-bold-navigation/css/style.css') }}" rel="stylesheet" type="text/css"/>
         <link href="{{ URL::asset('plugins/slidepushmenus/css/component.css') }}" rel="stylesheet" type="text/css"/>	
         <link href="{{ URL::asset('plugins/weather-icons-master/css/weather-icons.min.css') }}" rel="stylesheet" type="text/css"/>	
-        <link href="{{ URL::asset('plugins/toastr/toastr.min.css') }}" rel="stylesheet" type="text/css"/>
+       <!-- <link href="{{ URL::asset('plugins/toastr/toastr.min.css') }}" rel="stylesheet" type="text/css"/>-->
 	<link href="{{ URL::asset('plugins/summernote-master/summernote.css') }}" rel="stylesheet" type="text/css"/>
     
     <!-- Include external CSS. -->
