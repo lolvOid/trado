@@ -96,7 +96,7 @@ class WalletController extends Controller
             // $check      = enableHD($guid,$password);
             // $addressList = Blockchain::listAddress($guid,$password)['addresses'];
 
-             return view('wallet/_wallet')->with([
+             return view('wallet/showdata')->with([
                                                 'user'=>$user,
                                                 'wallets'=>$wallets
                                             ]);
