@@ -127,11 +127,11 @@ class WalletController extends Controller
 
         $local_url = $this->local_url;
         try{
-        $url = "$local_url/merchant/$guid/payment?".http_build_query($params);
-        $json_data = file_get_contents($url);
-        $json_feed = json_decode($json_data, true);
-        $success_message = "Transaction is successful";
-        return redirect('wallet/showdata')->with(['data'->$json_feed,'fee'->$fees,'amount'->$amount, 'success_message'->$success_message]);
+            $url = "$local_url/merchant/$guid/payment?".http_build_query($params);
+            $json_data = file_get_contents($url);
+            $json_feed = json_decode($json_data, true);
+            $success_message = "Transaction is successful";
+            return redirect('wallet/showdata')->with(['data'->$json_feed,'fee'->$fees,'amount'->$amount, 'success_message'->$success_message]);
         }catch(\Exception $e){
             $errors = "Transaction failed";
             return redirect()->back()->with(['errors'->$errors]);
