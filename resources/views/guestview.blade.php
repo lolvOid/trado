@@ -40,7 +40,7 @@
                                 <small>{{$product->presentprice()}} USD</small>
                             
                             
-                                <h3 class="product-description">{!! $product->description !!}</h3>
+                                <h3 class="product-description"> {!! strip_tags(str_limit($product->description, 100)) !!}</h3>
                             </div>
                         </div>
                     </div>
