@@ -98,7 +98,7 @@ div.jumbotron.hero-nature {
   font-weight:bold;
   text-align:center;
   opacity:0.91;
-  background:url('../../assets/img/opencampus.jpg');
+  background:url('/img/opencampus.jpg');
   background-size:cover;
   background-position:center;
   padding-top:100px;
