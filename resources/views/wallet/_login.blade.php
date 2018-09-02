@@ -3,14 +3,19 @@
 
 
     @section('pages')
-@if (isset($success_message))
-<div style="width:100%;"class="col-md-12 alert alert-success">
+
+
+    <div class="col-md-4 offset-4">
+    <div style="text-align:center;">
+        <h2 class="divider-style"><span>Wallet Login</span></h2>
+        @if (isset($success_message))
+<div style="width:100%;"class="col-md-8 alert alert-success">
     {{$success_message}}
 </div>
 @endif
 
 @if (count($errors)>0)
-<div style="width:100%;"class="col-md-12 alert alert-danger">
+<div style="width:100%;"class="col-md-8 alert alert-danger">
     <div class="alert alert-danger">
     <ul>
         @foreach ($errors->all() as $error)
@@ -19,10 +24,6 @@
     </ul>
 </div>
 @endif
-
-    <div class="col-md-4 offset-4">
-    <div style="text-align:center;">
-        <h2 class="divider-style"><span>Wallet Login</span></h2>
     </div>
     <div class="login-dark" style="background-color:rgb(255,255,255);background-image:url(&quot;dsfdsfdfdfsf&quot;);height:717px;">
             <form method="post" action="{{route('wallet.store')}}" style="background-color:rgb(0,0,0);">
