@@ -35,13 +35,13 @@
 		<button class=" btn-sm button" type="submit" data-hover="SURE!"><span>Buy It?</span></button>
 	</div>
 </form>
-@foreach ($comments as $comment)
-{{-- <p>{{User::where('id',$comment->user_id)->first()->name}}</p><br/> --}}
+{{-- @foreach ($comments as $comment)
+<p>{{User::where('id',$comment->user_id)->first()->name}}</p><br/>
 <p>{{$comment->comment}}</p><br>
 @endforeach
 <form method="POST" action="{{route('comment.store')}}" >
 	@foreach ($comments as $comment)
-	{{-- <p>{{User::where('id',$comment->user_id)->first()->name}}</p><br/> --}}
+	{{-- <p>{{User::where('id',$comment->user_id)->first()->name}}</p><br/>
 	<p>{{$comment->comment}}</p><br>
 	@endforeach
 	{{ csrf_field() }}
@@ -51,7 +51,7 @@
 		<input type="hidden" name="owner_id" value="{{$owner->id}}">
 		<input type="text" class="form-control" rows="5" name="comment" id="comment">
 	</div>
-</form>
+</form> --}}
 </div>
 </div>
 
