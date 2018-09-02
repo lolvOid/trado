@@ -40,12 +40,12 @@ class CommentController extends Controller
         if($user == null){
             return redirect()->route("login");
         }
-        
+        dd($user->id);
         comment::create([
             'owner_id' => $request->input('owner_id'),
             'product_id' => $request->input('product_id'),
             'comment' =>$request->input('comment'),
-             'cmt_user_id' =>$user->id,
+            'cmt_user_id' =>$user->id,
         ]);
         return redirect()->back();
     }
