@@ -236,7 +236,7 @@
                       <li><a href="{{route('wallet.show')}}" class="waves-effect waves-button"><span class="menu-icon icon-wallet"></span><p>Wallet</p></a></li>
                             <li><a href="{{route('statistics.index')}}" class="waves-effect waves-button"><span class="menu-icon icon-grid"></span><p>Statisics</p></a></li>
                         <li><a href="{{route('productdata.index')}}" class="waves-effect waves-button"><span class="menu-icon icon-basket"></span><p>Products</p></a></li>
-                            <li><a href="" class="waves-effect waves-button"><span class="menu-icon icon-power"></span><p>Logout</p></a></li>
+                        <li><a href="/logout" class="waves-effect waves-button"><span class="menu-icon icon-power"></span><p>Logout</p></a></li>
                         
                         </ul>
                     </div><!-- Page Sidebar Inner -->
