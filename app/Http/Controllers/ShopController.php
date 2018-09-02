@@ -10,6 +10,8 @@ use App\User;
 use App\Product;
 use App\Category;
 use Auth;
+use App\comment;
+
 class ShopController extends Controller
 {
     /**
@@ -83,13 +85,15 @@ class ShopController extends Controller
     {
         //
         $user = Auth::user();
+        
         if($user == null){
             $user = new User();
         }
         $product = Product::where('slug',$slug)->firstOrFail();
+        $owner = User::where('id',$product->owner_id)->first();
         $related = Product::where('slug','!=',$slug)->related()->get();
-
-        return view('product')->with(['product'=>$product,'related' =>$related, 'user'  => $user]);
+        $comments = Product::where('product_id',$product->id)->get();
+        return view('product')->with(['product'=>$product,'related' =>$related, 'user'  => $user,'owner'=>$owner, 'comments'=>$comments]);
     }
 
     public function showcategory(Request $request, $id)

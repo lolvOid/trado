@@ -18,7 +18,18 @@
             <div class="row">
                 <div class="col-6 col-sm-6 col-md-6"></div>
                 <div class="col-6 col-sm-6 col-md-6"></div>
-            </div>
+			</div>
+			@foreach ($comments as $comment)
+				
+			
+			<p>User</p><br/>
+			<p>User's Comment</p><br>
+			@endforeach
+			<div class="form-group">
+				<label for="comment">Comment:</label>
+				<textarea class="form-control" rows="5" id="comment"></textarea>
+			</div>
+
             <div class="row">
                 <div class="col-6 col-sm-6 col-md-6"></div>
                 <div class="col-6 col-sm-6 col-md-6"></div>
@@ -42,7 +53,7 @@
 
 
 	<!--Related Products-->
-    <div class="container" style="background-color:#ffffff;">
+    {{-- <div class="container" style="background-color:#ffffff;">
         <div class="row">
             <div class="col">
 				<div class="row">
@@ -89,7 +100,7 @@
 		
 		</div>
 		</div>
-	</div>
+	</div> --}}
 </div>
         </div>
     </div>
