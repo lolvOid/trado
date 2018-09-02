@@ -98,7 +98,7 @@ class WalletController extends Controller
 
              return view('wallet/showdata')->with([
                                                 'guid'=>$guid,
-                                                'my_balance'=>$my_balance,
+                                                'mybalance'=>$my_balance,
                                                 'addressList'=>$addressList,
                                                 'user'=>$user,
                                                 'wallets'=>$wallets
