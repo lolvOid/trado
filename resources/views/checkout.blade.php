@@ -23,7 +23,7 @@
             <h2 class="divider-style"><span>Billing form</span></h2>
         </div>
         <div class="row .payment-dialog-row">
-            <div class="col-12 col-md-12 offset-md-12" style="background-color:none">
+            <div class="col-12 col-md-4 offset-md-4" style="background-color:none">
                     <form action="{{route('checkout.store')}}" method="POST" payment-form">
                             {{ csrf_field() }}
                                 {{-- <div class="products">
@@ -73,7 +73,7 @@
                                 <div class="card-details">
                                     <h3 class="title">Credit Card Details</h3>
                                     <div class="form-row">
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-4">
                                             <div class="form-group"><label for="card-holder">Card Holder</label><input class="form-control" type="text" placeholder="Card Holder" id="card_holder" name="card_holder"></div>
                                     </div>
             
