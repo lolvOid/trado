@@ -36,14 +36,7 @@
                         <div class="col-sm-10 col-md-12 col-xl-12 offset-sm-0 col-md-5">
                             <div style="background-color:#ffffff;width:200px;"></div><img src="{{$product->images}}" style="height:242px;" /></div>
                         <div class="col-sm-10 col-md-12 col-lg-12 col-xl-12 offset-sm-9 offset-lg-0 offset-xl-0 offset-md-1 col-md-6" style="margin-left:0px;padding-left:21px;">
-                            
-                                <a href="{{ route('shop.show',$product->slug)}}">
-                                    <h1 class="product-text-color">
-                                        {{$product->name}}
-                                    </h1>
-                                </a>
-                            
-                            <small style="font-style:oblique;">{{$owner->username}}<i class="fa fa-user"></i></small>
+                            <h1 class="product-text-color">{{$product->name}}</h1><small style="font-style:oblique;">{{$owner->username}}<i class="fa fa-user"></i></small>
                                 <small>{{$product->presentprice()}} USD</small>
                              
                             
