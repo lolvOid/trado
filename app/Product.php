@@ -12,7 +12,7 @@ class Product extends Model
    use SearchableTrait;
 
    protected $fillable = [
-    'name', 'slug','category_id', 'details', 'price', 'description', 'owner_id', 'images', 'featured'
+    'name', 'slug','category_id', 'details', 'price', 'description', 'owner_id', 'images', 'featured', 'old',
     ];
    protected $searchable = [
     /**

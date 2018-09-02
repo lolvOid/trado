@@ -68,6 +68,7 @@ class ProductsDataController extends Controller
            $featured = 0;
        }
         Product::create([
+            
             'owner_id'      => $uid, 
             'name'          => $request->input('name'),
             'slug'          => $request->input('slug'),
@@ -75,6 +76,7 @@ class ProductsDataController extends Controller
             'details'       => $request->input('details'),
             'price'         => ($request->input('price') * 100),
             'featured'      => $featured,
+            'old'           => $request->input('old'),
             'description'   => $request->input('description'),
             'images'        => $filename
         ]); 
