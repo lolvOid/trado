@@ -4,7 +4,7 @@
 
     @section('pages')
      <div style="background-image:url('img/cover.png');height:800px;background-position:center;background-size:cover;background-repeat:no-repeat;">
-    <div class="d-flex justify-content-center align-items-center" style="height:inherit;min-height:initial;width:100%;position:absolute;left:0;background-color:rgba(30,41,99,0.53);">
+    <div class="d-flex justify-content-center align-items-center" style="height:inherit;min-height:initial;width:100%;position:absolute;left:0;">
         <div class="d-flex align-items-center order-12" style="height:200px;">
             <div class="container">
                 	<div class="caption v-middle text-center">
