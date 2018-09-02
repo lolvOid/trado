@@ -29,22 +29,22 @@
     <div class="container">
         <div class="row">
 
-            @foreach ($products as $product)
+            @foreach ($trendings as $trending)
                 
             
             <div class="col-md-4">
                 <div class="product-inner">
                     <div data-lightbox="photos" class="product-wrap">
-                        <img src="{{$product->images}}">
+                        <img src="{{$trending->images}}">
                             <div class="actions">
                                 <a href="" class="add-to-cart"></a>
-                                <a href="{{route('shop.show',$product->slug)}}" class="quickview"></a>
+                                <a href="{{route('shop.show',$trending->slug)}}" class="quickview"></a>
                                 
                             </div>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-title"><a href="{{route('shop.show',$product->slug)}}">{{$product->name}}</a></h3>
-                        <span class="price">{{$product->presentPrice()}}</span>
+                        <h3 class="product-title"><a href="{{route('shop.show',$trending->slug)}}">{{$trending->name}}</a></h3>
+                        <span class="price">{{$trending->presentPrice()}}</span>
                     </div>
                 </div>
             </div>
@@ -55,7 +55,7 @@
         <div class="Push-20"></div>
         <div class="Push-20"></div>
         <!--Product-row-->
-        <div class="row">
+        {{-- <div class="row">
             <!--Product-COlumn-->   
             @foreach ($trendings as $trending)
                 
@@ -76,7 +76,7 @@
                         </div>
                     </div>
                 </div><!--Product-COlumn-end-->
-                @endforeach 
+                @endforeach  --}}
             </div>
         </div><!--Product-Row-end-->
 
