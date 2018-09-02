@@ -3,7 +3,7 @@ body {
   color:#fff;
   font-family:'Open Sans', sans-serif;
   max-height:700px;
-  overflow:hidden;
+ 
 }
 
 .c {
@@ -51,7 +51,7 @@ body {
   display:inline-block;
 }
 
-.btn {
+.btn404 {
   background-color:rgb(7,4,21);
   position:relative;
   display:inline-block;
