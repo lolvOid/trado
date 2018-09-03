@@ -14,6 +14,20 @@
                     </div>
                 </div>
                 <div id="main-wrapper">
+                    {{session()->get('success')}}
+                    </div>
+                    @endif
+                
+                    @if (count($errors)>0)
+                    <div style="width:100%;"class="col-12 alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{$error}}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
+                
                     {{-- <div class="row">
                         <div class="col-md-6">
                             <div class="panel panel-white">

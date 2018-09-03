@@ -139,7 +139,11 @@ class WalletController extends Controller
     }
     
 
-  
+  public function delete(Request $request){
+    $wallet = Wallet::find($request->input("id"));
+    $wallet->delete();
+    return redirect()->route('wallet.index')->with('success','Wallet Delete Successful');
+  }
 
   
 }
