@@ -196,7 +196,7 @@
          <div class="page-sidebar sidebar">
                     <div class="page-sidebar-inner slimscroll">
                         <ul class="menu accordion-menu">
-                            {{-- <li ><a href="{{route("dashboard.index")}}" class="waves-effect waves-button"><span class="menu-icon icon-home"></span><p>Dashboard</p></a></li> --}}
+                            <li ><a href="{{route("dashboard.index")}}" class="waves-effect waves-button"><span class="menu-icon icon-home"></span><p>Dashboard</p></a></li>
                             <li><a href="{{route('profile.index')}}" class="waves-effect waves-button"><span class="menu-icon icon-user"></span><p>Profile</p><span class="active-page"></span></a></li>
                       <li><a href="{{route('wallet.show')}}" class="waves-effect waves-button"><span class="menu-icon icon-wallet"></span><p>Wallet</p></a></li>
                             <li><a href="{{route('statistics.index')}}" class="waves-effect waves-button"><span class="menu-icon icon-grid"></span><p>Statisics</p></a></li>

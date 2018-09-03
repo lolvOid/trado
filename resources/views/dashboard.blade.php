@@ -18,8 +18,9 @@
                 </div>
               
                 <div id="main-wrapper">
+                        <p style="color:red">This is a Demo Page</p>
                     <div class="row">
-
+                    
                       <!--sale table-->
                         <div class="col-md-6">
                             <div class="panel panel-white">
