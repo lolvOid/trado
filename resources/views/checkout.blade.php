@@ -43,31 +43,31 @@
                                     <div class="">
                                         <div class="form-row form-group">
                                             <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Name </label></div>
-                                            <div class="col-sm-12 input-column"><input class="form-control" type="text"></div>
+                                            <div class="col-sm-12 input-column"><input class="form-control" type="text" required></div>
                                         </div>
                                         <div class="form-row form-group">
                                             <div class="col-sm-4 label-column"><label class="col-form-label" for="email-input-field">Email </label></div>
-                                            <div class="col-sm-12 input-column"><input class="form-control" type="email"></div>
+                                            <div class="col-sm-12 input-column"><input class="form-control" type="email" required></div>
                                         </div>
                                         <div class="form-row form-group">
                                             <div class="col-sm-4 label-column"><label class="col-form-label" for="address" >Address</label></div>
-                                            <div class="col-sm-12 input-column"><input class="form-control" type="text" id="address" name="address"></div>
+                                            <div class="col-sm-12 input-column"><input class="form-control" type="text" id="address" name="address" required></div>
                                         </div>
                                         <div class="form-row form-group">
                                             <div class="col-sm-4 label-column"><label class="col-form-label" for="city">City</label></div>
-                                            <div class="col-sm-12 input-column"><input class="form-control" type="text" id="city" name="city"></div>
+                                            <div class="col-sm-12 input-column"><input class="form-control" type="text" id="city" name="city" required></div>
                                         </div>
                                         <div class="form-row form-group">
                                             <div class="col-sm-4 label-column"><label class="col-form-label" for="province">Province</label></div>
-                                            <div class="col-sm-12 input-column"><input class="form-control" type="text" id="province" name="province"></div>
+                                            <div class="col-sm-12 input-column"><input class="form-control" type="text" id="province" name="province" required></div>
                                         </div>
                                         <div class="form-row form-group">
                                             <div class="col-sm-4 label-column"><label class="col-form-label" for="postal_code">Postal Code</label></div>
-                                            <div class="col-sm-12 input-column"><input class="form-control" type="text" id="postal_code" name="postal_code"></div>
+                                            <div class="col-sm-12 input-column"><input class="form-control" type="text" id="postal_code" name="postal_code" required></div>
                                         </div>
                                         <div class="form-row form-group">
                                             <div class="col-sm-4 label-column"><label class="col-form-label" for="phone">Phone</label></div>
-                                            <div class="col-sm-12 input-column"><input class="form-control" type="text" id="phone" name="phone"></div>
+                                            <div class="col-sm-12 input-column"><input class="form-control" type="text" id="phone" name="phone" required></div>
                                         </div>
                                     </div>
                                 </div>
@@ -76,6 +76,7 @@
                                     <div class="form-row">
                                         <div class="col-sm-4">
                                             <div class="form-group"><label for="card-holder">Card Holder</label><input class="form-control" type="text" placeholder="Card Holder" id="card_holder" name="card_holder"></div>
+                                            <p style="color:red">Warning! Do not include your actual Card. try sample Card '4242 4242 4242 4242'</p>
                                     </div>
             
                                             
