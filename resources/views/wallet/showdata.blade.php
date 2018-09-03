@@ -62,7 +62,7 @@
                                         <input type="password" name="password" id="" class="form-control" placeholder="Enter Password" required> 
                                     </div>
                                 <div class="form-group">
-                                <label class="col-form-label">USD:</label><span>{{presentPrice(Cart::total())}} / {{getUSDToBtc(Cart::total())}}</span><br/>
+                                <label class="col-form-label">USD:</label><span>{{presentPrice(Cart::total())}} / {{getUSDToBtc(Cart::total())}} BTC</span><br/>
                                     <label class="col-form-label">Transtion Fee:</label><span>BTC:0.0001</span>
                                 
                                 <button type="submit" class="btn btn-primary pull-right">Submit</button>

@@ -58,7 +58,7 @@ Route::get('/wallet','WalletController@index')->middleware('auth')->name('wallet
 Route::get('/wallet/login','WalletController@login')->middleware('auth')->name('wallet.login');
 Route::post('/wallet/create','WalletController@create')->middleware('auth')->name('wallet.create');
 Route::post('/wallet/delete','WalletController@delete')->middleware('auth')->name('wallet.delete');
-Route::post('/wallet/auth','WalletController@walletstore')->middleware('auth')->name('wallet.store');
+Route::post('/wallet/trans','WalletController@walletstore')->middleware('auth')->name('wallet.store');
 Route::get('/wallet/showdata','WalletController@show')->middleware('auth')->name('wallet.show');
 Route::post('/wallet/transaction','WalletController@makeTransaction')->middleware('auth')->name('wallet.payment');
 
