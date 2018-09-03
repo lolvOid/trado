@@ -122,7 +122,7 @@
                                             <form method="POST" action="{{route('wallet.delete')}}">
                                                 {{ csrf_field() }}
                                             <input name="id" type="hidden" value="{{$wallet->id}}">
-                                            <input id="passwordbtn" type="button" class="btn btn-danger" onclick="passwordbtn" value="Delete">
+                                            <input id="passwordbtn" type="submit" class="btn btn-danger" value="Delete">
                                             {{-- <label for="label">Balance:</label>
                                             <span name="label">0.0000 <i class="fa fa-fa-bitcin"></i></span> --}}
                                             </form>
