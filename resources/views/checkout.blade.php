@@ -74,10 +74,11 @@
                                 <div class="card-details">
                                     <h3 class="title">Credit Card Details</h3>
                                     <div class="form-row">
-                                        <div class="col-sm-4">
+                                    l    <div class="col-sm-4">
                                             <div class="form-group"><label for="card-holder">Card Holder</label><input class="form-control" type="text" placeholder="Card Holder" id="card_holder" name="card_holder"></div>
-                                            <p style="color:red">Warning! Do not include your actual Card. try sample Card '4242 4242 4242 4242'</p>
+                                            
                                     </div>
+                                    <p style="color:red">Warning! Do not include your actual Card. try sample Card '4242 4242 4242 4242'</p>
             
                                             
             
