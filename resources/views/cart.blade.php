@@ -51,7 +51,7 @@
                                         <form action="{{route('cart.destroy',$item->rowId)}}" method="POST">
                                             {{ csrf_field() }}
                                             {{method_field('DELETE')}}
-                                            <div class="col-6 col-md-2 price"><button class="btn btn-primary" type="submit"><i class="fa fa-trash"></i></button></div>
+                                            <div class="col-6 col-md-2 price"><button class="btn btn-primary" type="submit" style="background-color:#ff3b3b;"><i class="fa fa-trash"></i></button></div>
                                         </form>
                                     </div>
                                 </div>                                
