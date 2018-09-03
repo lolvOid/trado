@@ -35,7 +35,7 @@
                     <div class="box"><img class="rounded-circle" src=" img/stmpp.jpg">
                         <h3 class="name">Si Thu Myoe</h3>
                         <p class="title">Server Administrator</p>
-                        <p class="description">He has three years experience in the field of Network, Server and Security fields. He is currently interested in Distributed System Programming and Writing RESTFul API.<br></p>
+                        <p class="description">He has three years experience in the field of Network, Server and Security fields. He is interested in Distributed System Programming and writing RESTFul API.<br></p>
                         <div class="social"><a href="https://www.facebook.com/sithu.myo.56?fb_dtsg_ag=Ady2RXZ8uoylTNd5mwaZeZHAsvPIyI5-3oCQw9kqBWvO_w%3AAdwGyypR5lw-saio363jxgjmb7ZiQfuIV-iLXQ0-XE3M6w"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                     </div>
                 </div>
