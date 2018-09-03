@@ -15,7 +15,7 @@
                 </div>
                 <div id="main-wrapper">
              
-                    <p style="color:rebeccapurple">This is a Demo Page</p>
+                    <p style="color:red">This is a Demo Page</p>
 
                       <div class="row">
                             <div class="col-md-6">
