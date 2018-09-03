@@ -15,12 +15,10 @@
                 </div>
                 <div id="main-wrapper">
              
-
+                    <p style="color:rebeccapurple">This is a Demo Page</p>
 
                       <div class="row">
                             <div class="col-md-6">
-
-
                                     <div class="panel panel-white">
                                             <div class="panel-heading">
                                                 <h4 class="panel-title">Bitcoin Price Chart   </h4>
