@@ -14,6 +14,8 @@
                     </div>
                 </div>
                 <div id="main-wrapper">
+                    @if (session()->has('success'))
+                    <div style="width:100%;"class="col-12 alert alert-success">
                     {{session()->get('success')}}
                     </div>
                     @endif
