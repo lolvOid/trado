@@ -60,7 +60,7 @@
                 <div class="col-md-6 col-lg-4 item">
                     <div class="box"><img class="rounded-circle" src=" img/spppp.jpg">
                         <h3 class="name">Satt Paing Phyoe</h3>
-                        <p class="title">S</p>
+                        <p class="title">Backend-Developer</p>
                         <p class="description">He is our planner.He thought every theory and principles of backend codes. And He is mastermind at backend developing.Our website processes become stronger thanks to his amazing codes<br><br></p>
                         <div class="social"><a href="https://www.facebook.com/Seth.spp21"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                     </div>
