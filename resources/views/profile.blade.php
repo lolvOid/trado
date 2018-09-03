@@ -9,7 +9,7 @@
                 <div class="page-title">
                     <div class="page-breadcrumb">
                         <ol class="breadcrumb">
-                            <li><a href=" dashboard.html">Home</a></li>
+                            <li><a href="/dashboard">Home</a></li>
                             <li class="active">Profile</li>
                         </ol>
                     </div>
@@ -31,7 +31,7 @@
                                         <form method="POST" action="{{ URL::to('upload') }}" enctype="multipart/form-data">
                                             {{csrf_field()}}
                                             <img src={{$user->avatar}} class="img-circle" style="width:200px; height:auto; clear:both; display:block; padding:2px; border:1px solid #ddd; margin-bottom:10px;">
-                                            <input class="btn btn-success btn-sm float-left" type="file" data-name="avatar" name="avatar" id="avatar">
+                                            <input class="btn btn-success btn-sm float-left" type="file" data-name="avatar" name="avatar" id="avatar" required>
                                             <button type="submit" class="btn btn-primary m-t-xs m-b-xs">Upload</button>
                                         </form>
                                     </div>
@@ -64,22 +64,22 @@
                                                     {{csrf_field()}}
                                                     <div class="form-group">
                                                             <label for="name">Name</label>
-                                                        <input type="text" class="form-control m-t-xxs" id="name" name='name' placeholder="Enter Name" value="{{$user->name}}">
+                                                        <input type="text" class="form-control m-t-xxs" id="name" name='name' placeholder="Enter Name" value="{{$user->name}}" required>
                                                     </div>    
                                                         <div class="form-group">
                                                                 <label for="username" value="">username</label>
-                                                                <input type="text" class="form-control m-t-xxs" id="username" name="username" value="{{$user->username}}">
+                                                                <input type="text" class="form-control m-t-xxs" id="username" name="username" value="{{$user->username}}"  required>
                                                             </div>    
                                                     
                                                         <div class="form-group">
                                                                 <label for="contect">Contact Number</label>
-                                                                <input type="tel" class="form-control m-t-xxs" id="contact" name="contact" value="{{$user->contact}}" >
+                                                                <input type="tel" class="form-control m-t-xxs" id="contact" name="contact" value="{{$user->contact}}" required>
                                                             </div>        
                                                             
 
                                                 <div class="form-group">
                                                     <label for="email">Email address</label>
-                                                    <input type="email" name="email"  class="form-control m-t-xxs" id="email" name="email" value="{{$user->email}}">
+                                                    <input type="email" name="email"  class="form-control m-t-xxs" id="email" name="email" value="{{$user->email}}" required>
                                                 </div>
 
                                                 <button type="submit" class="btn btn-primary m-t-xs m-b-xs">Submit</button>
