@@ -175,10 +175,10 @@
                                     </a>
                                     <ul class="dropdown-menu dropdown-list" role="menu">
                                     <li role="presentation"><a href="{{route('profile.index')}}"><i class="icon-user"></i>Profile</a></li>
-                                        <li role="presentation"><a href="calendar.html"><i class="icon-calendar"></i>Calendar</a></li>
-                                        <li role="presentation"><a href="inbox.html"><i class="icon-envelope-open"></i>Inbox<span class="badge badge-success pull-right">4</span></a></li>
+                                        <li role="presentation"><a href=""><i class="icon-calendar"></i>Calendar</a></li>
+                                        <li role="presentation"><a href=""><i class="icon-envelope-open"></i>Inbox<span class="badge badge-success pull-right">4</span></a></li>
                                         <li role="presentation" class="divider"></li>
-                                        <li role="presentation"><a href="lock-screen.html"><i class="icon-lock"></i>Lock screen</a></li>
+                                        <li role="presentation"><a href=""><i class="icon-lock"></i>Lock screen</a></li>
                                         <li role="presentation"><a href="login"><i class="icon-key m-r-xs"></i>Log out</a></li>
                                     </ul>
                                 </li>
