@@ -72,7 +72,7 @@
                 </div>
             </form>
 
-            <p  style="color:steelblue; font-size:12px">This website is alpha version and still in development</p>
+            <p  style="color:steelblue; font-size:8px">This website is alpha version and still in development</p>
 
             @if (session('status'))
             <div class="alert alert-success" role="alert">
