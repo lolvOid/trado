@@ -1,7 +1,6 @@
 @extends('master')
 
-
-@section('content')
+@section('pages')
 @if (session()->has('success_message'))
 <div style="width:100%;"class="col-12 alert alert-success">
         {{session()->get('success_message')}}
