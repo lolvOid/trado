@@ -103,7 +103,7 @@
                                         </li> 
                                     <li class="list-group-item">
                                         <div class="btcBalance">
-                                            <input id="passwordbtn" type="button" class="btn btn-default" onclick="passwordbtn" value="Click Here To See balance">
+                                            <input id="passwordbtn" type="button" class="btn btn-danger" onclick="passwordbtn" value="Delete">
                                             {{-- <label for="label">Balance:</label>
                                             <span name="label">0.0000 <i class="fa fa-fa-bitcin"></i></span> --}}
                                         </div>
