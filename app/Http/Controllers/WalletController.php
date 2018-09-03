@@ -134,7 +134,7 @@ class WalletController extends Controller
             return redirect('wallet/showdata')->with(['data'=>$json_feed,'fee'=>$fees,'amount'=>$amount, 'success_message'=>$success_message]);
         }catch(\Exception $e){
             $errors = "Transaction failed";
-            return redirect()->route('wallet.index')->with(['errors'=>$errors]);
+            return redirect()->route('wallet.sho')->with(['errors'=>$errors]);
         }
     }
     
@@ -142,7 +142,7 @@ class WalletController extends Controller
   public function delete(Request $request){
     $wallet = Wallet::find($request->input("id"));
     $wallet->delete();
-    return redirect()->route('wallet.index')->with('success','Wallet Delete Successful');
+    return redirect()->route('wallet.show')->with('success','Wallet Delete Successful');
   }
 
   
