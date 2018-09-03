@@ -44,7 +44,7 @@
                         <h3 class="name">Myat Kaung Khant&nbsp;</h3>
                         <p class="title">Frontend developer</p>
                         <p class="description"><br>He is the developer that match with the design. He handles all the codes to make the dsign. His goal is to make awesome and reliable UX for the website.<br><br></p>
-                        <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
+                        <div class="social"><a href="https://www.facebook.com/toolazytoaddthisusername"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
                     </div>
                 </div>
 
